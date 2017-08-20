@@ -1,0 +1,3 @@
+Best page to learn and test, personally tested...
+
+http://regexr.com/
