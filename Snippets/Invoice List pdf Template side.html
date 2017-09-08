@@ -1,0 +1,133 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body{font-size: 9px;}
+  </style>
+</head>
+<body>
+
+  <table width="100%">
+    <tr>
+      <td colspan="2"><b>Cód. Cliente</b></td>
+      <td colspan="7">{$code}</td>
+      <td colspan="2"><b>Fecha Emisión:</b></td>
+      <td colspan="2">{$create_date}</td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><b>Cliente:</b></td>
+      <td colspan="7">{$first_name}</td>
+      <td colspan="2"><b>Fecha Vencimiento:</b></td>
+      <td colspan="2">{$expire_date}</td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><b>Nro. Identificación:</b></td>
+      <td colspan="7">{$identification_type}-{$identification_number}</td>
+      <td colspan="2"><b>Nro. Pedido:</b></td>
+      <td colspan="2">{$saleorder_number}</td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><b>Dirección:</b></td>
+      <td colspan="7">{$address}</td>
+      <td colspan="2"><b>Nro. Factura:</b></td>
+      <td colspan="2">{$invoice_number}</td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><b>Teléfono:</b></td>
+      <td colspan="11">{$office_phone_1}</td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><b>Ruta de Entrega: </b></td>
+      <td colspan="11">{$route_code} - {$route_name}</td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table width="100%">
+    <thead>
+      <tr>
+        <th width="7%"><b>Código</b></th>
+        <th width="30%"><b>Producto</b></th>
+        <th width="7%"><b>Lote</b></th>
+        <th width="5%"><b>F. Vto:</b></th>
+        <th width="5%" align="right"><b>Cant.</b></th>
+        <th width="7%" align="right" ><b>Precio</b></th>
+        <th width="5%" align="right"><b>% O.</b></th>
+        <th width="5%" align="right"><b>D.C</b></th>
+        <th width="5%" align="right"><b>D.V</b></th>
+        <th width="5%" align="right"><b>D.Pre</b></th>
+        <th width="7%" align="right"><b>Neto</b></th>
+        <th width="7%" align="right"><b>Subtotal</b></th>
+        <th width="5%" align="right"><b>Bultos</b></th>
+      </tr>
+      <tr><th colspan="13"><hr/></th></tr>
+    </thead>
+    <tbody>
+      {Grid grid |provider="data" in="rows"}
+      {yieldd}
+      <tr>
+        <td width="7%">{$code}</td>
+        <td width="30%">{$description}</td>
+        <td width="7%">{$number_lot}</td>
+        <td width="5%">{$expiration_date}</td>
+        <td width="5%" align="right">{$product_quantity}</td>
+        <td width="7%" align="right">{$product_price}</td>
+        <td width="5%" align="right">{$offer_discount}%</td>
+        <td width="5%" align="right">{$commercial_discount}%</td>
+        <td width="5%" align="right">{$volumen_discount}%</td>
+        <td width="5%" align="right">{$prepacking_discount}%</td>
+        <td width="7%" align="right">{$net_price}</td>
+        <td width="7%" align="right">{$subtotal_price}</td>
+        <td width="5%" align="right">{$bags}</td>
+      </tr>
+      {/yieldd}
+      {/grid}
+      <tr>
+        <td colspan="3"></td>
+        <td colspan="10">
+          <hr/>
+        </td></tr>
+      <tr>
+        <td colspan="3" rowspan="5"><i>{$obs}</i> <strong>{$name}</strong></td>
+        <td align="right" colspan="3"><b>Total Unidades:</b></td>
+        <td align="center" colspan="2">{$total_units}</td>
+        <td align="right" colspan="3"><b>Subtotal Exento:</b></td>
+        <td align="right" colspan="2">{$subtotal_exento}</td>
+      </tr>
+      <tr>
+        <td align="right" colspan="3"><b>Productos:</b></td>
+        <td align="center" colspan="2">{$total_rows}</td>
+        <td align="right" colspan="3"><b>Base Imponible:</b></td>
+        <td align="right" colspan="2">{$base_imponible}</td>
+      </tr>
+      <tr>
+        <td align="right" colspan="3"><b>Bultos en Pedido:</b></td>
+        <td align="center" colspan="2">{$m_n_bags}</td>
+        <td align="right" colspan="3"><b>Impuesto:</b></td>
+        <td align="right" colspan="2">{$total_tax}</td>
+      </tr>
+      <tr>
+        <td align="right" colspan="3"><b>Descuento P. Pago:</b></td>
+        <td align="center" colspan="2">{$subtotal_earlypayment}</td>
+        <td align="right" colspan="3"><b>Total Fac. con P.P:</b></td>
+        <td align="right" colspan="2">{$total_invoice_wearlypay}</td>
+      </tr>
+      <tr>
+        <td align="right" colspan="3"><b>Subtotal:</b></td>
+        <td align="center" colspan="2">{$subtotal_wdiscount}</td>
+        <td align="right" colspan="3"><b>Total Factura:</b></td>
+        <td align="right" colspan="2">{$total_invoice}</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</body>
+</html>
