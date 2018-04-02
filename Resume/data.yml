@@ -1,16 +1,16 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
-  middle:
-  last: Doe
+  first: Luis
+  middle: Enrique
+  last: Campos
 about: Hi, my name is John Doe. I"m just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
 position: Software Developer
 
 birth:
-  year: 1990
-  location: New York
+  year: 1988
+  location: Caracas, Venezuela
 
 experience:
 - company: Company A
@@ -41,30 +41,36 @@ education:
 skills:
 - name: HTML5
   level: 99
+- name: React-native
+  level: 80
+- name: React
+  level: 60
 - name: CSS3
-  level: 95
+  level: 60
 - name: JavaScript
   level: 97
 - name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
+  level: 70
+- name: PHP
+  level: 70
+- name: Ruby
   level: 80
 - name: ES.Next
   level: 70
 - name: Docker
-  level: 99
+  level: 60
+- name: Vagrant
+  level: 60
 knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
+  email: luiscampostorreta@gmail.com
+  phone: 58 412 0107979
+  street: Palos Grandes
+  city: Caracas
   website: johndoe.com
-  github: johnyD
+  github: torreta
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
-lang: en
+lang: es, en
 `
