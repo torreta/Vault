@@ -1,0 +1,1144 @@
+{
+	"info": {
+		"name": "Spira Devise_token_auth copy",
+		"_postman_id": "9aa97d12-72a4-8e47-821f-2a6b8fb52bc2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE: New user (register)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"pedro@email.com\", \"password\": \"123456\",\"name\": \"pedro\", \"last_name\": \"alizo\",\"nickname\": \"pedro falso\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/auth",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE: sing in (Login)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"lcampos@strix.com.ve\", \"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/auth/sign_in",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"auth",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create: Authenticate (login)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "OQZB8KTPD1zIUkTPSg9DJQ"
+					},
+					{
+						"key": "client",
+						"value": "qD3eXwo7A9rl7stdOuKMaA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515176965"
+					},
+					{
+						"key": "uid",
+						"value": "lcampos@strix.com.ve"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/auth/validate_token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"auth",
+						"validate_token"
+					]
+				},
+				"description": "sad"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE:facebook (Login)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"lcampos@strix.com.ve\", \"uid\": \"superhashquenotengoniideadedondesale\", \"provider\":\"facebook\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/facebook",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"facebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE:facebook (Register)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"alfredaespro@gmail.com\", \"uid\": \"superhashquenotengoniideadedondesaleparte2\", \"provider\":\"facebook\", \"name\":\"alfreda\", \"sexo\":\"F\", \"image\":\"https://www.urlancestral/photo\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/facebook",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"facebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DESTROY: Sign Out (logout)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "NUwWQbWtOCqsxqOGWXPbyA",
+						"description": "Datos dados en los headers del sign in"
+					},
+					{
+						"key": "client",
+						"value": "k4GGWEkyRihAGTcr2IKQvA"
+					},
+					{
+						"key": "expiry",
+						"value": "1513800769"
+					},
+					{
+						"key": "uid",
+						"value": "yo@email.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/auth/sign_out",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"auth",
+						"sign_out"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password: remember (no Login)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"lcampos@strix.com.ve\", \"redirect_url\": \"#\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/auth/password",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"auth",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update: change  password (Loged)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "OQZB8KTPD1zIUkTPSg9DJQ"
+					},
+					{
+						"key": "client",
+						"value": "qD3eXwo7A9rl7stdOuKMaA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515176965"
+					},
+					{
+						"key": "uid",
+						"value": "lcampos@strix.com.ve"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\": \"123456\", \"password_confirmation\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/auth/password",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"auth",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INDEX: List all game modes (Loged)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "OQZB8KTPD1zIUkTPSg9DJQ"
+					},
+					{
+						"key": "client",
+						"value": "qD3eXwo7A9rl7stdOuKMaA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515176965"
+					},
+					{
+						"key": "uid",
+						"value": "lcampos@strix.com.ve"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/modes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"modes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INDEX: List all categories (Loged)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "OQZB8KTPD1zIUkTPSg9DJQ"
+					},
+					{
+						"key": "client",
+						"value": "qD3eXwo7A9rl7stdOuKMaA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515176965"
+					},
+					{
+						"key": "uid",
+						"value": "lcampos@strix.com.ve"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/categories/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "f0e69472-c0c6-481e-b467-145948a9c489",
+					"name": "INDEX: List all categories no-token",
+					"originalRequest": {
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"eac76cc558217054006f2a94d1044fec\"",
+							"name": "ETag",
+							"description": ""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=U2ZGTjA0Z1pwbWVVY08rbzFiYng3UkxMSVJ1SW1VekhIaW5PV2MvcjRiNXphQ3lYbzAxb1BBRzIwVUorV0dSOWFGQlhTb1RVWmt2cnh3QkRpcERXTVpVS1R0N3RsZEtyOThEY0lrUDMxT2l2V2xOSWZoOHFzL3NXSWtaeUtLTm44Mmo2OXlwaFI3dnJLbFZVR3VEWUp4U1ZpbDVMSE9iOTYxaklrSGd4MWVrbVF2SzZoVjRjbVE1RXo3Rnd6MVcwLS1zQTdVTHJwbGNyd2RFbDN2MUVLdlpRPT0%3D--1ae25d7f4383d62885c98bb34cbabdcbb197f1cb; path=/; HttpOnly",
+							"name": "Set-Cookie",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "779730ed-bbae-41d2-89c9-793e36fec4c5",
+							"name": "X-Request-Id",
+							"description": ""
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.585410",
+							"name": "X-Runtime",
+							"description": ""
+						},
+						{
+							"key": "access-token",
+							"value": "58FsuLDGw08aO_IiWpUSsg",
+							"name": "access-token",
+							"description": ""
+						},
+						{
+							"key": "client",
+							"value": "0nQnx72I-JbfYPLxrz5mMQ",
+							"name": "client",
+							"description": ""
+						},
+						{
+							"key": "expiry",
+							"value": "1513801693",
+							"name": "expiry",
+							"description": ""
+						},
+						{
+							"key": "token-type",
+							"value": "Bearer",
+							"name": "token-type",
+							"description": ""
+						},
+						{
+							"key": "uid",
+							"value": "yo@email.com",
+							"name": "uid",
+							"description": ""
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "192.168.0.240",
+							"path": "/",
+							"secure": false,
+							"value": "a2hnSHl5R2g0QnpCR2s0TnNDUHJyRGhJUjNoVm9oY1lmSkJjZ1lmTEo4TDZUTzRkMUxXMExLYlYzT1FFdThsWlBCbnF0TzlSblg0RldMbGNmS0dEMTB0RjNFUXJpUTlDYncxc0wvRGovOWdZMU01NGU3blRZaTcrbFhBUzZyWnYvbUQ4c2t1VmhHRXZyeFR0ZTlUVU1BPT0tLTkwbFpMRy9FWmNseWt5TkJTUXlrOHc9PQ%3D%3D--b64e58ae1a360a2d296b4904c21143d515658693",
+							"key": "_CMS_session"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "192.168.0.240",
+							"path": "/",
+							"secure": false,
+							"value": "U2ZGTjA0Z1pwbWVVY08rbzFiYng3UkxMSVJ1SW1VekhIaW5PV2MvcjRiNXphQ3lYbzAxb1BBRzIwVUorV0dSOWFGQlhTb1RVWmt2cnh3QkRpcERXTVpVS1R0N3RsZEtyOThEY0lrUDMxT2l2V2xOSWZoOHFzL3NXSWtaeUtLTm44Mmo2OXlwaFI3dnJLbFZVR3VEWUp4U1ZpbDVMSE9iOTYxaklrSGd4MWVrbVF2SzZoVjRjbVE1RXo3Rnd6MVcwLS1zQTdVTHJwbGNyd2RFbDN2MUVLdlpRPT0%3D--1ae25d7f4383d62885c98bb34cbabdcbb197f1cb",
+							"key": "_session_id"
+						}
+					],
+					"responseTime": 1266,
+					"body": "[{\"id\":1,\"name\":\"FÚTBOL\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":2,\"name\":\"BALONCESTO\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":3,\"name\":\"TENIS\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":4,\"name\":\"CICLISMO\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":5,\"name\":\"OTROS DEPORTES\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null}]"
+				}
+			]
+		},
+		{
+			"name": "SHOW: Categories (Loged)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "OQZB8KTPD1zIUkTPSg9DJQ"
+					},
+					{
+						"key": "client",
+						"value": "qD3eXwo7A9rl7stdOuKMaA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515176965"
+					},
+					{
+						"key": "uid",
+						"value": "lcampos@strix.com.ve"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/categories/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SHOW: Show all info of a profile (Loged)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "OQZB8KTPD1zIUkTPSg9DJQ"
+					},
+					{
+						"key": "client",
+						"value": "qD3eXwo7A9rl7stdOuKMaA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515176965"
+					},
+					{
+						"key": "uid",
+						"value": "lcampos@strix.com.ve"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/profiles/7",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"profiles",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post: Update Profile   (loged)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "OQZB8KTPD1zIUkTPSg9DJQ"
+					},
+					{
+						"key": "client",
+						"value": "qD3eXwo7A9rl7stdOuKMaA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515176965"
+					},
+					{
+						"key": "uid",
+						"value": "lcampos@strix.com.ve"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"nombre nuevo\",\n\t\"last_name\": \"apelido nuevo\",\n\t\"gender_id\": 2,\n\t\"country_id\": 3,\n\t\"email\": \"correo_nuevo@gmail.com\",\n\t\"password\": \"123123\",\n\t\"password_confirmation\": \"123123\",\n\t\"image\": {\n\t    \"name\": \"erre.png\",\n\t    \"content_type\": \"image/png\",\n\t    \"data\": \"cadena base64 de la imagen\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/profiles/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"profiles",
+						"1"
+					]
+				},
+				"description": "Te dice si el usuario ha pagado o no la aplicación"
+			},
+			"response": []
+		},
+		{
+			"name": "INDEX: Purchase (loged)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "VRQ7SCCYStBE1rChrLVlow"
+					},
+					{
+						"key": "client",
+						"value": "_DpX5lwGmglTuRkE2a7XgA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515177829"
+					},
+					{
+						"key": "uid",
+						"value": "pedro@email.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/purchase/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"purchase",
+						""
+					]
+				},
+				"description": "Te dice si el usuario ha pagado o no la aplicación"
+			},
+			"response": []
+		},
+		{
+			"name": "Post: Purchase (loged)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "VRQ7SCCYStBE1rChrLVlow"
+					},
+					{
+						"key": "client",
+						"value": "_DpX5lwGmglTuRkE2a7XgA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515177829"
+					},
+					{
+						"key": "uid",
+						"value": "pedro@email.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"estado\": \"probando\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/purchase/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"purchase",
+						""
+					]
+				},
+				"description": "Te dice si el usuario ha pagado o no la aplicación"
+			},
+			"response": []
+		},
+		{
+			"name": "INDEX: List all questions (Loged)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "VRQ7SCCYStBE1rChrLVlow"
+					},
+					{
+						"key": "client",
+						"value": "_DpX5lwGmglTuRkE2a7XgA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515177829"
+					},
+					{
+						"key": "uid",
+						"value": "pedro@email.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"category_id\": \"1\"\n\t,\"level_id\": \"2\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/questions/get_questions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"questions",
+						"get_questions"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "d0505357-e853-4ce0-b430-bf7758eba5d1",
+					"name": "INDEX: List all categories no-token",
+					"originalRequest": {
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"eac76cc558217054006f2a94d1044fec\"",
+							"name": "ETag",
+							"description": ""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=U2ZGTjA0Z1pwbWVVY08rbzFiYng3UkxMSVJ1SW1VekhIaW5PV2MvcjRiNXphQ3lYbzAxb1BBRzIwVUorV0dSOWFGQlhTb1RVWmt2cnh3QkRpcERXTVpVS1R0N3RsZEtyOThEY0lrUDMxT2l2V2xOSWZoOHFzL3NXSWtaeUtLTm44Mmo2OXlwaFI3dnJLbFZVR3VEWUp4U1ZpbDVMSE9iOTYxaklrSGd4MWVrbVF2SzZoVjRjbVE1RXo3Rnd6MVcwLS1zQTdVTHJwbGNyd2RFbDN2MUVLdlpRPT0%3D--1ae25d7f4383d62885c98bb34cbabdcbb197f1cb; path=/; HttpOnly",
+							"name": "Set-Cookie",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "779730ed-bbae-41d2-89c9-793e36fec4c5",
+							"name": "X-Request-Id",
+							"description": ""
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.585410",
+							"name": "X-Runtime",
+							"description": ""
+						},
+						{
+							"key": "access-token",
+							"value": "58FsuLDGw08aO_IiWpUSsg",
+							"name": "access-token",
+							"description": ""
+						},
+						{
+							"key": "client",
+							"value": "0nQnx72I-JbfYPLxrz5mMQ",
+							"name": "client",
+							"description": ""
+						},
+						{
+							"key": "expiry",
+							"value": "1513801693",
+							"name": "expiry",
+							"description": ""
+						},
+						{
+							"key": "token-type",
+							"value": "Bearer",
+							"name": "token-type",
+							"description": ""
+						},
+						{
+							"key": "uid",
+							"value": "yo@email.com",
+							"name": "uid",
+							"description": ""
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "192.168.0.240",
+							"path": "/",
+							"secure": false,
+							"value": "a2hnSHl5R2g0QnpCR2s0TnNDUHJyRGhJUjNoVm9oY1lmSkJjZ1lmTEo4TDZUTzRkMUxXMExLYlYzT1FFdThsWlBCbnF0TzlSblg0RldMbGNmS0dEMTB0RjNFUXJpUTlDYncxc0wvRGovOWdZMU01NGU3blRZaTcrbFhBUzZyWnYvbUQ4c2t1VmhHRXZyeFR0ZTlUVU1BPT0tLTkwbFpMRy9FWmNseWt5TkJTUXlrOHc9PQ%3D%3D--b64e58ae1a360a2d296b4904c21143d515658693",
+							"key": "_CMS_session"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "192.168.0.240",
+							"path": "/",
+							"secure": false,
+							"value": "U2ZGTjA0Z1pwbWVVY08rbzFiYng3UkxMSVJ1SW1VekhIaW5PV2MvcjRiNXphQ3lYbzAxb1BBRzIwVUorV0dSOWFGQlhTb1RVWmt2cnh3QkRpcERXTVpVS1R0N3RsZEtyOThEY0lrUDMxT2l2V2xOSWZoOHFzL3NXSWtaeUtLTm44Mmo2OXlwaFI3dnJLbFZVR3VEWUp4U1ZpbDVMSE9iOTYxaklrSGd4MWVrbVF2SzZoVjRjbVE1RXo3Rnd6MVcwLS1zQTdVTHJwbGNyd2RFbDN2MUVLdlpRPT0%3D--1ae25d7f4383d62885c98bb34cbabdcbb197f1cb",
+							"key": "_session_id"
+						}
+					],
+					"responseTime": 1266,
+					"body": "[{\"id\":1,\"name\":\"FÚTBOL\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":2,\"name\":\"BALONCESTO\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":3,\"name\":\"TENIS\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":4,\"name\":\"CICLISMO\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":5,\"name\":\"OTROS DEPORTES\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null}]"
+				}
+			]
+		},
+		{
+			"name": "INDEX: List all questions to synchronize (Loged)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "VRQ7SCCYStBE1rChrLVlow"
+					},
+					{
+						"key": "client",
+						"value": "_DpX5lwGmglTuRkE2a7XgA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515177829"
+					},
+					{
+						"key": "uid",
+						"value": "pedro@email.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"category_id\": \"1\"\n\t,\"level_id\": \"2\"\n\t,\"timestamp\":\"2017-12-1 19:40:00\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/questions/sync_up",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"questions",
+						"sync_up"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "eabfae25-2513-4ed1-b89d-5e7a68d7dfd7",
+					"name": "INDEX: List all categories no-token",
+					"originalRequest": {
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"eac76cc558217054006f2a94d1044fec\"",
+							"name": "ETag",
+							"description": ""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_session_id=U2ZGTjA0Z1pwbWVVY08rbzFiYng3UkxMSVJ1SW1VekhIaW5PV2MvcjRiNXphQ3lYbzAxb1BBRzIwVUorV0dSOWFGQlhTb1RVWmt2cnh3QkRpcERXTVpVS1R0N3RsZEtyOThEY0lrUDMxT2l2V2xOSWZoOHFzL3NXSWtaeUtLTm44Mmo2OXlwaFI3dnJLbFZVR3VEWUp4U1ZpbDVMSE9iOTYxaklrSGd4MWVrbVF2SzZoVjRjbVE1RXo3Rnd6MVcwLS1zQTdVTHJwbGNyd2RFbDN2MUVLdlpRPT0%3D--1ae25d7f4383d62885c98bb34cbabdcbb197f1cb; path=/; HttpOnly",
+							"name": "Set-Cookie",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "779730ed-bbae-41d2-89c9-793e36fec4c5",
+							"name": "X-Request-Id",
+							"description": ""
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.585410",
+							"name": "X-Runtime",
+							"description": ""
+						},
+						{
+							"key": "access-token",
+							"value": "58FsuLDGw08aO_IiWpUSsg",
+							"name": "access-token",
+							"description": ""
+						},
+						{
+							"key": "client",
+							"value": "0nQnx72I-JbfYPLxrz5mMQ",
+							"name": "client",
+							"description": ""
+						},
+						{
+							"key": "expiry",
+							"value": "1513801693",
+							"name": "expiry",
+							"description": ""
+						},
+						{
+							"key": "token-type",
+							"value": "Bearer",
+							"name": "token-type",
+							"description": ""
+						},
+						{
+							"key": "uid",
+							"value": "yo@email.com",
+							"name": "uid",
+							"description": ""
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "192.168.0.240",
+							"path": "/",
+							"secure": false,
+							"value": "a2hnSHl5R2g0QnpCR2s0TnNDUHJyRGhJUjNoVm9oY1lmSkJjZ1lmTEo4TDZUTzRkMUxXMExLYlYzT1FFdThsWlBCbnF0TzlSblg0RldMbGNmS0dEMTB0RjNFUXJpUTlDYncxc0wvRGovOWdZMU01NGU3blRZaTcrbFhBUzZyWnYvbUQ4c2t1VmhHRXZyeFR0ZTlUVU1BPT0tLTkwbFpMRy9FWmNseWt5TkJTUXlrOHc9PQ%3D%3D--b64e58ae1a360a2d296b4904c21143d515658693",
+							"key": "_CMS_session"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "192.168.0.240",
+							"path": "/",
+							"secure": false,
+							"value": "U2ZGTjA0Z1pwbWVVY08rbzFiYng3UkxMSVJ1SW1VekhIaW5PV2MvcjRiNXphQ3lYbzAxb1BBRzIwVUorV0dSOWFGQlhTb1RVWmt2cnh3QkRpcERXTVpVS1R0N3RsZEtyOThEY0lrUDMxT2l2V2xOSWZoOHFzL3NXSWtaeUtLTm44Mmo2OXlwaFI3dnJLbFZVR3VEWUp4U1ZpbDVMSE9iOTYxaklrSGd4MWVrbVF2SzZoVjRjbVE1RXo3Rnd6MVcwLS1zQTdVTHJwbGNyd2RFbDN2MUVLdlpRPT0%3D--1ae25d7f4383d62885c98bb34cbabdcbb197f1cb",
+							"key": "_session_id"
+						}
+					],
+					"responseTime": 1266,
+					"body": "[{\"id\":1,\"name\":\"FÚTBOL\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":2,\"name\":\"BALONCESTO\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":3,\"name\":\"TENIS\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":4,\"name\":\"CICLISMO\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null},{\"id\":5,\"name\":\"OTROS DEPORTES\",\"created_at\":\"2017-12-06T18:55:11.000Z\",\"updated_at\":\"2017-12-06T18:55:11.000Z\",\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null}]"
+				}
+			]
+		},
+		{
+			"name": "CREATE: score",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "VRQ7SCCYStBE1rChrLVlow"
+					},
+					{
+						"key": "client",
+						"value": "_DpX5lwGmglTuRkE2a7XgA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515177829"
+					},
+					{
+						"key": "uid",
+						"value": "pedro@email.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"category_id\": \"1\", \n\t\"level_id\": \"1\",\n\t\"score\": \"150\",\n\t\"user_level_id\":\"2\"\n}"
+				},
+				"url": {
+					"raw": "https://hostexample.com/score",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get: rankings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "VRQ7SCCYStBE1rChrLVlow"
+					},
+					{
+						"key": "client",
+						"value": "_DpX5lwGmglTuRkE2a7XgA"
+					},
+					{
+						"key": "expiry",
+						"value": "1515177829"
+					},
+					{
+						"key": "uid",
+						"value": "pedro@email.com"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hostexample.com/rankings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sports4u-quiz",
+						"com"
+					],
+					"path": [
+						"rankings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
