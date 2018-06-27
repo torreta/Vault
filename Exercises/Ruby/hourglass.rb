@@ -6,7 +6,7 @@ require 'stringio'
 # Complete the hourglassSum function below.
 def hourglassSum(arr)
 
-     max = 0
+     max = -99 #why 99? because, i need to register a maximun even if the numbers are negative 
      sum = 0
     for i in 0..(arr.size()-2-1)
         for y in 0..(arr.size()-2-1)
