@@ -3,10 +3,15 @@ name:
   first: Luis
   middle: Enrique
   last: Campos
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+about: En General, soy metódico, me gusta aprender y soy rápido en ello, soy excelente para ubicar errores
+y flancos en general de los proyectos; soy pro convenios, hacer tracing, escribir logs, documentación y pruebas,
+Sería ideal para mi solucionar y automatizar problemas comunes de manera eficiente, me llama mucho poder prestar
+un servicio o simplemente optimizar uno existente. Más que cualquier otra cosa, ayudar a crear proyectos que
+hagan la vida más fácil. Y si de algo vale, poner mi grano de arena para que avancemos como civilización.
+Juzga mis habilidades, si aprendo en el proceso, ¡mejor!
+
+
+position: Ingeniero Consultor
 
 birth:
   year: 1988
@@ -40,37 +45,35 @@ education:
 # skill level goes 0 to 100
 skills:
 - name: HTML5
-  level: 99
+  level: 90
 - name: React-native
-  level: 80
+  level: 75
 - name: React
-  level: 60
+  level: 75
 - name: CSS3
   level: 60
 - name: JavaScript
-  level: 97
+  level: 85
 - name: Node.js
-  level: 70
+  level: 60
 - name: PHP
-  level: 70
+  level: 60
 - name: Ruby
   level: 80
-- name: ES.Next
-  level: 70
+- name: LISP
+  level: 50
 - name: Docker
   level: 60
 - name: Vagrant
   level: 60
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+knowledge: A little bit of everything.
 
 contact:
   email: luiscampostorreta@gmail.com
   phone: 58 412 0107979
   street: Palos Grandes
   city: Caracas
-  website: johndoe.com
+  website: notyetXD.com
   github: torreta
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: es, en
-`
