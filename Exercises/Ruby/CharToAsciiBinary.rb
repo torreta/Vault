@@ -1,58 +1,58 @@
 
 def translateAsciiBinary(letter)
 
-    if(letter == "A"){return "1000001"} 	 
-    if(letter == "B"){return "1000010"}
-    if(letter == "C"){return "1000011"}
-    if(letter == "D"){return "1000100"}
-    if(letter == "E"){return "1000101"}
-    if(letter == "F"){return "1000110"}
-    if(letter == "G"){return "1000111"}
-    if(letter == "H"){return "1001000"}
-    if(letter == "I"){return "1001001"}
-    if(letter == "J"){return "1001010"}
-    if(letter == "K"){return "1001011"}
-    if(letter == "L"){return "1001100"}
-    if(letter == "M"){return "1001101"}
-    if(letter == "N"){return "1001110"}
-    if(letter == "O"){return "1001111"}
-    if(letter == "P"){return "1010000"}
-    if(letter == "Q"){return "1010001"}
-    if(letter == "R"){return "1010010"}
-    if(letter == "S"){return "1010011"}
-    if(letter == "T"){return "1010100"}
-    if(letter == "U"){return "1010101"}
-    if(letter == "V"){return "1010110"}
-    if(letter == "W"){return "1010111"}
-    if(letter == "X"){return "1011000"}
-    if(letter == "Y"){return "1011001"}
-    if(letter == "Z"){return "1011010"}
-    if(letter == "a"){return "1100001"}
-    if(letter == "b"){return "1100010"}
-    if(letter == "c"){return "1100011"}
-    if(letter == "d"){return "1100100"}
-    if(letter == "e"){return "1100101"}
-    if(letter == "f"){return "1100110"}
-    if(letter == "g"){return "1100111"}
-    if(letter == "h"){return "1101000"}
-    if(letter == "i"){return "1101001"}
-    if(letter == "j"){return "1101010"}
-    if(letter == "k"){return "1101011"}
-    if(letter == "l"){return "1101100"}
-    if(letter == "m"){return "1101101"}
-    if(letter == "n"){return "1101110"}
-    if(letter == "o"){return "1101111"}
-    if(letter == "p"){return "1110000"}
-    if(letter == "q"){return "1110001"}
-    if(letter == "r"){return "1110010"}
-    if(letter == "s"){return "1110011"}
-    if(letter == "t"){return "1110100"}
-    if(letter == "u"){return "1110101"}
-    if(letter == "v"){return "1110110"}
-    if(letter == "w"){return "1110111"}
-    if(letter == "x"){return "1111000"}
-    if(letter == "y"){return "1111001"}
-    if(letter == "z"){return "1111010"}
+    if(letter == "A")then return ("1000001"); end
+    if(letter == "B")then return ("1000010"); end
+    if(letter == "C")then return ("1000011"); end
+    if(letter == "D")then return ("1000100"); end
+    if(letter == "E")then return ("1000101"); end
+    if(letter == "F")then return ("1000110"); end
+    if(letter == "G")then return ("1000111"); end
+    if(letter == "H")then return ("1001000"); end
+    if(letter == "I")then return ("1001001"); end
+    if(letter == "J")then return ("1001010"); end
+    if(letter == "K")then return ("1001011"); end
+    if(letter == "L")then return ("1001100"); end
+    if(letter == "M")then return ("1001101"); end
+    if(letter == "N")then return ("1001110"); end
+    if(letter == "O")then return ("1001111"); end
+    if(letter == "P")then return ("1010000"); end
+    if(letter == "Q")then return ("1010001"); end
+    if(letter == "R")then return ("1010010"); end
+    if(letter == "S")then return ("1010011"); end
+    if(letter == "T")then return ("1010100"); end
+    if(letter == "U")then return ("1010101"); end
+    if(letter == "V")then return ("1010110"); end
+    if(letter == "W")then return ("1010111"); end
+    if(letter == "X")then return ("1011000"); end
+    if(letter == "Y")then return ("1011001"); end
+    if(letter == "Z")then return ("1011010"); end
+    if(letter == "a")then return ("1100001"); end
+    if(letter == "b")then return ("1100010"); end
+    if(letter == "c")then return ("1100011"); end
+    if(letter == "d")then return ("1100100"); end
+    if(letter == "e")then return ("1100101"); end
+    if(letter == "f")then return ("1100110"); end
+    if(letter == "g")then return ("1100111"); end
+    if(letter == "h")then return ("1101000"); end
+    if(letter == "i")then return ("1101001"); end
+    if(letter == "j")then return ("1101010"); end
+    if(letter == "k")then return ("1101011"); end
+    if(letter == "l")then return ("1101100"); end
+    if(letter == "m")then return ("1101101"); end
+    if(letter == "n")then return ("1101110"); end
+    if(letter == "o")then return ("1101111"); end
+    if(letter == "p")then return ("1110000"); end
+    if(letter == "q")then return ("1110001"); end
+    if(letter == "r")then return ("1110010"); end
+    if(letter == "s")then return ("1110011"); end
+    if(letter == "t")then return ("1110100"); end
+    if(letter == "u")then return ("1110101"); end
+    if(letter == "v")then return ("1110110"); end
+    if(letter == "w")then return ("1110111"); end
+    if(letter == "x")then return ("1111000"); end
+    if(letter == "y")then return ("1111001"); end
+    if(letter == "z")then return ("1111010"); end
 
     STDERR.puts ("Letra invalida")
     return "X"
