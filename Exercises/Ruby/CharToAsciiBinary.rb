@@ -1,4 +1,3 @@
-
 def translateAsciiBinary(letter)
 
     if(letter == "A")then return ("1000001"); end
@@ -54,7 +53,42 @@ def translateAsciiBinary(letter)
     if(letter == "y")then return ("1111001"); end
     if(letter == "z")then return ("1111010"); end
 
-    STDERR.puts ("Letra invalida")
+    if(letter == " ")then return ("0100000"); end
+
+    if(letter == "!")then return ("0100001"); end
+    if(letter == "\"")then return ("0100010"); end
+    if(letter == "#")then return ("0100011"); end
+    if(letter == "$")then return ("0100100"); end
+    if(letter == "%")then return ("0100101"); end
+    if(letter == "&")then return ("0100110"); end
+    if(letter == "'")then return ("0100111"); end
+    if(letter == "(")then return ("0101000"); end
+    if(letter == ")")then return ("0101001"); end
+    if(letter == "*")then return ("0101010"); end
+    if(letter == "+")then return ("0101011"); end
+    if(letter == ",")then return ("0101100"); end
+    if(letter == "-")then return ("0101101"); end
+    if(letter == ".")then return ("0101110"); end
+    if(letter == "/")then return ("0101111"); end
+    if(letter == "0")then return ("0110000"); end
+    if(letter == "1")then return ("0110001"); end
+    if(letter == "2")then return ("0110010"); end
+    if(letter == "3")then return ("0110011"); end
+    if(letter == "4")then return ("0110100"); end
+    if(letter == "5")then return ("0110101"); end
+    if(letter == "6")then return ("0110110"); end
+    if(letter == "7")then return ("0110111"); end
+    if(letter == "8")then return ("0111000"); end
+    if(letter == "9")then return ("0111001"); end
+    if(letter == ":")then return ("0111010"); end
+    if(letter == ";")then return ("0111011"); end
+    if(letter == "<")then return ("0111100"); end
+    if(letter == "=")then return ("0111101"); end
+    if(letter == ">")then return ("0111110"); end
+    if(letter == "?")then return ("0111111"); end
+    if(letter == "@")then return ("1000000"); end
+
+    STDERR.puts ("Letra invalida  #{letter}")
     return "X"
 
 end
