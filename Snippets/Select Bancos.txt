@@ -1,0 +1,34 @@
+<select  id="input" class="form-control"  ng-model="pago.bancodonde"  required="required">
+        <option value="0001"> Banco Central de Venezuela</option>
+        <option value="0003"> Banco Industrial de Venezuela, C.A. Banco Universal</option>
+        <option value="0102"> Banco de Venezuela S.A.C.A. Banco Universal</option>
+        <option value="0104"> Venezolano de Crédito, S.A. Banco Universal</option>
+        <option value="0105"> Banco Mercantil, C.A S.A.C.A. Banco Universal</option>
+        <option value="0108"> Banco Provincial, S.A. Banco Universal</option>
+        <option value="0114"> Bancaribe C.A. Banco Universal</option>
+        <option value="0115"> Banco Exterior C.A. Banco Universal</option>
+        <option value="0116"> Banco Occidental de Descuento, Banco Universal C.A.</option>
+        <option value="0128"> Banco Caroní C.A. Banco Universal</option>
+        <option value="0134"> Banesco Banco Universal S.A.C.A.</option>
+        <option value="0137"> Banco Sofitasa Banco Universal</option>
+        <option value="0138"> Banco Plaza Banco Universal</option>
+        <option value="0146"> Banco de la Gente Emprendedora C.A.</option>
+        <option value="0149"> Banco del Pueblo Soberano, C.A. Banco de Desarrollo</option>
+        <option value="0151"> BFC Banco Fondo Común C.A Banco Universal</option>
+        <option value="0156"> 100% Banco, Banco Universal C.A.</option>
+        <option value="0157"> DelSur Banco Universal, C.A.</option>
+        <option value="0163"> Banco del Tesoro, C.A. Banco Universal</option>
+        <option value="0166"> Banco Agrícola de Venezuela, C.A. Banco Universal</option>
+        <option value="0168"> Bancrecer, S.A. Banco Microfinanciero</option>
+        <option value="0169"> Mi Banco Banco Microfinanciero C.A.</option>
+        <option value="0171"> Banco Activo, C.A. Banco Universal</option>
+        <option value="0172"> Bancamiga Banco Microfinanciero C.A.</option>
+        <option value="0173"> Banco Internacional de Desarrollo, C.A. Banco Universal</option>
+        <option value="0174"> Banplus Banco Universal, C.A.</option>
+        <option value="0175"> Banco Bicentenario Banco Universal C.A.</option>
+        <option value="0176"> Banco Espirito Santo, S.A. Sucursal Venezuela B.U.</option>
+        <option value="0177"> Banco de la Fuerza Armada Nacional Bolivariana, B.U.</option>
+        <option value="0190"> Citibank N.A.</option>
+        <option value="0191"> Banco Nacional de Crédito, C.A. Banco Universal</option>
+        <option value="0601"> Instituto Municipal de Crédito Popular</option>
+      </select>
