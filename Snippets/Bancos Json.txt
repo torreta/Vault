@@ -1,0 +1,157 @@
+[
+  { 
+    "codigo": "0001", 
+    "nombre": "Banco Central de Venezuela", 
+    "nombreCorto": "BCV"
+  },
+  { 
+    "codigo": "0003", 
+    "nombre": "Banco Industrial de Venezuela, C.A. Banco Universal" ,
+    "nombreCorto": "Industrial"
+  },
+  { 
+    "codigo": "0102", 
+    "nombre": "Banco de Venezuela S.A.C.A. Banco Universal",
+    "nombreCorto": "Venezuela" 
+  },
+  { 
+    "codigo": "0104", 
+    "nombre": "Venezolano de Crédito, S.A. Banco Universal",
+    "nombreCorto":"Venezolano de Crédito"
+  },
+  { 
+    "codigo": "0105", 
+    "nombre": "Banco Mercantil, C.A S.A.C.A. Banco Universal",
+    "nombreCorto":"Mercantil"
+  },
+  { 
+    "codigo": "0108", 
+    "nombre": "Banco Provincial, S.A. Banco Universal",
+    "nombreCorto":"Provincial"
+  },
+  { 
+    "codigo": "0114", 
+    "nombre": "Bancaribe C.A. Banco Universal",
+    "nombreCorto":"Bancaribe"
+  },
+  { 
+    "codigo": "0115", 
+    "nombre": "Banco Exterior C.A. Banco Universal",
+    "nombreCorto":"Exterior"
+  },
+  { 
+    "codigo": "0116", 
+    "nombre": "Banco Occidental de Descuento, Banco Universal C.A.",
+    "nombreCorto":"BOD"
+  },
+  { 
+    "codigo": "0128", 
+    "nombre": "Banco Caroní C.A. Banco Universal",
+    "nombreCorto":"Caroní"
+  },
+  { 
+    "codigo": "0134", 
+    "nombre": "Banesco Banco Universal S.A.C.A.",
+    "nombreCorto":"Banesco"
+  },
+  { 
+    "codigo": "0137", 
+    "nombre": "Banco Sofitasa Banco Universal",
+    "nombreCorto":"Sofitasa"
+  },
+  { 
+    "codigo": "0138", 
+    "nombre": "Banco Plaza Banco Universal",
+    "nombreCorto":"Plaza"
+  },
+  { 
+    "codigo": "0146", 
+    "nombre": "Banco de la Gente Emprendedora C.A.",
+    "nombreCorto":"de la Gente Emprendedora"
+  },
+  { 
+    "codigo": "0149", 
+    "nombre": "Banco del Pueblo Soberano, C.A. Banco de Desarrollo",
+    "nombreCorto":"del Pueblo Soberano"
+  },
+  { 
+    "codigo": "0151", 
+    "nombre": "BFC Banco Fondo Común C.A Banco Universal",
+    "nombreCorto":"BFC"
+  },
+  { 
+    "codigo": "0156", 
+    "nombre": "100% Banco, Banco Universal C.A.",
+    "nombreCorto":"100% Banco"
+  },
+  { 
+    "codigo": "0157", 
+    "nombre": "DelSur Banco Universal, C.A.",
+    "nombreCorto":"DelSur"
+  },
+  { 
+    "codigo": "0163", 
+    "nombre": "Banco del Tesoro, C.A. Banco Universal",
+    "nombreCorto":"del Tesoro"
+  },
+  { 
+    "codigo": "0166", 
+    "nombre": "Banco Agrícola de Venezuela, C.A. Banco Universal",
+    "nombreCorto":"Agrícola"
+  },
+  { 
+    "codigo": "0168", 
+    "nombre": "Bancrecer, S.A. Banco Microfinanciero",
+    "nombreCorto":"Bancrecer"
+  },
+  { 
+    "codigo": "0169", 
+    "nombre": "Mi Banco Banco Microfinanciero C.A.",
+    "nombreCorto":"Mi Banco"
+  },
+  { 
+    "codigo": "0171", 
+    "nombre": "Banco Activo, C.A. Banco Universal",
+    "nombreCorto":"Activo"
+  },
+  { 
+    "codigo": "0172", 
+    "nombre": "Bancamiga Banco Microfinanciero C.A.",
+    "nombreCorto":"Bancamiga"
+  },
+  { 
+    "codigo": "0173", 
+    "nombre": "Banco Internacional de Desarrollo, C.A. Banco Universal",
+    "nombreCorto":"BID"
+  },
+  { 
+    "codigo": "0174", 
+    "nombre": "Banplus Banco Universal, C.A.",
+    "nombreCorto":"Banplus"
+  },
+  { 
+    "codigo": "0175", 
+    "nombre": "Banco Bicentenario Banco Universal C.A.",
+    "nombreCorto":"Bicentenario"
+  },
+  { 
+    "codigo": "0176", 
+    "nombre": "Banco Espirito Santo, S.A. Sucursal Venezuela B.U.",
+    "nombreCorto":"Espiritu Santo"
+  },
+  { 
+    "codigo": "0177", 
+    "nombre": "Banco de la Fuerza Armada Nacional Bolivariana, B.U.",
+    "nombreCorto":"de la Fuerza Armada Nacional"
+  },
+  { 
+    "codigo": "0190", 
+    "nombre": "Citibank N.A.",
+    "nombreCorto":"Citibank"
+  },
+  { 
+    "codigo": "0191", 
+    "nombre": "Banco Nacional de Crédito, C.A. Banco Universal",
+    "nombreCorto":"BNC"
+  }
+]
