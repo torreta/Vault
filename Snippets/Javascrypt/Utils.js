@@ -272,7 +272,7 @@ Utils.prototype.observation = function (mCallback) {
         {
             type: "block", inputWidth: "auto", offsetTop: 12, list: [
             , {"type": "input", "name": "obs", "label": "Observación", "required": true, "validate": "NotEmpty"}
-            , {"type": "button", "name": "save", "value": "Guardar"}
+            , {"type": "button", "name": "save", "1": "Guardar"}
         ]
         },
     ];
@@ -309,13 +309,22 @@ Utils.prototype.inventoryObservation = function (mCallback) {
                 "validate": "NotEmpty",
                 connector: URL_MODULE.CTRL_URL + "Lots.php?call=inventoryLogTypes"
             }
+            , {
+                "type": "combo",
+                "name": "responsible",
+                "label": "Responsable",
+                "required": true,
+                "validate": "NotEmpty",
+                connector: URL_MODULE.CTRL_URL + "Inventory.php?call=combo_seeker_packer"
+            }
+            , {'type': "checkbox", 'name':'me', 'label': "Operador", 'checked': false},
             , {"type": "button", "name": "save", "value": "Guardar"}
         ]
         },
     ];
 
     var dhxWins = new dhtmlXWindows();
-    var mWindow = dhxWins.createWindow("mWindow", 10, 10, 310, 150);
+    var mWindow = dhxWins.createWindow("mWindow", 10, 10, 310, 230);
     mWindow.denyResize();
     mWindow.setText("Observación");
     mWindow.center();
@@ -323,12 +332,127 @@ Utils.prototype.inventoryObservation = function (mCallback) {
     var mForm = mWindow.attachForm(structure, true);
     mForm = mForm.getForm();
     mForm.enableLiveValidation(true);
+    // mForm.getCombo('responsible').enableFilteringMode('between', URL_MODULE.CTRL_URL + "Inventory.php?call=combo_seeker_packer", null, true);
+    mForm.attachEvent("onChange", function (name, value, is_checked) {
+
+            if (name == 'me') {
+                if (is_checked == true) {
+                    /* Si se selecciono el checkbox de "YO" entonces se deshabilita el combo del responsable, se limpia el texto que habia
+                       y se coloca que ya el campo no es requerido */
+                    // mForm.getCombo('responsible').clearAll();
+                    mForm.getCombo('responsible').setComboText("");
+                    mForm.getCombo('responsible').enable(false);
+                    mForm.setRequired('responsible',false);
+                } else {
+                    /*Se coloca el combo como requerido y se habilita*/
+                    mForm.getCombo('responsible').enable(true);
+                    mForm.setRequired('responsible',true);
+                }
+            }
+
+    });
 
     mForm.attachEvent("onButtonClick", function (id) {
         if (!mForm.validate()) return;
-        mCallback(mForm.getItemValue("obs"), mForm.getItemValue("type_id"));
+
+        var responsible;
+        if (mForm.getItemValue("responsible") === "")
+            responsible = 'yo';
+        else
+            responsible = mForm.getItemValue("responsible");
+
+        mCallback(mForm.getItemValue("obs"), mForm.getItemValue("type_id"), responsible);
         mWindow.close();
     });
+
+}
+
+Utils.prototype.inventoryResponsibleObservation = function (mCallback) {
+    var structure = [
+        {type: "settings", position: "label-left", labelWidth: 100, inputWidth: 150},
+        {
+            type: "block", inputWidth: "auto", offsetTop: 12, list: [
+            , {"type": "input", "name": "obs", "label": "Observación(*)", "required": true, "validate": "NotEmpty"}
+            , {
+                "type": "select",
+                "name": "type_id",
+                "label": "Tipo",
+                "required": true,
+                "validate": "NotEmpty",
+                connector: URL_MODULE.CTRL_URL + "Lots.php?call=inventoryLogTypes"
+            }
+            , {
+                "type": "combo",
+                "name": "responsible_type",
+                "label": "Responsable",
+                "required": true,
+                "validate": "NotEmpty",
+                connector: URL_MODULE.CTRL_URL + "Responsible.php?call=combo_responsible_type"
+            },
+            {
+                type: "combo",
+                name: "responsible_id",
+                label: "Encargado",
+                required: true,
+            },
+            , {"type": "button", "name": "save", "value": "Guardar"}
+        ]
+        },
+    ];
+
+    var dhxWins = new dhtmlXWindows();
+    var mWindow = dhxWins.createWindow("mWindow", 10, 10, 310, 230);
+    mWindow.denyResize();
+    mWindow.setText("Observación");
+    mWindow.center();
+
+    var mForm = mWindow.attachForm(structure, true);
+    mForm = mForm.getForm();
+    mForm.enableLiveValidation(true);
+    
+    // mForm.getCombo('responsible').enableFilteringMode('between', URL_MODULE.CTRL_URL + "Inventory.php?call=combo_seeker_packer", null, true);
+    mForm.attachEvent("onChange", function (name, value) {
+        if(name === "responsible_type") comboResponsible(value, mForm);
+    });
+
+    mForm.attachEvent("onButtonClick", function (id) {
+        
+        // si falla la validacion, no continuar
+        if (!mForm.validate()) return;
+        
+        var responsible_type = mForm.getItemValue('responsible_type')
+        var responsible = mForm.getItemValue('responsible_id')
+        // valores sacados del callback
+        mCallback(mForm.getItemValue("obs"), mForm.getItemValue("type_id"),responsible_type, responsible);
+        
+        // close windows passed down
+        mWindow.close();
+    });
+
+    // Fill responsible
+    function comboResponsible(type_id, mForm) {
+        
+        // cleaning responsible input
+        mForm.getCombo('responsible_id').hide(false);
+        mForm.getCombo('responsible_id').enable(true);
+        mForm.setRequired('responsible_id',true);    
+        mForm.getCombo("responsible_id").clearAll();
+        mForm.getCombo("responsible_id").setComboText("");        
+        
+        //loading new info on responsible id combo
+        var responsible = mForm.getCombo("responsible_id");
+        responsible.load(URL_MODULE.CTRL_URL + "Responsible.php?call=combo_responsible&type_id="+type_id);
+        responsible.enableFilteringMode('between', null, null, true);
+
+        //not necesary if current user
+        if(type_id == 1){
+            mForm.getCombo('responsible_id').hide(true);
+            mForm.getCombo('responsible_id').enable(false);
+            mForm.getCombo('responsible_id').disable(true);
+            mForm.setRequired('responsible_id',false);    
+            mForm.getCombo("responsible_id").setComboText("Usuario Actual");        
+        }
+    };
 
 }
 
@@ -637,4 +761,69 @@ Utils.prototype.xmlTojson = function xml2json(xmlDoc) {
 
     return xmlToJson(xmlDoc);
 
+}
+
+// filterCalendar is a function that generates a modal that allows the user filter
+// by a date range.
+// IF YOU DON'T KNOW HOW TO USE IT.. visit: drotaca/app/js/readmeFilterCalendar.txt 
+Utils.prototype.filterCalendar = function (grid,url) {
+
+    // 1-- create a window
+    var dhxWins = new dhtmlXWindows();
+    var mWindow = dhxWins.createWindow("mWindow", 100, 100, 270, 210);
+    mWindow.denyResize();
+    mWindow.setText("Filtrar por fecha");
+    mWindow.center();
+    // 2-- create a form
+    var structure = [
+        {type: "settings", position: "label-left", labelWidth: 100, inputWidth: 200},
+        {
+            type: "block", inputWidth: "auto", offsetTop: 15, list: [
+                {
+                    type: "calendar",
+                    name: "begin_date",
+                    label: "Fecha de inicio",
+                    dateFormat: "%d-%m-%Y",
+                    serverDateFormat: "%Y-%m-%d",
+                    calendarPosition: "right",
+                    required: true,
+                },
+                {
+                    type: "calendar",
+                    name: "end_date",
+                    label: "Fecha final",
+                    dateFormat: "%d-%m-%Y",
+                    serverDateFormat: "%Y-%m-%d",
+                    calendarPosition: "right",
+                    required: true,
+                },
+                {type: "button", name: "filter_calendar", value: 'Filtrar'}
+            ]
+        },
+    ];
+
+    var mForm = mWindow.attachForm(structure,true);
+    mForm = mForm.getForm();
+    mForm.enableLiveValidation(true);
+
+    //3-- We change the USA-dateformat to spanish-dateformat
+    mForm.getCalendar("begin_date").loadUserLanguage("es");
+    mForm.getCalendar("end_date").loadUserLanguage("es");
+
+
+    mForm.attachEvent("onButtonClick", function (id) {
+        grid.grid.first();       
+
+        // catch both dates 
+        var begin_date = (new Date(mForm.getItemValue("begin_date")).toJSON().slice(0, 10));
+        var end_date = (new Date(mForm.getItemValue("end_date")).toJSON().slice(0, 10));
+        // compare both dates
+        if (begin_date <= end_date) {
+            grid.load(url+"&begin_date=" + begin_date + "&end_date=" + end_date);
+            mWindow.close();  
+        }else{
+            (new Utils).confirmWindow(false, "Coloque mejor las fechas");
+        }
+
+    });
 }
