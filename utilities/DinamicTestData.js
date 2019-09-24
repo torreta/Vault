@@ -20,6 +20,49 @@ function _generateRandomImageUrl() {
   return url;
 }
 
+var true_group_info = [
+  //0
+  {
+    image: require("../assets/images/artifices/artifices.png"),
+    title: "Artífices",
+    description:
+      "Personas con fuertes convicciones que hacen de guía a los demás. No temen al riesgo ni al cambio. Lo importante es no rendirse nunca y seguir avanzando.",
+    color: "#fcad4e",
+    conversationId: "5cd915d586d07d761bb8f8a0",
+    id: "5cd915d586d07d761bb8f8b7"
+  },
+  //0.8
+  {
+    image: require("../assets/images/conspiradores/conspiradores.png"),
+    title: "Conspiradores",
+    description:
+      "Personas inteligentes, calculadoras y astutas que harán todo lo que esté en su mano para alcanzar sus metas y objetivos. Lo importante es lograr sus ambiciones. El fin justifica los medios.",
+    color: "#818aff",
+    conversationId: "5cd915d586d07d761bb8f8a1",
+    id: "5cd915d586d07d761bb8f8b8"
+  },
+  //1.8
+  {
+    image: require("../assets/images/impredecibles/impredecibles.png"),
+    title: "Impredecibles",
+    description:
+      "Personas inestables por naturaleza. Pueden estar en lo más alto un día y caer a lo más bajo al día siguiente. Lo importante es encontrar el equilibrio, tanto dentro como fuera de su mente.",
+    color: "#81d5ff",
+    conversationId: "5cd915d586d07d761bb8f8a3",
+    id: "5cd915d586d07d761bb8f8b9"
+  },
+  //2.8
+  {
+    image: require("../assets/images/inefables/inefables.png"),
+    title: "Inefables",
+    description:
+      "Personas que odian ser encasilladas. En realidad, nadie sabe qué se les pasa por la cabeza (ni siquiera ellos).",
+    color: "#393e46",
+    conversationId: "5cd915d586d07d761bb8f8a2",
+    id: "5cd915d586d07d761bb8f8ba"
+  }
+];
+
 var nombreGrupos = ["Inefables", "Conspiradores", "Impredecibles", "Artífices"];
 
 var groupTitle = _.sample(nombreGrupos);
@@ -1613,7 +1656,7 @@ function _valorations() {
   return notificationsArray;
 }
 
-export default (DinamicTestData = {
+export default DinamicTestData = {
   randomInterests: randomInterests,
   randomInterestsText: randomInterestsText,
   othersRandomInterests: othersRandomInterests,
@@ -1648,5 +1691,6 @@ export default (DinamicTestData = {
   messageCount: _generateMessageCount(),
   unreadMessageCount: _generateUnreadMessageCount(),
   message_random: _generateMessage(),
-  message: _generateMessage()
-});
+  message: _generateMessage(),
+  true_group_info: true_group_info
+};
