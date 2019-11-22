@@ -471,7 +471,7 @@ function _generateInterestText() {
   var este = "";
   var i = 0;
 
-  _.forEach(randomInterests, function(interest) {
+  _.forEach(randomInterests, function (interest) {
     if (i == 0) {
       este = interest.title;
       i = i + 1;
@@ -487,7 +487,7 @@ function _generateoInterestText() {
   var este = "";
   var i = 0;
 
-  _.forEach(randomInterests, function(interest) {
+  _.forEach(randomInterests, function (interest) {
     if (i == 0) {
       este = interest.title;
       i = i + 1;
@@ -507,6 +507,7 @@ var otherUsers = [
   {
     id: 1,
     _id: 1,
+    key: "1",
     username: "Pablito01",
     name: "Pablito Escobarcito",
     rating: _generateRating(),
@@ -524,6 +525,7 @@ var otherUsers = [
   {
     id: 2,
     _id: 2,
+    key: "2",
     username: "Antont",
     name: "Antonio Tirant",
     rating: _generateRating(),
@@ -541,6 +543,7 @@ var otherUsers = [
   {
     id: 3,
     _id: 3,
+    key: "3",
     username: "Mariela",
     name: "Mariela Camacho",
     rating: _generateRating(),
@@ -558,6 +561,7 @@ var otherUsers = [
   {
     id: 4,
     _id: 4,
+    key: "4",
     username: "AlejandraLA",
     name: "Alejandra La´dana",
     rating: _generateRating(),
@@ -575,6 +579,7 @@ var otherUsers = [
   {
     id: 5,
     _id: 5,
+    key: "5",
     username: "Mireia33",
     name: "Mireia D´torres",
     rating: _generateRating(),
@@ -592,6 +597,7 @@ var otherUsers = [
   {
     id: 6,
     _id: 6,
+    key: "6",
     username: "Jose21",
     name: "Jose Polento",
     rating: _generateRating(),
@@ -609,6 +615,7 @@ var otherUsers = [
   {
     id: 7,
     _id: 7,
+    key: "7",
     username: "Francisca.3",
     name: "Francisca Corvo",
     rating: _generateRating(),
@@ -626,6 +633,7 @@ var otherUsers = [
   {
     id: 8,
     _id: 8,
+    key: "8",
     username: "Helena00",
     name: "Helena Bond",
     rating: _generateRating(),
@@ -643,6 +651,7 @@ var otherUsers = [
   {
     id: 9,
     _id: 9,
+    key: "9",
     username: "PaulaSH",
     name: "Paula Shapiro Hortiz",
     rating: _generateRating(),
@@ -660,6 +669,7 @@ var otherUsers = [
   {
     id: 10,
     _id: 10,
+    key: "10",
     username: "Hectorr3",
     rating: _generateRating(),
     rating_quantity: _generateRatingCount(),
@@ -676,6 +686,7 @@ var otherUsers = [
   {
     id: 11,
     _id: 11,
+    key: "11",
     username: "Pablo03",
     name: "Pablo Barranca",
     rating: _generateRating(),
@@ -693,6 +704,7 @@ var otherUsers = [
   {
     id: 12,
     _id: 12,
+    key: "12",
     username: "Julia PA",
     name: "Julia Paris Almodobar",
     rating: _generateRating(),
@@ -710,6 +722,7 @@ var otherUsers = [
   {
     id: 13,
     _id: 13,
+    key: "13",
     username: "Marina34",
     name: "Marina Canelon",
     rating: _generateRating(),
@@ -727,6 +740,7 @@ var otherUsers = [
   {
     id: 14,
     _id: 14,
+    key: "14",
     username: "Pepe213",
     name: "Pedro Eduardo Padilla Erasmo",
     rating: _generateRating(),
@@ -744,6 +758,7 @@ var otherUsers = [
   {
     id: 15,
     _id: 15,
+    key: "15",
     username: "Mauricio99",
     name: "Mauricio Zapata",
     rating: _generateRating(),
@@ -761,6 +776,7 @@ var otherUsers = [
   {
     id: 16,
     _id: 16,
+    key: "16",
     username: "Paco007",
     name: "Pierre A Cordoba O",
     rating: _generateRating(),
@@ -778,6 +794,7 @@ var otherUsers = [
   {
     id: 17,
     _id: 17,
+    key: "17",
     username: "Ester64",
     name: "Ester Zulillo",
     rating: _generateRating(),
@@ -795,6 +812,7 @@ var otherUsers = [
   {
     id: 18,
     _id: 18,
+    key: "18",
     username: "Manuel45",
     name: "Manuel Marruero",
     rating: _generateRating(),
@@ -812,6 +830,7 @@ var otherUsers = [
   {
     id: 19,
     _id: 19,
+    key: "19",
     username: "Laiia12",
     name: "Laila Torres",
     rating: _generateRating(),
@@ -829,6 +848,7 @@ var otherUsers = [
   {
     id: 20,
     _id: 20,
+    key: "20",
     username: "LauraGarcia",
     name: "Laura Garcia",
     rating: _generateRating(),
@@ -1139,7 +1159,7 @@ function _othersRankingGlobal() {
   var afterAddingPositionUsersGlobal = [];
   var i = 1;
 
-  _.forEach(otherUsersShuffleGlobal, function(user) {
+  _.forEach(otherUsersShuffleGlobal, function (user) {
     user.global_ranking = i;
     user.group = _generateGroup();
     i = i + 1;
@@ -1156,7 +1176,7 @@ function _othersRanking() {
   var afterAddingPositionUsers = [];
   var i = 1;
 
-  _.forEach(otherUsersShuffle, function(user) {
+  _.forEach(otherUsersShuffle, function (user) {
     user.group_ranking = i;
     user.group = usuarioActual.group;
     i = i + 1;
@@ -1181,7 +1201,7 @@ function _GroupRankings() {
   var grupo_objeto = {};
 
   // creating group object
-  _.forEach(shuffleNombreGrupos, function(group_name) {
+  _.forEach(shuffleNombreGrupos, function (group_name) {
     grupo_objeto.name = group_name;
     grupo_objeto.rating = _generateRating();
     grupo_objeto.members = _generateMembersCount();
@@ -1196,7 +1216,7 @@ function _GroupRankings() {
   afterAddingRatingGroups = _.reverse(afterAddingRatingGroups);
 
   //addding rank after sorting
-  _.forEach(afterAddingRatingGroups, function(group) {
+  _.forEach(afterAddingRatingGroups, function (group) {
     group.rank = i;
     i = i + 1;
     afterAddingPositionGroups.push(group);
@@ -1626,7 +1646,7 @@ function _notifications() {
   var notificationsArray = [];
   var i = 1;
 
-  _.forEach(otherUsersShuffleGlobal, function(user) {
+  _.forEach(otherUsersShuffleGlobal, function (user) {
     user.global_ranking = i;
     user.group = _generateGroup();
     user.created_at = _generateDatePastSimple();
@@ -1644,7 +1664,7 @@ function _valorations() {
   var notificationsArray = [];
   var i = 1;
 
-  _.forEach(otherUsersShuffleGlobal, function(user) {
+  _.forEach(otherUsersShuffleGlobal, function (user) {
     user.global_ranking = i;
     user.group = _generateGroup();
     user.created_at = _generateDatePastSimple();
