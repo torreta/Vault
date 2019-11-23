@@ -1,10 +1,13 @@
 import * as React from "react";
 import {
+  StyleSheet,
   View,
   Dimensions,
   ScrollView,
   TouchableOpacity,
-  Image
+  Image,
+  ActivityIndicator,
+  Text
 } from "react-native";
 import { BackHandler } from "react-native";
 import { GenericHeader } from "../components/GenericHeader";
@@ -19,7 +22,11 @@ export default class ImageGallery extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { items: [] };
+    this.state = {
+      items: [],
+      loading: true,
+      conversationExists: true
+    };
   }
 
   static navigationOptions = {
@@ -37,21 +44,24 @@ export default class ImageGallery extends React.Component {
   }
 
   _shareImages() {
-    ApiUtils.get(
-      `${API.url}api/conversations/${this.props.navigation.state.params.conversationId}/media`
-    )
-      .then(response => {
-        // console.log("imagenes del canal", response);
-        let items = response.map((message, i) => {
-          //Using demo placeholder images but you can add your images here
-          return { id: message._id, src: message.image };
-        });
-        console.log(items);
-        this.setState({ items })
-      })
-      .catch(error => {
-        console.log("error al buscar imagenes", error);
-      })
+    if (this.props.navigation.state.params.conversationId != 0) {
+      ApiUtils.get(
+        `${API.url}api/conversations/${this.props.navigation.state.params.conversationId}/media`
+      )
+        .then(response => {
+          // console.log("imagenes del canal", response);
+          let items = response.map((message, i) => {
+            //Using demo placeholder images but you can add your images here
+            return { id: message._id, src: message.image };
+          });
+          this.setState({ items, loading: false, conversationExists: true })
+        })
+        .catch(error => {
+          console.log("error al buscar imagenes", error);
+        })
+    } else {
+      this.setState({ items: [], loading: false, conversationExists: false })
+    }
   }
 
   _renderElements() {
@@ -65,16 +75,27 @@ export default class ImageGallery extends React.Component {
   render() {
     //Photo Grid of images
     return (
-      <View style={{ justifyContent: 'center', flex: 1, marginTop: 20 }}>
+      <View style={styles.contentGalery}>
         <GenericHeader
           title="Galeria"
           navigation={this.props.navigation}
         />
         <ScrollView>
           <View
-            style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}
+            style={styles.imageContainer}
           >
-            {this._renderElements()}
+            {this.state.loading == true ?
+              (<ActivityIndicator
+                style={[styles.spinner, { height: 40 }]}
+                color={"rgb(57,62,70)"}
+                size="large"
+              />) :
+              (this.state.conversationExists == true ?
+                (this.state.items.length > 0 ?
+                  (this._renderElements()) :
+                  (<Text> La conversacion no posee ninguna imagen todavia </Text>)) :
+                (<Text> Usted no posee una conversacion con este usuario, para iniciarla debe hacerlo desde la pantalla anterior </Text>)
+              )}
           </View>
         </ScrollView>
       </View>
@@ -95,17 +116,39 @@ export class ImageElement extends React.Component {
   render() {
     return (
       <TouchableOpacity
-        style={{ height: photo_cell_width, width: photo_cell_width, margin: 1 }}
+        style={styles.imageItemPress}
         onPress={() => this._onPhotoPress({ uri: this.props.src })}
       >
         <Image
           key={this.props.id}
           source={{ uri: this.props.src }}
-          style={{ height: photo_cell_width, width: photo_cell_width }}
+          style={styles.imageItem}
           resizeMode="cover"
         />
-
       </TouchableOpacity>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  contentGalery: {
+    justifyContent: 'center',
+    flex: 1, marginTop: 20
+  },
+  imageContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    flexWrap: "wrap"
+  },
+  imageItemPress: {
+    height: photo_cell_width,
+    width: photo_cell_width,
+    margin: 1
+  },
+  imageItem: {
+    height: photo_cell_width,
+    width: photo_cell_width
+  },
+  textMessage: {}
+})

@@ -40,7 +40,7 @@ export default class ImageDisplayer extends React.Component {
           title="Imagen"
           navigation={this.props.navigation}
         />
-        <ImageViewer imageUrls={images} />
+        <ImageViewer imageUrls={images} renderIndicator={() => null} />
       </View>
     );
 
