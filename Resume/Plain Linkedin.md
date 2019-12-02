@@ -2,7 +2,7 @@ BIO:
 
 En General, soy metódico, me gusta aprender y soy rápido en ello, soy excelente para ubicar errores y flancos en general de los proyectos; soy pro convenios, hacer tracing, escribir logs, documentación y pruebas, Sería ideal para mi solucionar y automatizar problemas comunes de manera eficiente, me llama mucho poder prestar un servicio o simplemente optimizar uno existente. Más que cualquier otra cosa, ayudar a crear proyectos que hagan la vida más fácil. Y si de algo vale, poner mi grano de arena para que avancemos como civilización. Juzga mis habilidades, si aprendo en el proceso, ¡mejor!
 
-
+Sabes cuando cocinas y le das comida a alguien y sonrie cuando lo prueban? bueno, quiero escribir codigo que haga lo mismo cuando lo lean, dificil eh? he visto a la tecnologia mejorar vidas en muchos sentidos, quiero ser parte de eso, despues de todo, he visto mi propio trabajo traer prosperidad, me alegra que quizas algo que haga yo ayude a alguien, asi nunca conosca a esa persona, despues de todo, la tecnologia es lo mas cercano que tenemos a la magia. Soy generalista de corazon, pero practico como desarrollador, me gusta saber como funcionan las cosas, y me gusta ayudar a destruir mitos y fantasias sobre tecnologia y mas que hacer tareas, me gusta solucionar problemas. por eso automatizo, hago test unitarios, y hago lo posible por que la computadora haga lo pesado. si te paresco idealista, no lo soy, soy realista y humano con limitaciones fisicas, y por eso me gusta la Inteligencia Artificial, mas temprano que tarde veremos algo mas alla de nuestra imaginacion gracias a ello y me gusta pensar que ayudare a que no sea algo maligno.  
 
 
 Ingeniero Consultor:
