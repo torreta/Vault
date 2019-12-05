@@ -1,3 +1,7 @@
+#
+# some context:used this as a template for a seed on various projects, 
+# so im saving it here so it makes the search faster   
+#
 
 country_list = [
   ["Afghanistan ","AFG" ,"AF"],
