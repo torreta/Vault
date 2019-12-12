@@ -15,6 +15,33 @@ CUR_DIR=$(pwd)
 echo "zipping repos to pull"
 echo $CUR_DIR
 
+# copiar todo al repositorio espejo, sin node modules 
+# puede ser copiar y borrar o ignorar
+# quizas algunos archivos indicados en un blacklist
+
+
+
+# leer variables de entorno como claves desde un archivo que debemos ignorar
+
+
+# comprimir con clave y hacer split en pedazos de 10 megas de todo el repo
+# la clave no debe estar escrita en el comando sino de una variable de entorno
+
+
+
+
+# hacer un repositorio de github con ese archivo
+
+
+# hacer comits todos los dias a ese repo con todo el codigo (cromjob de bash?)
+# quizas aprender a hacer algo en auto.it
+
+# 
+
+
+
+
+
 
 
 
