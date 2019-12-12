@@ -18,7 +18,7 @@ echo $CUR_DIR
 # copiar todo al repositorio espejo, sin node modules 
 # puede ser copiar y borrar o ignorar
 # quizas algunos archivos indicados en un blacklist
-
+# https://stackoverflow.com/questions/2193584/copy-folder-recursively-excluding-some-folders
 
 
 # leer variables de entorno como claves desde un archivo que debemos ignorar
