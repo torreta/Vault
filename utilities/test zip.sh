@@ -6,7 +6,7 @@
 # some context, i want to make an automathic backup of all my days work.
 # compresed but for now im just saving my advances since its a little more
 # complex my idea.
-
+# https://www.dotnetperls.com/7-zip-examples
 
 # store the current dir
 CUR_DIR=$(pwd)
