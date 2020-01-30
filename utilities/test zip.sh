@@ -19,7 +19,8 @@ echo $CUR_DIR
 # puede ser copiar y borrar o ignorar
 # quizas algunos archivos indicados en un blacklist
 # https://stackoverflow.com/questions/2193584/copy-folder-recursively-excluding-some-folders
-
+# ej: 
+# 7z a -r testenado_zip.zip .\App-Wilson\ -x"!.\App-Wilson\node_modules\*" 
 
 # leer variables de entorno como claves desde un archivo que debemos ignorar
 
@@ -37,11 +38,6 @@ echo $CUR_DIR
 # quizas aprender a hacer algo en auto.it
 
 # 
-
-
-
-
-
 
 
 
