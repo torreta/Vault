@@ -55,16 +55,17 @@ export var ApiUtils = {
       }
 
       console.log("error especifico en el fetch (checkstatus)");
-      console.log(response);
+      // console.log(response);
       console.log(source);
 
       switch (source) {
         case "password":
           if (error == "request") {
-            //el mensaje de error que me da el endpoint (email en uso)(registro)
-            mensaje = "Correo no registrado";
-            // NOTA: ESTE ERROR DEBERIA ESTAR FOMALITO POR EL MODULO DE TRADUCCIONES
-            throw new Error(mensaje);
+            // el mensaje de error que me da el endpoint (email en uso)(registro)
+            // NOTA: ESTE ERROR DEBERIA ESTAR FOMALITO POR EL MODULO DE TRADUCCIONES (?)
+            await response.json().then(function (data) {
+              throw new Error(data.message);
+            })
           }
           break;
         case "register":
@@ -113,17 +114,23 @@ export var ApiUtils = {
         case "facebook":
           if (error == "entity") {
             //el mensaje de error que me da el endpoint (email en uso)(registro)
-            mensaje = JSON.parse(response._bodyInit).message;
+            // mensaje = JSON.parse(response._bodyInit).message;
             // NOTA: ESTE ERROR DEBERIA ESTAR FOMALITO POR EL MODULO DE TRADUCCIONES
-            throw new Error(mensaje);
+            // throw new Error(mensaje);
+            await response.json().then(function (data) {
+              throw new Error(data.message);
+            });
           }
           if (error == "request") {
             //el mensaje de error que me da el endpoint (email en uso)(registro)
             // NOTA: ESTE ERROR DEBERIA ESTAR FOMALITO POR EL MODULO DE TRADUCCIONES
-            console.log("RESPONSE LITERAL DEL API DE REGRESO /SOCIAL")
-            mensaje = JSON.parse(response._bodyInit).message;
-            console.log(mensaje)
-            throw new Error(mensaje);
+            // console.log("RESPONSE LITERAL DEL API DE REGRESO /SOCIAL")
+            // mensaje = JSON.parse(response._bodyInit).message;
+            // console.log(mensaje)
+            // throw new Error(mensaje);
+            await response.json().then(function (data) {
+              throw new Error(data.message);
+            });
           }
           break;
         case "joinChannel":
@@ -535,7 +542,20 @@ export var ApiUtils = {
   },
 
   subscribe: async function () {
-    let push_token = await AsyncStorage.getItem("push_token");
+    let push_token = null;
+
+    try {
+      push_token = await AsyncStorage.getItem("push_token");
+    } catch{
+      console.log("push_token vacio para el subscribe, ignoro enviarlo");
+    }
+
+    console.log("supuestamente tengo un valor a subscribir");
+    if (!push_token) {
+      console.log("push_token esta vacio tiene: " + push_token + " evitando subscripcion");
+      return;
+    }
+
     let token = store.getState().authentication.token;
     let url = API.url + "api/users/notifications/subscription";
     let body = { deviceId: push_token };

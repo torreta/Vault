@@ -36,7 +36,7 @@ var true_group_info = [
     image: require("../assets/images/conspiradores/conspiradores.png"),
     title: "Conspiradores",
     description:
-      "Personas inteligentes, calculadoras y astutas que harán todo lo que esté en su mano para alcanzar sus metas y objetivos. Lo importante es lograr sus ambiciones. El fin justifica los medios.",
+      "Personas inteligentes, calculadoras y astutas que harán todo lo que esté en su mano para alcanzar sus metas y objetivos. Lo importante es lograr sus ambiciones.",
     color: "#818aff",
     conversationId: "5cd915d586d07d761bb8f8a1",
     id: "5cd915d586d07d761bb8f8b8"
