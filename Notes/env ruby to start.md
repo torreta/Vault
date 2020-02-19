@@ -11,9 +11,11 @@ https://guides.rubyonrails.org/getting_started.html
 # test before starting new
 gem update rails
 gem install railties
+bundle install --path vendor/bundle
+bundle config set path 'vendor/bundle'
 
 # start new api project
-rails new victory-api --api -T
+rails new pagoprueba-api --api -T
 
 # install dependencies
 bundle install
@@ -26,7 +28,7 @@ ridk install
 
 -----------------------APP 
 # new react project after node
- npx create-react-app victory-app
+ npx create-react-app pagoprueba-front
 
 # start server
  yarn start 
