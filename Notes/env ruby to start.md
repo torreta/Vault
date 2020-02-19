@@ -13,6 +13,7 @@ gem update rails
 gem install railties
 bundle install --path vendor/bundle
 bundle config set path 'vendor/bundle'
+https://github.com/rubygems/bundler/issues/6865
 
 # start new api project
 rails new pagoprueba-api --api -T
