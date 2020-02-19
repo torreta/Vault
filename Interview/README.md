@@ -1,68 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# link rails api devise
+https://github.com/lynndylanhurley/devise_token_auth
 
-## Available Scripts
+gem 'devise_token_auth' 
 
-In the project directory, you can run:
+alternativa 'knock'
 
-### `npm start`
+# ---------- scafolds semi validos
+ 
+rails g scaffold profile cedula:integer name:string 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+rails g scaffold bank name:string code:integer phone_registered:integer:uniq
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+rails g scaffold bank_account amount:float bank_id:references:bank
 
-### `npm test`
+rails g transaction amount:float sender_account_id:references:bank_account receiver_account_id:references:bank_account sender_id:user_id:references receiver_id:user_id:references 
+date:timestamp
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# chuleta
+:boolean
+:date
+:datetime
+:float
+:integer
+:timestamps
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# ref
+https://material-ui.com/es/components/menus/
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# commandos
+> levantar en otro puerto (choca con npx)
+rails s -p 3001 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> levantar el app con  (puerto 3000)
+yarn start
 
-### `npm run eject`
+# --------- Pantallas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ login - registro
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ perfil
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ boton logout
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ tranferir
 
-## Learn More
+ transacciones
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# seeds proximas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bank_list = [
+  ["Banco Central de Venezuela","0001"]
+  ["Banco Industrial de Venezuela, C.A. Banco Universal","0003"]
+  ["Banco de Venezuela S.A.C.A. Banco Universal","0102"]
+  ["Venezolano de Crédito, S.A. Banco Universal","0104"]
+  ["Banco Mercantil, C.A S.A.C.A. Banco Universal","0105"]
+  ["Banco Provincial, S.A. Banco Universal","0108"]
+  ["Bancaribe C.A. Banco Universal","0114"]
+  ["Banco Exterior C.A. Banco Universal","0115"]
+  ["Banco Occidental de Descuento, Banco Universal C.A.","0116"]
+  ["Banco Caroní C.A. Banco Universal","0128"]
+  ["Banesco Banco Universal S.A.C.A.","0134"]
+  ["Banco Sofitasa Banco Universal","0137"]
+  ["Banco Plaza Banco Universal","0138"]
+  ["Banco de la Gente Emprendedora C.A.","0146"]
+  ["Banco del Pueblo Soberano, C.A. Banco de Desarrollo","0149"]
+  ["BFC Banco Fondo Común C.A Banco Universal","0151"]
+  ["100% Banco, Banco Universal C.A.","0156"]
+  ["DelSur Banco Universal, C.A.","0157"]
+  ["Banco del Tesoro, C.A. Banco Universal","0163"]
+  ["Banco Agrícola de Venezuela, C.A. Banco Universal","0166"]
+  ["Bancrecer, S.A. Banco Microfinanciero","0168"]
+  ["Mi Banco Banco Microfinanciero C.A.","0169"]
+  ["Banco Activo, C.A. Banco Universal","0171"]
+  ["Bancamiga Banco Microfinanciero C.A.","0172"]
+  ["Banco Internacional de Desarrollo, C.A. Banco Universal","0173"]
+  ["Banplus Banco Universal, C.A.","0174"]
+  ["Banco Bicentenario Banco Universal C.A.","0175"]
+  ["Banco Espirito Santo, S.A. Sucursal Venezuela B.U.","0176"]
+  ["Banco de la Fuerza Armada Nacional Bolivariana, B.U.","0177"]
+  ["Citibank N.A.","0190"]
+  ["Banco Nacional de Crédito, C.A. Banco Universal","0191"]
+  ["Instituto Municipal de Crédito Popular","0601"]
+]
 
-### Code Splitting
+bank_list.each do |name, code3, code2|
+  Country.create( name: name, code: code3)
+end
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# install yarn 
+yarn start
