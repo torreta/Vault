@@ -25,7 +25,7 @@
 #   database: db/production.sqlite3
 
 
-# development:
+ development:
   adapter: postgresql
   encoding: unicode
   database: pagoprueba-api
