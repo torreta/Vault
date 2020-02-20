@@ -94,7 +94,7 @@ class SignIn extends React.Component {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Acceso
         </Typography>
         <form className={classes.form} noValidate onSubmit={this.onSubmit}>
           <TextField
@@ -103,7 +103,7 @@ class SignIn extends React.Component {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="Correo"
             name="email"
             autoComplete="email"
             onChange={this.handleChange}
@@ -114,7 +114,7 @@ class SignIn extends React.Component {
             margin="normal"
             required
             fullWidth
-            name="password"
+            name="Contraseña"
             label="Password"
             type="password"
             id="password"
@@ -132,17 +132,17 @@ class SignIn extends React.Component {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            Entrar
           </Button>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
-                Forgot password?
+                Olvidaste tu Contraseña?
               </Link>
             </Grid>
             <Grid item>
               <Link href="/signup" variant="body2">
-                {"Don't have an account? Sign Up"}
+                {"No tienes cuenta? Registrate"}
               </Link>
             </Grid>
           </Grid>
