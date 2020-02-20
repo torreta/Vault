@@ -974,3 +974,102 @@ Migrating to CreateBanks (20200220051243)
   [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(4514104601314011795)[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Central de Venezuela"], ["code", 1], ["created_at", "2020-02-20 05:21:47.660686"], ["updated_at", "2020-02-20 05:21:47.660686"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Industrial de Venezuela, C.A. Banco Universal"], ["code", 3], ["created_at", "2020-02-20 05:21:47.665517"], ["updated_at", "2020-02-20 05:21:47.665517"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco de Venezuela S.A.C.A. Banco Universal"], ["code", 102], ["created_at", "2020-02-20 05:21:47.667469"], ["updated_at", "2020-02-20 05:21:47.667469"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Venezolano de Crédito, S.A. Banco Universal"], ["code", 104], ["created_at", "2020-02-20 05:21:47.669422"], ["updated_at", "2020-02-20 05:21:47.669422"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Mercantil, C.A S.A.C.A. Banco Universal"], ["code", 105], ["created_at", "2020-02-20 05:21:47.671369"], ["updated_at", "2020-02-20 05:21:47.671369"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Provincial, S.A. Banco Universal"], ["code", 108], ["created_at", "2020-02-20 05:21:47.673336"], ["updated_at", "2020-02-20 05:21:47.673336"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bancaribe C.A. Banco Universal"], ["code", 114], ["created_at", "2020-02-20 05:21:47.675282"], ["updated_at", "2020-02-20 05:21:47.675282"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Exterior C.A. Banco Universal"], ["code", 115], ["created_at", "2020-02-20 05:21:47.678210"], ["updated_at", "2020-02-20 05:21:47.678210"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Occidental de Descuento, Banco Universal C.A."], ["code", 116], ["created_at", "2020-02-20 05:21:47.680162"], ["updated_at", "2020-02-20 05:21:47.680162"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Caroní C.A. Banco Universal"], ["code", 128], ["created_at", "2020-02-20 05:21:47.682113"], ["updated_at", "2020-02-20 05:21:47.682113"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banesco Banco Universal S.A.C.A."], ["code", 134], ["created_at", "2020-02-20 05:21:47.684070"], ["updated_at", "2020-02-20 05:21:47.684070"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Sofitasa Banco Universal"], ["code", 137], ["created_at", "2020-02-20 05:21:47.686022"], ["updated_at", "2020-02-20 05:21:47.686022"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Plaza Banco Universal"], ["code", 138], ["created_at", "2020-02-20 05:21:47.687970"], ["updated_at", "2020-02-20 05:21:47.687970"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco de la Gente Emprendedora C.A."], ["code", 146], ["created_at", "2020-02-20 05:21:47.689928"], ["updated_at", "2020-02-20 05:21:47.689928"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco del Pueblo Soberano, C.A. Banco de Desarrollo"], ["code", 149], ["created_at", "2020-02-20 05:21:47.691881"], ["updated_at", "2020-02-20 05:21:47.691881"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "BFC Banco Fondo Común C.A Banco Universal"], ["code", 151], ["created_at", "2020-02-20 05:21:47.694811"], ["updated_at", "2020-02-20 05:21:47.694811"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "100% Banco, Banco Universal C.A."], ["code", 156], ["created_at", "2020-02-20 05:21:47.696764"], ["updated_at", "2020-02-20 05:21:47.696764"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "DelSur Banco Universal, C.A."], ["code", 157], ["created_at", "2020-02-20 05:21:47.698717"], ["updated_at", "2020-02-20 05:21:47.698717"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco del Tesoro, C.A. Banco Universal"], ["code", 163], ["created_at", "2020-02-20 05:21:47.700671"], ["updated_at", "2020-02-20 05:21:47.700671"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Agrícola de Venezuela, C.A. Banco Universal"], ["code", 166], ["created_at", "2020-02-20 05:21:47.702624"], ["updated_at", "2020-02-20 05:21:47.702624"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bancrecer, S.A. Banco Microfinanciero"], ["code", 168], ["created_at", "2020-02-20 05:21:47.704576"], ["updated_at", "2020-02-20 05:21:47.704576"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mi Banco Banco Microfinanciero C.A."], ["code", 169], ["created_at", "2020-02-20 05:21:47.706521"], ["updated_at", "2020-02-20 05:21:47.706521"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Activo, C.A. Banco Universal"], ["code", 171], ["created_at", "2020-02-20 05:21:47.709458"], ["updated_at", "2020-02-20 05:21:47.709458"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bancamiga Banco Microfinanciero C.A."], ["code", 172], ["created_at", "2020-02-20 05:21:47.711413"], ["updated_at", "2020-02-20 05:21:47.711413"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Internacional de Desarrollo, C.A. Banco Universal"], ["code", 173], ["created_at", "2020-02-20 05:21:47.713361"], ["updated_at", "2020-02-20 05:21:47.713361"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banplus Banco Universal, C.A."], ["code", 174], ["created_at", "2020-02-20 05:21:47.715318"], ["updated_at", "2020-02-20 05:21:47.715318"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Bicentenario Banco Universal C.A."], ["code", 175], ["created_at", "2020-02-20 05:21:47.717277"], ["updated_at", "2020-02-20 05:21:47.717277"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Espirito Santo, S.A. Sucursal Venezuela B.U."], ["code", 176], ["created_at", "2020-02-20 05:21:47.719230"], ["updated_at", "2020-02-20 05:21:47.719230"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco de la Fuerza Armada Nacional Bolivariana, B.U."], ["code", 177], ["created_at", "2020-02-20 05:21:47.721177"], ["updated_at", "2020-02-20 05:21:47.721177"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Citibank N.A."], ["code", 190], ["created_at", "2020-02-20 05:21:47.724101"], ["updated_at", "2020-02-20 05:21:47.724101"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Banco Nacional de Crédito, C.A. Banco Universal"], ["code", 191], ["created_at", "2020-02-20 05:21:47.726059"], ["updated_at", "2020-02-20 05:21:47.726059"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Instituto Municipal de Crédito Popular"], ["code", 601], ["created_at", "2020-02-20 05:21:47.728012"], ["updated_at", "2020-02-20 05:21:47.728012"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
