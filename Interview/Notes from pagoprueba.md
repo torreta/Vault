@@ -1,6 +1,14 @@
 # por ser una subcarpeta de un git mayor se creo con el comando
 rails new pagoprueba-api --api -T --skip-git
 
+# la aplicacion react la cree con 
+ npx create-react-app pagoprueba-front
+
+# le agrego react core (app)
+https://material-ui.com/getting-started/installation/
+ yarn add @material-ui/core
+
+
 # link rails api devise (para autenticacion)
 https://github.com/lynndylanhurley/devise_token_auth
 
