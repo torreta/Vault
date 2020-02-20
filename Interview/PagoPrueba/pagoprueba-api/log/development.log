@@ -526,3 +526,379 @@ vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
 vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
 vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
 vendor/bundle/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started OPTIONS "/auth" for ::1 at 2020-02-19 23:28:34 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/auth" for ::1 at 2020-02-19 23:28:35 -0400
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"name"=>"luis", "email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]", "registration"=>{"name"=>"luis", "email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameters: :name, :registration
+Unpermitted parameters: :name, :registration
+Unpermitted parameters: :name, :registration
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "luiscampostorreta@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["uid", "luiscampostorreta@gmail.com"], ["encrypted_password", "$2a$11$13USPFR5lZSlLZhR4dBUEenMM8jgUHknCZAxv4daUJ1X4jdd5/ccK"], ["email", "luiscampostorreta@gmail.com"], ["created_at", "2020-02-20 03:28:41.802295"], ["updated_at", "2020-02-20 03:28:41.802295"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"expiry\\\":1583378921}}\""], ["updated_at", "2020-02-20 03:28:41.888200"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$xFmF0CXs1Bmqcj54Lbcvjen08C7je20P/k2Y3RELWTPzvbWtIxOOO\\\",\\\"expiry\\\":1583378921,\\\"last_token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"updated_at\\\":\\\"2020-02-20 03:28:41 UTC\\\"}}\""], ["updated_at", "2020-02-20 03:28:41.981944"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 6639ms (Views: 0.6ms | ActiveRecord: 15.7ms)
+
+
+Started OPTIONS "/auth/sign_in" for ::1 at 2020-02-19 23:34:58 -0400
+Started OPTIONS "/auth/sign_in" for ::1 at 2020-02-19 23:34:58 -0400
+Started OPTIONS "/auth/sign_in" for ::1 at 2020-02-19 23:34:58 -0400
+Started GET "/auth/sign_in" for ::1 at 2020-02-19 23:34:58 -0400
+Started POST "/auth/sign_in" for ::1 at 2020-02-19 23:34:58 -0400
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Processing by DeviseTokenAuth::SessionsController#create as */*
+Started POST "/auth/sign_in" for ::1 at 2020-02-19 23:34:58 -0400
+Started POST "/auth/sign_in" for ::1 at 2020-02-19 23:34:58 -0400
+Completed 405 Method Not Allowed in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  Parameters: {"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]"}}
+Processing by DeviseTokenAuth::SessionsController#create as */*
+Processing by DeviseTokenAuth::SessionsController#create as */*
+Unpermitted parameter: :session
+  Parameters: {"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]"}}
+  Parameters: {"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "luiscampostorreta@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$xFmF0CXs1Bmqcj54Lbcvjen08C7je20P/k2Y3RELWTPzvbWtIxOOO\\\",\\\"expiry\\\":1583378921,\\\"last_token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"updated_at\\\":\\\"2020-02-20 03:28:41 UTC\\\"},\\\"J_68Ho7y4JtBicNezS1hpw\\\":{\\\"token\\\":\\\"$2a$10$/VG8e3Wt1xpcMm4i5Jt1DewUGGYrA74mtgERM6VLB6K/NeP0cwq5S\\\",\\\"expiry\\\":1583379299}}\""], ["updated_at", "2020-02-20 03:34:59.241775"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `current_sign_in_at' for #<User:0x54277e0>):
+  
+vendor/bundle/gems/activemodel-5.1.7/lib/active_model/attribute_methods.rb:432:in `method_missing'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:21:in `update_tracked_fields'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:39:in `update_tracked_fields!'
+vendor/bundle/gems/devise-4.7.1/lib/devise/hooks/trackable.rb:9:in `block in <top (required)>'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:15:in `block in _run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `each'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:52:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/proxy.rb:191:in `set_user'
+vendor/bundle/gems/devise-4.7.1/lib/devise/controllers/sign_in_out.rb:53:in `sign_in'
+vendor/bundle/gems/devise_token_auth-1.1.3/app/controllers/devise_token_auth/sessions_controller.rb:32:in `create'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:46:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/bundle/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "luiscampostorreta@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "luiscampostorreta@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (204.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$xFmF0CXs1Bmqcj54Lbcvjen08C7je20P/k2Y3RELWTPzvbWtIxOOO\\\",\\\"expiry\\\":1583378921,\\\"last_token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"updated_at\\\":\\\"2020-02-20 03:28:41 UTC\\\"},\\\"J_68Ho7y4JtBicNezS1hpw\\\":{\\\"token\\\":\\\"$2a$10$/VG8e3Wt1xpcMm4i5Jt1DewUGGYrA74mtgERM6VLB6K/NeP0cwq5S\\\",\\\"expiry\\\":1583379299},\\\"z_2JUzdNiM0WhDkWUrdl2Q\\\":{\\\"token\\\":\\\"$2a$10$Dv4r6VVZMcfSv1xFH6OAG.9OQQHMZnEzA31QycZDKHtQge36eqM/q\\\",\\\"expiry\\\":1583379299}}\""], ["updated_at", "2020-02-20 03:34:59.778846"], ["id", 1]]
+  [1m[35mSQL (4.8ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$xFmF0CXs1Bmqcj54Lbcvjen08C7je20P/k2Y3RELWTPzvbWtIxOOO\\\",\\\"expiry\\\":1583378921,\\\"last_token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"updated_at\\\":\\\"2020-02-20 03:28:41 UTC\\\"},\\\"J_68Ho7y4JtBicNezS1hpw\\\":{\\\"token\\\":\\\"$2a$10$/VG8e3Wt1xpcMm4i5Jt1DewUGGYrA74mtgERM6VLB6K/NeP0cwq5S\\\",\\\"expiry\\\":1583379299},\\\"Dld8gL2lPm4sgHnpNmuITQ\\\":{\\\"token\\\":\\\"$2a$10$Y00QAcZlwzxGzxZsAN0lKOYg.r5p8JmtERkawl8Z4qKFgYjKx4.62\\\",\\\"expiry\\\":1583379299}}\""], ["updated_at", "2020-02-20 03:34:59.780856"], ["id", 1]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 883ms (ActiveRecord: 304.7ms)
+
+
+  [1m[35m (32.2ms)[0m  [1m[35mCOMMIT[0m
+  
+Completed 500 Internal Server Error in 915ms (ActiveRecord: 143.5ms)
+
+
+NoMethodError (undefined method `current_sign_in_at' for #<User:0x5eeb1d8>):
+  
+  
+NoMethodError (undefined method `current_sign_in_at' for #<User:0x5eeaf38>):
+vendor/bundle/gems/activemodel-5.1.7/lib/active_model/attribute_methods.rb:432:in `method_missing'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:21:in `update_tracked_fields'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:39:in `update_tracked_fields!'
+vendor/bundle/gems/devise-4.7.1/lib/devise/hooks/trackable.rb:9:in `block in <top (required)>'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:15:in `block in _run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `each'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:52:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/proxy.rb:191:in `set_user'
+vendor/bundle/gems/devise-4.7.1/lib/devise/controllers/sign_in_out.rb:53:in `sign_in'
+vendor/bundle/gems/devise_token_auth-1.1.3/app/controllers/devise_token_auth/sessions_controller.rb:32:in `create'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:46:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/bundle/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+vendor/bundle/gems/activemodel-5.1.7/lib/active_model/attribute_methods.rb:432:in `method_missing'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:21:in `update_tracked_fields'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:39:in `update_tracked_fields!'
+vendor/bundle/gems/devise-4.7.1/lib/devise/hooks/trackable.rb:9:in `block in <top (required)>'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:15:in `block in _run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `each'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:52:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/proxy.rb:191:in `set_user'
+vendor/bundle/gems/devise-4.7.1/lib/devise/controllers/sign_in_out.rb:53:in `sign_in'
+vendor/bundle/gems/devise_token_auth-1.1.3/app/controllers/devise_token_auth/sessions_controller.rb:32:in `create'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:46:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/bundle/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/auth/sign_in" for ::1 at 2020-02-19 23:35:33 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "luiscampostorreta@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$xFmF0CXs1Bmqcj54Lbcvjen08C7je20P/k2Y3RELWTPzvbWtIxOOO\\\",\\\"expiry\\\":1583378921,\\\"last_token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"updated_at\\\":\\\"2020-02-20 03:28:41 UTC\\\"},\\\"J_68Ho7y4JtBicNezS1hpw\\\":{\\\"token\\\":\\\"$2a$10$/VG8e3Wt1xpcMm4i5Jt1DewUGGYrA74mtgERM6VLB6K/NeP0cwq5S\\\",\\\"expiry\\\":1583379299},\\\"Dld8gL2lPm4sgHnpNmuITQ\\\":{\\\"token\\\":\\\"$2a$10$Y00QAcZlwzxGzxZsAN0lKOYg.r5p8JmtERkawl8Z4qKFgYjKx4.62\\\",\\\"expiry\\\":1583379299},\\\"Z8f5rJCzebuFasIKaKvWbg\\\":{\\\"token\\\":\\\"$2a$10$lQB2Qrbhh8/mi5ZnEMg/lepNHnh/yABCMrQScHeSCD850U99ITE6a\\\",\\\"expiry\\\":1583379340}}\""], ["updated_at", "2020-02-20 03:35:40.664899"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 6483ms (ActiveRecord: 12.6ms)
+
+
+  
+NoMethodError (undefined method `current_sign_in_at' for #<User:0x5829ee8>):
+  
+vendor/bundle/gems/activemodel-5.1.7/lib/active_model/attribute_methods.rb:432:in `method_missing'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:21:in `update_tracked_fields'
+vendor/bundle/gems/devise-4.7.1/lib/devise/models/trackable.rb:39:in `update_tracked_fields!'
+vendor/bundle/gems/devise-4.7.1/lib/devise/hooks/trackable.rb:9:in `block in <top (required)>'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:15:in `block in _run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `each'
+vendor/bundle/gems/warden-1.2.8/lib/warden/hooks.rb:10:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:52:in `_run_callbacks'
+vendor/bundle/gems/warden-1.2.8/lib/warden/proxy.rb:191:in `set_user'
+vendor/bundle/gems/devise-4.7.1/lib/devise/controllers/sign_in_out.rb:53:in `sign_in'
+vendor/bundle/gems/devise_token_auth-1.1.3/app/controllers/devise_token_auth/sessions_controller.rb:32:in `create'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/bundle/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/mapper.rb:46:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/bundle/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/etag.rb:27:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/activerecord-5.1.7/lib/active_record/migration.rb:556:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.7/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.7/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.7/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.2.2/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/gems/railties-5.1.7/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
