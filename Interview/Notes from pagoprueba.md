@@ -1,5 +1,11 @@
+:::::: api
+
 # por ser una subcarpeta de un git mayor se creo con el comando
 rails new pagoprueba-api --api -T --skip-git
+
+# devise token auth
+https://github.com/lynndylanhurley/devise_token_auth
+rails g devise_token_auth:install User auth
 
 # la aplicacion react la cree con 
  npx create-react-app pagoprueba-front
@@ -49,11 +55,11 @@ yarn start
 
 # --------- Pantallas
 
- login - registro
+ login - registro (ok)
 
- perfil
+ perfil 
 
- boton logout
+ boton logout (ok)
 
  tranferir
 
