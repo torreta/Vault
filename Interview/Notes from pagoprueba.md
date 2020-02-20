@@ -1,5 +1,18 @@
-:::::: api
+Notas Generales: (para Leoner) 
 
+empeze a las 8 pm (un pelo antes mientras cocinaba / deje de codear a las 2am)
+y dure este rato terminando de subir cosas al git y escribir esta nota
+
+- el api sirve pero le falta seed/factories a todo lo que no es banco 
+- los modelos estan funcionando bien chequeando por 'rails c' y postman
+- el front solo pude hacer arreglos visuales (loguea y registra si te fijas en la consola JS) 
+- hice 3 rutas en el front /dasboard /signup /signin
+- pensaba hacer el resto de las cosas tipo SPA y ocultando segmentos (me quede sin tiempo)
+- agradesco la oportunidad pero el tiempo me parece poco si se necesita algo funcional mas que maquetado
+- gracias por la oportunidad
+
+
+:::::: api
 # por ser una subcarpeta de un git mayor se creo con el comando
 rails new pagoprueba-api --api -T --skip-git
 
@@ -7,41 +20,28 @@ rails new pagoprueba-api --api -T --skip-git
 https://github.com/lynndylanhurley/devise_token_auth
 rails g devise_token_auth:install User auth
 
+:::::: front
 # la aplicacion react la cree con 
  npx create-react-app pagoprueba-front
 
-# le agrego react core (app)
+# le agrego react core (app - para maquetado)
 https://material-ui.com/getting-started/installation/
  yarn add @material-ui/core
 
-
-# link rails api devise (para autenticacion)
-https://github.com/lynndylanhurley/devise_token_auth
-
-gem 'devise_token_auth' 
-
-alternativa 'knock'
-
-# ---------- scafolds semi validos
+::::::: avances (de ser posible ver comentarios de git)
+# ---------- scafolds usados (menos el remake) (+seeds de bancos)
 rails new pagoprueba-api --api -T --skip-git
  
-rails g scaffold profile cedula:integer name:string 
+rails g scaffold profile cedula:integer name:string  (ok)
 
-rails g scaffold bank name:string code:integer phone_registered:integer:uniq
+rails g scaffold bank name:string code:integer (ok)
 
-rails g scaffold bank_account amount:float bank_id:references:bank
+rails g scaffold bank_account amount:float phone:integer bank:references user:references (ok)
 
-rails g transaction amount:float sender_account_id:references:bank_account receiver_account_id:references:bank_account sender_id:user_id:references receiver_id:user_id:references 
-date:timestamp
+rails g scaffold transaction amount:float sender_account_id:references:bank_account receiver_account_id:references:bank_account sender_id:user_id:references receiver_id:user_id:references 
+date:timestamp (remake)
 
-# chuleta
-:boolean
-:date
-:datetime
-:float
-:integer
-:timestamps
-
+rails g scaffold transaction amount:float sender_account:references  receiver_account:references sender:references receiver:references date:timestamp (ok)
 
 # ref
 https://material-ui.com/es/components/menus/
@@ -55,56 +55,14 @@ yarn start
 
 # --------- Pantallas
 
- login - registro (ok)
+ login - registro (ok, maquetado funciona, sin redireccion) (/ -/signin - /signup)
+
+ Dashboard - intento de pantalla principal despues de loguear (solo visual) (/dashboard)
 
  perfil 
 
- boton logout (ok)
+ boton logout (maquetado funciona en api )
 
  tranferir
 
- transacciones
-
-# seeds proximas
-
-bank_list = [
-  ["Banco Central de Venezuela","0001"]
-  ["Banco Industrial de Venezuela, C.A. Banco Universal","0003"]
-  ["Banco de Venezuela S.A.C.A. Banco Universal","0102"]
-  ["Venezolano de Crédito, S.A. Banco Universal","0104"]
-  ["Banco Mercantil, C.A S.A.C.A. Banco Universal","0105"]
-  ["Banco Provincial, S.A. Banco Universal","0108"]
-  ["Bancaribe C.A. Banco Universal","0114"]
-  ["Banco Exterior C.A. Banco Universal","0115"]
-  ["Banco Occidental de Descuento, Banco Universal C.A.","0116"]
-  ["Banco Caroní C.A. Banco Universal","0128"]
-  ["Banesco Banco Universal S.A.C.A.","0134"]
-  ["Banco Sofitasa Banco Universal","0137"]
-  ["Banco Plaza Banco Universal","0138"]
-  ["Banco de la Gente Emprendedora C.A.","0146"]
-  ["Banco del Pueblo Soberano, C.A. Banco de Desarrollo","0149"]
-  ["BFC Banco Fondo Común C.A Banco Universal","0151"]
-  ["100% Banco, Banco Universal C.A.","0156"]
-  ["DelSur Banco Universal, C.A.","0157"]
-  ["Banco del Tesoro, C.A. Banco Universal","0163"]
-  ["Banco Agrícola de Venezuela, C.A. Banco Universal","0166"]
-  ["Bancrecer, S.A. Banco Microfinanciero","0168"]
-  ["Mi Banco Banco Microfinanciero C.A.","0169"]
-  ["Banco Activo, C.A. Banco Universal","0171"]
-  ["Bancamiga Banco Microfinanciero C.A.","0172"]
-  ["Banco Internacional de Desarrollo, C.A. Banco Universal","0173"]
-  ["Banplus Banco Universal, C.A.","0174"]
-  ["Banco Bicentenario Banco Universal C.A.","0175"]
-  ["Banco Espirito Santo, S.A. Sucursal Venezuela B.U.","0176"]
-  ["Banco de la Fuerza Armada Nacional Bolivariana, B.U.","0177"]
-  ["Citibank N.A.","0190"]
-  ["Banco Nacional de Crédito, C.A. Banco Universal","0191"]
-  ["Instituto Municipal de Crédito Popular","0601"]
-]
-
-bank_list.each do |name, code3, code2|
-  Country.create( name: name, code: code3)
-end
-
-# install yarn 
-yarn start
+ transacciones (maquetado)
