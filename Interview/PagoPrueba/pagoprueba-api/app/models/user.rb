@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   belongs_to :profile, dependent: :destroy
   
-  has_many: :bank_accounts
+  has_many :bank_accounts
   has_many :banks, through: :bank_accounts
 
   devise :database_authenticatable, :registerable,
