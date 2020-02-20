@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
   has_many :bank_accounts
   has_many :banks, through: :bank_accounts
 
+  has_many :sent_transactions, :class_name => 'Transaction', :foreign_key => 'sender_id'
+  has_many :received_transactions, :class_name => 'Transaction', :foreign_key => 'receiver_id'
+
   devise :database_authenticatable, :registerable,
          :recoverable
   include DeviseTokenAuth::Concerns::User
