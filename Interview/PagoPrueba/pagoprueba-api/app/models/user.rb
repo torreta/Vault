@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   belongs_to :profile, dependent: :destroy
+  
+  has_many: :bank_accounts
+  has_many :banks, through: :bank_accounts
 
   devise :database_authenticatable, :registerable,
          :recoverable
