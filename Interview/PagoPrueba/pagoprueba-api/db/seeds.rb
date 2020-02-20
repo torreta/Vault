@@ -42,5 +42,5 @@ bank_list = [
 ]
 
 bank_list.each do |name, code3, code2|
-  Country.create( name: name, code: code3)
+  Banks.create( name: name, code: code3)
 end
