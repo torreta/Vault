@@ -16,7 +16,7 @@ bundle config set path 'vendor/bundle'
 https://github.com/rubygems/bundler/issues/6865
 
 # start new api project
-rails new pagoprueba-api --api -T
+rails new pagoprueba-api --api -T --skip-git
 
 # install dependencies
 bundle install
