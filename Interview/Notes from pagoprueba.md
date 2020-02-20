@@ -1,4 +1,7 @@
-# link rails api devise
+# por ser una subcarpeta de un git mayor se creo con el comando
+rails new pagoprueba-api --api -T --skip-git
+
+# link rails api devise (para autenticacion)
 https://github.com/lynndylanhurley/devise_token_auth
 
 gem 'devise_token_auth' 
@@ -6,6 +9,7 @@ gem 'devise_token_auth'
 alternativa 'knock'
 
 # ---------- scafolds semi validos
+rails new pagoprueba-api --api -T --skip-git
  
 rails g scaffold profile cedula:integer name:string 
 
