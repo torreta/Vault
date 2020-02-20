@@ -128,6 +128,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  devise
   devise_token_auth
   pg
   puma (~> 3.7)
