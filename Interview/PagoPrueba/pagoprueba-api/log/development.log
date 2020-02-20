@@ -902,3 +902,23 @@ vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
 vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
 vendor/bundle/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
 vendor/bundle/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/auth/sign_in" for ::1 at 2020-02-19 23:37:57 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"luiscampostorreta@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "luiscampostorreta@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$xFmF0CXs1Bmqcj54Lbcvjen08C7je20P/k2Y3RELWTPzvbWtIxOOO\\\",\\\"expiry\\\":1583378921,\\\"last_token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"updated_at\\\":\\\"2020-02-20 03:28:41 UTC\\\"},\\\"J_68Ho7y4JtBicNezS1hpw\\\":{\\\"token\\\":\\\"$2a$10$/VG8e3Wt1xpcMm4i5Jt1DewUGGYrA74mtgERM6VLB6K/NeP0cwq5S\\\",\\\"expiry\\\":1583379299},\\\"Dld8gL2lPm4sgHnpNmuITQ\\\":{\\\"token\\\":\\\"$2a$10$Y00QAcZlwzxGzxZsAN0lKOYg.r5p8JmtERkawl8Z4qKFgYjKx4.62\\\",\\\"expiry\\\":1583379299},\\\"Z8f5rJCzebuFasIKaKvWbg\\\":{\\\"token\\\":\\\"$2a$10$lQB2Qrbhh8/mi5ZnEMg/lepNHnh/yABCMrQScHeSCD850U99ITE6a\\\",\\\"expiry\\\":1583379340},\\\"mUMJUSUVtBT6Zllq8D_ckQ\\\":{\\\"token\\\":\\\"$2a$10$iQ4/kpPpAAWTHwHOrFh/NuGGAGSSm/iYyBAQhUVYHIEaY4MaRHaCS\\\",\\\"expiry\\\":1583379484}}\""], ["updated_at", "2020-02-20 03:38:04.089330"], ["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"miBjL-GGcBUA-B_QxuCUfw\\\":{\\\"token\\\":\\\"$2a$10$xFmF0CXs1Bmqcj54Lbcvjen08C7je20P/k2Y3RELWTPzvbWtIxOOO\\\",\\\"expiry\\\":1583378921,\\\"last_token\\\":\\\"$2a$10$m/17513vHgFJdWWwZ1Jzp.tedclfdv6AHv6k1wYtghr4zCC3C5oDy\\\",\\\"updated_at\\\":\\\"2020-02-20 03:28:41 UTC\\\"},\\\"J_68Ho7y4JtBicNezS1hpw\\\":{\\\"token\\\":\\\"$2a$10$/VG8e3Wt1xpcMm4i5Jt1DewUGGYrA74mtgERM6VLB6K/NeP0cwq5S\\\",\\\"expiry\\\":1583379299},\\\"Dld8gL2lPm4sgHnpNmuITQ\\\":{\\\"token\\\":\\\"$2a$10$Y00QAcZlwzxGzxZsAN0lKOYg.r5p8JmtERkawl8Z4qKFgYjKx4.62\\\",\\\"expiry\\\":1583379299},\\\"Z8f5rJCzebuFasIKaKvWbg\\\":{\\\"token\\\":\\\"$2a$10$lQB2Qrbhh8/mi5ZnEMg/lepNHnh/yABCMrQScHeSCD850U99ITE6a\\\",\\\"expiry\\\":1583379340},\\\"mUMJUSUVtBT6Zllq8D_ckQ\\\":{\\\"token\\\":\\\"$2a$10$SJew9dmA2/T8ZzQO4wcG0ennXdzESPgKgc5RD.blj/2sWopjMZM.6\\\",\\\"expiry\\\":1583379484,\\\"last_token\\\":\\\"$2a$10$iQ4/kpPpAAWTHwHOrFh/NuGGAGSSm/iYyBAQhUVYHIEaY4MaRHaCS\\\",\\\"updated_at\\\":\\\"2020-02-20 03:38:04 UTC\\\"}}\""], ["updated_at", "2020-02-20 03:38:04.178216"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 6546ms (Views: 0.3ms | ActiveRecord: 17.4ms)
+
+
