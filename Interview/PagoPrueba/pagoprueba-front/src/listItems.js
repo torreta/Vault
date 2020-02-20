@@ -51,7 +51,7 @@ export const secondaryListItems = (
       <ListItemIcon>
         <ExitToAppIcon />
       </ListItemIcon>
-      <ListItemText primary="Salir" />
+      <ListItemText  primary="Salir" />
     </ListItem>
 
   </div>
