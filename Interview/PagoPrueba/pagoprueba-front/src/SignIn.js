@@ -71,7 +71,7 @@ class SignIn extends React.Component {
     console.log(JSON.stringify(data));
     console.log(this.state.password);
 
-    PostData('/users/sessions', data)
+    PostData('/auth/sign_up', data)
     .then((result) => {
       let responseJSON = result;
       if (responseJSON.token) {

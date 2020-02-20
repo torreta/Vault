@@ -1,6 +1,6 @@
 export default function PostData(type, userData) {
     
-    let baseUrl = 'http://localhost:3001/api';
+    let baseUrl = 'http://localhost:3001';
 
     console.log(JSON.stringify(userData));
 
@@ -8,8 +8,10 @@ export default function PostData(type, userData) {
         fetch(baseUrl+type,{
             method: 'POST',
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
+              "access-control-allow-headers":
+              "Origin, X-Requested-With, Content-Type, Accept",
+              "access-control-allow-origin": "*",
+              "content-type": "application/json; charset=utf-8"
               },
             body: JSON.stringify(userData)
         })
