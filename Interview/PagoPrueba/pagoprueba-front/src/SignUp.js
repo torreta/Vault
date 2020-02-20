@@ -96,7 +96,7 @@ class SignUp extends React.Component {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign up
+              Registro
             </Typography>
             <form className={classes.form} noValidate onSubmit={this.onSubmit}>
               <Grid container spacing={2}>
@@ -108,7 +108,7 @@ class SignUp extends React.Component {
                     required
                     fullWidth
                     id="name"
-                    label="First Name"
+                    label="Nombre"
                     onChange={this.handleChange}
 
                     autoFocus
@@ -120,7 +120,7 @@ class SignUp extends React.Component {
                     required
                     fullWidth
                     id="email"
-                    label="Email Address"
+                    label="Correo"
                     name="email"
                     autoComplete="email"
                     onChange={this.handleChange}
@@ -133,7 +133,7 @@ class SignUp extends React.Component {
                     required
                     fullWidth
                     name="password"
-                    label="Password"
+                    label="Contraseña"
                     type="password"
                     id="password"
                     onChange={this.handleChange}
@@ -148,12 +148,12 @@ class SignUp extends React.Component {
                 color="primary"
                 className={classes.submit}
               >
-                Sign Up
+               registrar
               </Button>
               <Grid container justify="flex-end">
                 <Grid item>
                   <Link href="#" variant="body2">
-                    Already have an account? Sign in
+                    Ya tienes cuenta? accede
                   </Link>
                 </Grid>
               </Grid>
