@@ -1073,3 +1073,23 @@ Migrating to CreateBanks (20200220051243)
   [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "banks" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Instituto Municipal de Crédito Popular"], ["code", 601], ["created_at", "2020-02-20 05:21:47.728012"], ["updated_at", "2020-02-20 05:21:47.728012"]]
   [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4514104601314011795)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBankAccounts (20200220053944)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE TABLE "bank_accounts" ("id" bigserial primary key, "amount" float, "phone" integer, "bank_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_39d701cbed"
+FOREIGN KEY ("bank_id")
+  REFERENCES "banks" ("id")
+, CONSTRAINT "fk_rails_92daa8a387"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_bank_accounts_on_bank_id" ON "bank_accounts"  ("bank_id")[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_bank_accounts_on_user_id" ON "bank_accounts"  ("user_id")[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200220053944"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(4514104601314011795)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
