@@ -4,8 +4,6 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 
 const Routes = () => {
-
-    
         return (
             <BrowserRouter>
                 <Switch>
@@ -14,7 +12,6 @@ const Routes = () => {
                 </Switch>
             </BrowserRouter>
         );
-    
 }
 
 export default Routes;
