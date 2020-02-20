@@ -1,12 +1,13 @@
-export default function PostData(type, userData) {
+export default function PostData(type,method,userData) {
     
     let baseUrl = 'http://localhost:3001';
 
     console.log(JSON.stringify(userData));
+    console.log(method);
 
     return new Promise((resolve, reject) => {
         fetch(baseUrl+type,{
-            method: 'POST',
+            method: method,
             headers: {
               "access-control-allow-headers":
               "Origin, X-Requested-With, Content-Type, Accept",

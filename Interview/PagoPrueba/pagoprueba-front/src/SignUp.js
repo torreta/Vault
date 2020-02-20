@@ -73,7 +73,7 @@ class SignUp extends React.Component {
         console.log(JSON.stringify(data));
         console.log(this.state.password);
     
-        PostData('/auth/sign_up', data)
+        PostData('/auth',"POST", data)
         .then((result) => {
           let responseJSON = result;
           if (responseJSON.token) {
