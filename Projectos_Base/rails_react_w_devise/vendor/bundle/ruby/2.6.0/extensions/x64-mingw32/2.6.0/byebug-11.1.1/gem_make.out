@@ -1,0 +1,20 @@
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+C:/Ruby26-x64/bin/ruby.exe -I C:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20200309-12848-henipy.rb extconf.rb
+creating Makefile
+
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR="
+generating byebug-x64-mingw32.def
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20200309-12848-1ahuyrs/byebug

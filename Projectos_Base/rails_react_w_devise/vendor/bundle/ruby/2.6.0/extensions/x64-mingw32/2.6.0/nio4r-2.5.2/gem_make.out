@@ -1,8 +1,14 @@
 current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
-C:/Ruby26-x64/bin/ruby.exe -I C:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20200308-3880-wsvqnr.rb extconf.rb
+C:/Ruby26-x64/bin/ruby.exe -I C:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20200309-12848-1n5elry.rb extconf.rb
 
 current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR=" clean
+make: *** No hay ninguna regla para construir el objetivo 'clean'.  Alto.
+
 current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR="
-make failedNo such file or directory - make "DESTDIR="
+make: No se hace nada para 'all'.
+
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR=" install
+make: No se hace nada para 'install'.

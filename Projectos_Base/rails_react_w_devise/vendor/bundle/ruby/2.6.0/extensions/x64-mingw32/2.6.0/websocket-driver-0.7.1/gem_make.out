@@ -1,0 +1,16 @@
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+C:/Ruby26-x64/bin/ruby.exe -I C:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20200309-12848-16xupnt.rb extconf.rb
+creating Makefile
+
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR="
+generating websocket_mask-x64-mingw32.def
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: D:/xamp/htdocs/Proyectos/Vault/Projectos_Base/rails_react_w_devise/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20200309-12848-1lijbkc

@@ -1,0 +1,33 @@
+"pkg-config --exists sqlite3"
+package configuration for sqlite3 is not found
+find_header: checking for sqlite3.h... -------------------- no
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -IC:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IC:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IC:/Ruby26-x64/include/ruby-2.6.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -DTAINTING_SUPPORT conftest.c  -L. -LC:/Ruby26-x64/lib -L. -pipe -s     -lx64-msvcrt-ruby260  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return 0;
+8: }
+/* end */
+
+"x86_64-w64-mingw32-gcc -E -IC:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IC:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IC:/Ruby26-x64/include/ruby-2.6.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -DTAINTING_SUPPORT  conftest.c -o conftest.i"
+conftest.c:5:10: fatal error: sqlite3.h: No such file or directory
+    5 | #include <sqlite3.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <sqlite3.h>
+/* end */
+
+--------------------
+
