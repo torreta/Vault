@@ -63,3 +63,8 @@ rails db:create
 
 // generas 
  rails db:migrate
+
+ // webpacker... no estaba automatico instalado
+ rails webpacker:install
+
+// agrega node_modules al git ignore....
