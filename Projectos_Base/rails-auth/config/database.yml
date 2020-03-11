@@ -27,7 +27,7 @@
  development:
   adapter: postgresql
   encoding: unicode
-  database: pagoprueba-api
+  database: rails-auth-api
   pool: 5
   username: postgres
   password: 123456
@@ -35,7 +35,7 @@
 test:
   adapter: postgresql
   encoding: unicode
-  database: pagoprueba-api-test
+  database: rails-auth-api-test
   pool: 5
   username: postgres
   password: 123456
