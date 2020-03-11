@@ -1,4 +1,6 @@
 instalar railsinstaller con todo y devtools.
+usar la consola de ruby de railsintaller para evitar problemas (!!!!)
+
 instala postgres
 instala node
 
@@ -68,3 +70,8 @@ rails db:create
  rails webpacker:install
 
 // agrega node_modules al git ignore....
+
+// forgot that
+gem install bundler
+bundle update
+bundle install
