@@ -69,9 +69,12 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     nio4r (2.5.2)
+    nokogiri (1.10.8-x64-mingw32)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.8-x86-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pg (1.2.2-x64-mingw32)
     pg (1.2.2-x86-mingw32)
     puma (3.12.2)
     rack (2.2.2)
@@ -126,6 +129,7 @@ GEM
     websocket-extensions (0.1.4)
 
 PLATFORMS
+  x64-mingw32
   x86-mingw32
 
 DEPENDENCIES
