@@ -1,4 +1,5 @@
 instalar railsinstaller con todo y devtools.
+quizas toca instalar tambien rubyinstaller....
 usar la consola de ruby de railsintaller para evitar problemas (!!!!)
 
 instala postgres
@@ -8,14 +9,13 @@ rails new nombre --skip-git
 
 haces el comit de git
 
+gem install bundler 
 bundle intall 
 
-coloca postgrest en el gemfile
-gem 'pg'
-
 borra sqlite  en el gemfile
+coloca postgrest en el gemfile
+gem install pg
 
-gem install bundler 
 
 bundle install
 
@@ -26,7 +26,7 @@ https://guides.railsgirls.com/devise
 gem install devise
 
 bundle install
-
+(si te sale algo gem update --system)
 rails generate devise:install
 (en este tienes que seguir las instrucciones)
 /*
