@@ -78,4 +78,4 @@ bundle install
 
 rails g scaffold profile cedula:integer name:string Users:references
 
-rails g scaffold transaction amount:float phone:string sender_id:user_id:references receiver_id:user_id:references bank:string timestamps 
+rails g scaffold transaction amount:float phone:string sender_id: receiver_id:user_id:references bank:string timestamps 
