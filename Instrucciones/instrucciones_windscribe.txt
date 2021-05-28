@@ -1,0 +1,45 @@
+1. Create Account
+https://esp.windscribe.com/
+2.
+
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
+
+3.
+
+echo 'deb https://repo.windscribe.com/ubuntu zesty main' | sudo tee /etc/apt/sources.list.d/windscribe-repo.list
+
+4. 
+
+
+sudo apt-get update
+
+5.
+
+sudo apt-get install windscribe-cli
+
+
+6.
+
+
+
+windscribe login
+
+7.
+
+windscribe connect
+
+8. 
+
+windscribe --help
+
+
+9.
+
+wget https://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-server_5.6.48-1debian9_amd64.deb-bundle.tar
+
+tar xvf mysql-server_5.6.48-1debian9_amd64.deb-bundle.tar
+
+sudo dpkg -i *.deb
+
+sudo apt --fix-broken install

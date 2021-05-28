@@ -1,0 +1,114 @@
+
+0. git clone http://192.168.0.105/StrixERP/ERP.git
+
+1. sudo aptitude install  apache2
+
+
+2.
+sudo /etc/init.d/mysql stop
+sudo apt-get purge mysql-server-core-5.7 mysql-client-core-5.7
+sudo apt-get purge mysql-server
+sudo apt-get purge mysql-common
+sudo rm -r /etc/mysql/
+sudo rm -r  /var/lib/mysql/
+
+3. 
+
+sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty universe'
+sudo apt-get update
+sudo apt install mysql-server-5.6 mysql-client-5.6
+
+mysql -u root -p -e "SET GLOBAL sql_mode = 'NO_ENGINE_SUBSTITUTION';"
+
+Si eso falla intentar esto:
+
+Edit /etc/mysql/my.cn
+[mysqld]
+sql_mode = "NO_ENGINE_SUBSTITUTION"
+Edit sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+Change
+#bind-address           = 127.0.0.1
+To
+bind-address           = 0.0.0.0
+
+mysql> SELECT host FROM mysql.user WHERE User = 'root';
++-----------------+
+| host            |
++-----------------+
+| 127.0.0.1       |
+| ::1             |
+| ip-172-31-85-83 |
+| localhost       |
++-----------------+
+4 rows in set (0.00 sec)
+
+mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'manager';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+Query OK, 0 rows affected (0.01 sec)
+
+
+
+
+4. 
+sudo apt-get purge `dpkg -l | grep php7.2| awk '{print $2}' |tr "\n" " "`
+sudo apt-get install ppa-purge
+sudo add-apt-repository ppa:ondrej/php
+sudo aptitude update
+
+sudo apt-get install php5.6 php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml
+
+sudo aptitude install php5.6-imagick
+
+
+5. Crear el Directorio y los siguientes archivos:
+/var/www/html/drotaca/app/tmp
+/var/www/html/drotaca/app/tmp/includes.ini
+/var/www/html/drotaca/app/tmp/modelLogs.log
+
+6.Cambiar Propietario de los archivos:
+
+sudo  chown -R www-data.www-data /var/www/html/drotaca
+
+
+7. Database
+
+dbname="strix_erp"
+filename="$dbname.sql"
+mcmd="mysqldump -u root -pmanager --routines --single-transaction $dbname  > $filename"
+eval $mcmd
+
+sed -i -e 's/DEFINER=`remote`@`192.168.%`//g' drotaca.sql
+sed -i -e 's/DEFINER=`drotaca`@`192.168.%`//g' drotaca.sql
+sed -i -e 's/DEFINER=`root`@`192.168.%`//g' drotaca.sql
+sed -i -e 's/DEFINER=`drotaca`@`127.0.%`//g' drotaca.sql
+sed -i -e 's/DEFINER=`drotaca`@`localhost`//g' drotaca.sql
+sed -i -e 's/DEFINER=`root`@`localhost`//g' drotaca.sql
+
+gzip -c drotaca.sql > drotaca.sql.gz
+
+gunzip drotaca.sql.gz
+
+mysql -u root -p 
+
+create database strix_erp
+
+8. Edit app/vendor/AppConfig.php
+mysql -u root -p strix_erp < drotaca.sql
+
+
+Crear Usuario con privilegios de acceso a mysql
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypass';
+CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypass';
+
+GRANT ALL ON *.* TO 'myuser'@'localhost';
+GRANT ALL ON *.* TO 'myuser'@'%';
+
+
+CONFIGURARA LA CLAVE DE ROOT PARA MYSQL
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
+
+FLUSH PRIVILEGES; 
+EXIT;
+
