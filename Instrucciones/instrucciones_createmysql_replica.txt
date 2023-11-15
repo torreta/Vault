@@ -1,0 +1,94 @@
+Paso 1: Copiar DBs a replicar de Master a Slave. 
+
+Create Docker Master DB
+Paso 1: Solo hacer este paso en caso de instalar la primera vez , ya que de no hacerlo no podrás editar /etc/mysql
+sudo docker run --net dbnetwork --ip 172.18.0.22    -v '/opt/mysql2/lib/:/var/lib/mysql'  --name dbserver2 -i -t mysql:5.6.51  /bin/bash
+/etc/init.d/mysql start
+cp /etc/mysql/* to /opt/mysql2/conf/
+
+
+Paso 2: Crear el docker master y crear la db original
+sudo docker run --net dbnetwork --ip 172.18.0.22   -v '/opt/mysql2/conf/:/etc/mysql' -v '/opt/mysql2/lib/:/var/lib/mysql'  --name dbserver2 -i -t mysql:5.6.51  /bin/bash
+/etc/init.d/mysql start
+mysql -uroot -p
+SET GLOBAL log_bin_trust_function_creators = 1;
+mysql -uroot -p drotaca_soberano5 < drotaca_soberano4-30-04-2021.sql
+
+Create Docker Slave DB
+Paso 1: Solo hacer este paso en caso de instalar la primera vez , ya que de no hacerlo no podrás editar /etc/mysql
+sudo docker run --net dbnetwork --ip 172.18.0.33   -v '/opt/mysql3/lib/:/var/lib/mysql'  --name dbserver3 -i -t mysql:5.6.51  /bin/bash
+/etc/init.d/mysql start
+cp /etc/mysql/* to /opt/mysql3/conf/
+
+Paso 2: Crear el docker slave  con la copia de la db que esta en master
+sudo docker run --net dbnetwork --ip 172.18.0.33   -v '/opt/mysql3/conf/:/etc/mysql' -v '/opt/mysql3/lib/:/var/lib/mysql'  --name dbserver3 -i -t mysql:5.6.51  /bin/bash
+/etc/init.d/mysql start
+mysql -uroot -p
+SET GLOBAL log_bin_trust_function_creators = 1;
+mysql -uroot -p drotaca_soberano5 < drotaca_soberano4-30-04-2021.sql
+
+
+On Master Server 172.18.0.22:
+
+1. Edita : /etc/mysql/mysql.conf.d/mysqld.cnf y agrega las siguientes lineas:
+
+server-id               = 1
+log_bin                 = /var/log/mysql/mysql-bin.log
+binlog_do_db            = drotaca_soberano5
+bind-address            = 0.0.0.0
+
+
+2. Create usuario replica:
+
+CREATE USER 'replica_user'@'%' IDENTIFIED BY 'replica_user';
+SET PASSWORD FOR 'replica_user'@'localhost' = PASSWORD('manager');
+
+
+3. Otorgar permisos:
+
+GRANT ALL PRIVILEGES ON *.* TO 'replica_user'@'172.18.0.22'  IDENTIFIED BY 'manager' with grant option;
+
+4. Restart db
+
+/etc/init.d/mysql stop
+/etc/init.d/mysql start
+
+5. Check replication master status
+
+SHOW MASTER STATUS;
+
+Should show something like this
+
++------------------+----------+-------------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB      | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+-------------------+------------------+-------------------+
+| mysql-bin.000005 |      120 | drotaca_soberano5 |                  |                   |
++------------------+----------+-------------------+------------------+-------------------+
+1 row in set (0.00 sec)
+
+On Slave Server 172.18.0.33
+
+1. Edita : /etc/mysql/mysql.conf.d/mysqld.cnf y agrega las siguientes lineas:
+
+server-id               = 2
+log_bin                 = /var/log/mysql/mysql-bin.log
+binlog_do_db            = drotaca_soberano5
+relay-log               = /var/log/mysql/mysql-relay-bin.log
+bind-address            = 0.0.0.0
+
+
+
+2. Restart db
+
+/etc/init.d/mysql stop
+/etc/init.d/mysql start
+
+3. Configure who the master is :
+
+CHANGE MASTER TO MASTER_HOST='192.168.1.125', MASTER_USER='replica_user', MASTER_PASSWORD='manager', MASTER_LOG_FILE='mysql-bin.000008', MASTER_LOG_POS=41536022;
+
+6. Initiate replica and show status:
+
+START SLAVE;
+
+SHOW SLAVE STATUS\G;

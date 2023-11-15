@@ -1,0 +1,26 @@
+Get size of all tables on your db
+
+SELECT 
+     table_schema as `Database`, 
+     table_name AS `Table`, 
+     round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` 
+FROM information_schema.TABLES 
+ORDER BY (data_length + index_length) DESC;
+
+
+Clean Mysql in docker container
+
+ sudo apt-get remove --purge 'mysql*'
+ apt-get remove --purge 'mysql*'
+ rm -rf /etc/mysql /var/lib/mysql
+ apt-get autoremove
+ apt-get install mysql-server-5.6
+ apt-get update
+ apt-get install mysql-server-5.6
+ /etc/init.d/mysql start
+
+
+Eliminar el prepared 
+
+
+set global table_definition_cache = 2048

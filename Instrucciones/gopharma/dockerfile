@@ -1,0 +1,34 @@
+# syntax=docker/dockerfile:1.4
+
+FROM --platform=$BUILDPLATFORM ubuntu:22.04 AS builder
+ARG DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+RUN echo "Installing locals"
+RUN apt update && apt install -y locales systemd && rm -rf /var/lib/apt/lists/* \
+  && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
+ENV TZ=America/Caracas
+
+RUN apt-get update -y && apt-get upgrade -y
+
+# install php
+RUN apt install php-mbstring php-xml php-bcmath php-curl php-gd php-intl php-xsl php-zip php-pdo-mysql -y
+RUN apt update -y
+RUN apt install php-cli unzip curl gnupg gpg nano vim -y
+RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+RUN php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+RUN composer require cocur/slugify:4.1
+RUN apt install php-mbstring
+RUN composer dump-autoload
+RUN composer install --no-scripts
+RUN composer update
+
+# install mysql
+RUN apt install mysql-server -y
+
+EXPOSE 8000
+WORKDIR /root/Code/
+CMD bash
