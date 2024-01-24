@@ -1,0 +1,15 @@
+FROM ruby:2.6.3-alpine
+
+RUN apk update
+RUN apk upgrade --no-cache
+RUN apk --update add build-base nodejs tzdata mysql-dev mysql-client
+
+WORKDIR /myapp
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.lock /myapp/Gemfile.lock
+RUN RAILS_ENV=production bundle install
+
+COPY . /myapp
+EXPOSE 3000
+
+CMD ["rails", "server", "-b", "0.0.0.0"]
