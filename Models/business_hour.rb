@@ -47,18 +47,104 @@ class BusinessHour < ApplicationRecord
     @type.first.service_id
   end
 
+
+  def refresh_schedules
+    self.provider.refresh_schedules
+  end
+
+
+  def user_email
+    self.provider.user.email
+  end
+
+
   def internal_plain_type
-    @type = CategoryService.where(category_id: self.address.category_id)
-    
-    @internal_type_id = @type.first.service_id
-    
-    if (@internal_type_id  == 1)
-      return "medical"
-      elseif(@internal_type_id  == 2)
-      return "generic"
+    @internal_type_id  = CategoryService.where(category_id: self.address.category_id).first&.service_id
+      
+    case @internal_type_id
+    when 1
+      "medical"
+    when 2
+      "generic"
     else
-      return "other"
+      "other"
     end
+  end
+
+
+
+  def check_new_schedule_collision(bh_to_evaluate)
+    return self.horas_solapadas2(bh_to_evaluate)
+  end
+
+
+  def check_update_schedule_collision(bh_to_evaluate)
+    
+    # como hacerlo?
+    # busco todas las horas asociadas al proveedor
+    @bhe = bh_to_evaluate
+
+    @business_hour = BusinessHour.find(bh_to_evaluate.id)
+
+    @provider_id = @business_hour.provider.id
+
+    @provider_bhs = BusinessHour.where(provider_id: @provider_id ).where.not(id: bh_to_evaluate.id)
+
+    # por defecto, solo se permiten horarios que no den conflictos entre ellos
+    # asi que por defecto los horarios no estan solapados
+    # por lo tanto, usarre esta variable para guardar el estado de solapado.
+    @horas_solapadas = false; 
+
+    # horario por horario, comparo si el proveedor tiene horas que choquen, y
+    # de este modo determino si se solapa alguna
+
+    # si el proveedor no tiene otro registro de horario por defecto no solapa
+    # si el usuario tiene un solo registro de horario por defecto no solapa
+    if @provider_bhs.count == 0
+      return false;
+    end
+
+    # tienen que ser 2 al menos para que el siguiente ciclo haga su trabajo
+    # de comprarar los horarios con sus siguientes.
+    # ejem: 
+
+      # todos los horarios existentes del proveedor.
+      @provider_bhs.each do |bha|
+    
+        # reviso sino solapan sus horas del actual con el que se esta evaluando
+        if (
+            # si empieza a la misma hora que otro horario registrado 
+            (bha.hour_start == @bhe.hour_start) or 
+            # si termina a la misma hora que otro horario registrado
+            (bha.hour_finish == @bhe.hour_finish) or 
+            # si comienza antes que un horario ya registrado y termina antes que la hora inicial de dicho horario
+            ((bha.hour_start > @bhe.hour_start) and (bha.hour_start < @bhe.hour_finish)) or 
+            # si comienza antes que otro horario registrado termine y a su vez  termina despues de que ese otro horario termine 
+            ((bha.hour_finish > @bhe.hour_start) and (bha.hour_finish < @bhe.hour_finish))
+          )
+          # reviso sino concuerdan alguno de sus dias, con alguno ya registrado
+          if (
+              (bha.monday and @bhe.monday) or 
+              (bha.tuesday and @bhe.tuesday) or 
+              (bha.wednesday and @bhe.wednesday) or 
+              (bha.thursday and @bhe.thursday) or 
+              (bha.friday and @bhe.friday) or 
+              (bha.saturday and @bhe.saturday) or 
+              (bha.sunday and @bhe.sunday)
+            )
+              # de llegar aqui, no hace falta que pase mas de una vez.
+              # (pero estoy dejando que termine sus ciclos)
+              # podria hacer que termine directamente con return true, pero
+              # lo prefiero asi por legibilidad
+              @horas_solapadas = true
+          end
+        end
+  
+      end
+
+    # aviso si esta solapada o no. (booleano)
+    return @horas_solapadas
+
   end
 
 
