@@ -29,6 +29,10 @@ class BusinessHour < ApplicationRecord
   def category_id
     self.address.category_id
   end
+
+  def provider_id
+    self.address.provider_id
+  end
   
   def category
     Category.find(self.address.category_id)
@@ -72,6 +76,10 @@ class BusinessHour < ApplicationRecord
   end
 
 
+  def rebuild_schedule
+    self.provider.rebuild_schedule
+  end
+
 
   def check_new_schedule_collision(bh_to_evaluate)
     return self.horas_solapadas2(bh_to_evaluate)
@@ -88,7 +96,11 @@ class BusinessHour < ApplicationRecord
 
     @provider_id = @business_hour.provider.id
 
-    @provider_bhs = BusinessHour.where(provider_id: @provider_id ).where.not(id: bh_to_evaluate.id)
+    @adresses_provider_ids = Address.where(provider_id: @provider_id).ids
+
+    # por suerte si le das un arrray el saba interpretar que es un where in...
+    @provider_bhs = BusinessHour.where(address_id: @adresses_provider_ids).where.not(id: bh_to_evaluate.id)
+
 
     # por defecto, solo se permiten horarios que no den conflictos entre ellos
     # asi que por defecto los horarios no estan solapados
@@ -148,8 +160,8 @@ class BusinessHour < ApplicationRecord
   end
 
 
-# tomas una hora y evalua si da conflicto con alguna de los otros horarios
-# ya registrados en el proveedor
+  # tomas una hora y evalua si da conflicto con alguna de los otros horarios
+  # ya registrados en el proveedor
   def horas_solapadas2(bh_to_evaluate)
     # buscando los otros datos que necesito para procesar el horario
     @address = Address.find(bh_to_evaluate.address_id)
@@ -264,329 +276,39 @@ class BusinessHour < ApplicationRecord
 
   # Esto se hace porque cuando se agregan business_hours a traves de los seeds, las hour_start y hour_finish de provider no se colocan como deberian (la menor hour_start y la mayor hour_finish)
   def self.provider_update(bh)
-    address = Address.find(bh.address_id)
-    provider = Provider.find(address.provider_id)
-
-    # Evaluar si las nuevas horas ingresadas no se solapan
-    lista = BusinessHour.joins(:address).joins(:provider).where("addresses.provider_id = ?", provider.id)
-    horas_solapadas = false
-    lista.each do |l|
-      # if (bh.hour_start > l.hour_start and bh.hour_start < l.hour_finish) or (bh.hour_finish > l.hour_start and bh.hour_finish < l.hour_finish)
-      if ((bh.hour_start == l.hour_start) or (bh.hour_finish == l.hour_finish) or ((bh.hour_start > l.hour_start) and (bh.hour_start < l.hour_finish)) or ((bh.hour_finish > l.hour_start) and (bh.hour_finish < l.hour_finish)))
-        if (bh.monday and l.monday) or (bh.tuesday and l.tuesday) or (bh.wednesday and l.wednesday) or (bh.thursday and l.thursday) or (bh.friday and l.friday) or (bh.saturday and l.saturday) or (bh.sunday and l.sunday)
-          horas_solapadas = true
-        end
-      end
-    end
-
-    if horas_solapadas
-      if bh.save
-        return (!horas_solapadas)
-      end
-    else
-      #Evaluando dia por dia si el provider trabaja en los mismos, en caso de que no, coloco false
-      if provider.monday or bh.monday
-        provider.update_attributes(:monday => true)
-      else
-        provider.update_attributes(:monday => false)
-      end
-      if provider.tuesday or bh.tuesday
-        provider.update_attributes(:tuesday => true)
-      else
-        provider.update_attributes(:tuesday => false)
-      end
-      if provider.wednesday or bh.wednesday
-        provider.update_attributes(:wednesday => true)
-      else
-        provider.update_attributes(:wednesday => false)
-      end
-      if provider.thursday or bh.thursday
-        provider.update_attributes(:thursday => true)
-      else
-        provider.update_attributes(:thursday => false)
-      end
-      if provider.friday or bh.friday
-        provider.update_attributes(:friday => true)
-      else
-        provider.update_attributes(:friday => false)
-      end
-      if provider.saturday or bh.saturday
-        provider.update_attributes(:saturday => true)
-      else
-        provider.update_attributes(:saturday => false)
-      end
-      if provider.sunday or bh.sunday
-        provider.update_attributes(:sunday => true)
-      else
-        provider.update_attributes(:sunday => false)
-      end
-
-      # Se le coloca al Provider la menor de todas las horas de entrada y la mayor de todas las horas de salida
-      if provider.hour_start == nil 
-        provider.update_attributes(:hour_start => bh.hour_start)
-      else
-        if provider.hour_start > bh.hour_start
-          provider.update_attributes(:hour_start => bh.hour_start)
-        end
-      end
-
-      if provider.hour_finish == nil 
-        provider.update_attributes(:hour_finish => bh.hour_finish)
-      else
-        if provider.hour_finish < bh.hour_finish
-          provider.update_attributes(:hour_finish => bh.hour_finish)
-        end
-      end
-      self.medical_update(bh)
-      self.generic_update(bh)
+    if !bh.check_new_schedule_collision(bh)
       if bh.save
         return bh, status: :created, location: bh
       else
         return bh.errors, status: :unprocessable_entity
       end
+    else
+      return false
     end
-
   end
 
   def horas_solapadas(bh)
-    address = Address.find(bh.address_id)
-    provider = Provider.find(address.provider_id)
-
-    # Evaluar si las nuevas horas ingresadas no se solapan
-    lista = BusinessHour.joins(:address).joins(:provider).where("addresses.provider_id = ?", provider.id)
-    horas_solapadas = false
-    lista.each do |l|
-      # if (bh.hour_start > l.hour_start and bh.hour_start < l.hour_finish) or (bh.hour_finish > l.hour_start and bh.hour_finish < l.hour_finish)
-      if ((bh.hour_start == l.hour_start) or (bh.hour_finish == l.hour_finish) or ((bh.hour_start > l.hour_start) and (bh.hour_start < l.hour_finish)) or ((bh.hour_finish > l.hour_start) and (bh.hour_finish < l.hour_finish)))  
-        if (bh.monday and l.monday) or (bh.tuesday and l.tuesday) or (bh.wednesday and l.wednesday) or (bh.thursday and l.thursday) or (bh.friday and l.friday) or (bh.saturday and l.saturday) or (bh.sunday and l.sunday)
-          horas_solapadas = true
-        end
-      end
-    end
-
-    if horas_solapadas
-      if bh.save
-        return (!horas_solapadas)
-      end
-    else
-      return horas_solapadas
-    end
+    bh.check_new_schedule_collision(bh)
   end
 
   def provider_update(bh)
-    address = Address.find(bh.address_id)
-    provider = Provider.find(address.provider_id)
-
-    # Evaluar si las nuevas horas ingresadas no se solapan
-    lista = BusinessHour.joins(:address).joins(:provider).where("addresses.provider_id = ?", provider.id)
-    horas_solapadas = false
-    lista.each do |l|
-      # if (bh.hour_start > l.hour_start and bh.hour_start < l.hour_finish) or (bh.hour_finish > l.hour_start and bh.hour_finish < l.hour_finish)
-      puts("Afuera 1 :v")
-      if ((bh.hour_start == l.hour_start) or (bh.hour_finish == l.hour_finish) or ((bh.hour_start > l.hour_start) and (bh.hour_start < l.hour_finish)) or ((bh.hour_finish > l.hour_start) and (bh.hour_finish < l.hour_finish))) 
-        puts("Adentro 2 :v")
-        if (bh.monday and l.monday) or (bh.tuesday and l.tuesday) or (bh.wednesday and l.wednesday) or (bh.thursday and l.thursday) or (bh.friday and l.friday) or (bh.saturday and l.saturday) or (bh.sunday and l.sunday)
-          puts("Adentro 3 :v")
-          horas_solapadas = true
-        end
-      end
-    end
-
-    if horas_solapadas
-      if bh.save
-        return (!horas_solapadas)
-      end
-    else
-      #Evaluando dia por dia si el provider trabaja en los mismos, en caso de que no, coloco false
-      if provider.monday or bh.monday
-        provider.update_attributes(:monday => true)
-      else
-        provider.update_attributes(:monday => false)
-      end
-      if provider.tuesday or bh.tuesday
-        provider.update_attributes(:tuesday => true)
-      else
-        provider.update_attributes(:tuesday => false)
-      end
-      if provider.wednesday or bh.wednesday
-        provider.update_attributes(:wednesday => true)
-      else
-        provider.update_attributes(:wednesday => false)
-      end
-      if provider.thursday or bh.thursday
-        provider.update_attributes(:thursday => true)
-      else
-        provider.update_attributes(:thursday => false)
-      end
-      if provider.friday or bh.friday
-        provider.update_attributes(:friday => true)
-      else
-        provider.update_attributes(:friday => false)
-      end
-      if provider.saturday or bh.saturday
-        provider.update_attributes(:saturday => true)
-      else
-        provider.update_attributes(:saturday => false)
-      end
-      if provider.sunday or bh.sunday
-        provider.update_attributes(:sunday => true)
-      else
-        provider.update_attributes(:sunday => false)
-      end
-
-      # Se le coloca al Provider la menor de todas las horas de entrada y la mayor de todas las horas de salida
-      if provider.hour_start == nil 
-        provider.update_attributes(:hour_start => bh.hour_start)
-      else
-        if provider.hour_start > bh.hour_start
-          provider.update_attributes(:hour_start => bh.hour_start)
-        end
-      end
-
-      if provider.hour_finish == nil 
-        provider.update_attributes(:hour_finish => bh.hour_finish)
-      else
-        if provider.hour_finish < bh.hour_finish
-          puts(bh.hour_finish)
-          provider.update_attributes(:hour_finish => bh.hour_finish)
-        end
-      end
-        bh.medical_update(bh)
-        bh.generic_update(bh)
-        puts(bh.hour_finish)
+    if !bh.check_new_schedule_collision(bh)
       if bh.save
         return bh, status: :created, location: bh
       else
         return bh.errors, status: :unprocessable_entity
       end
+    else
+      return false
     end
   end
 
   def medical_update(bh)
-    address = Address.find(bh.address_id)
-    provider = Provider.find(address.provider_id)
-    puts(bh)
-    puts("afuera")
-    if CategoryService.find_by_category_id(Address.find(bh.address_id).category_id).service_id == 1
-      puts("adentro")
-      medical = MedicalProfile.find_by_provider_id(bh.address.provider_id)
-
-      if bh.monday
-        medical.update_attributes(:monday => true)
-      else
-        medical.update_attributes(:monday => false)
-      end
-      if bh.tuesday
-        medical.update_attributes(:tuesday => true)
-      else
-        medical.update_attributes(:tuesday => false)
-      end
-      if bh.wednesday
-        medical.update_attributes(:wednesday => true)
-      else
-        medical.update_attributes(:wednesday => false)
-      end
-      if bh.thursday
-        medical.update_attributes(:thursday => true)
-      else
-        medical.update_attributes(:thursday => false)
-      end
-      if bh.friday
-        medical.update_attributes(:friday => true)
-      else
-        medical.update_attributes(:friday => false)
-      end
-      if bh.saturday
-        medical.update_attributes(:saturday => true)
-      else
-        medical.update_attributes(:saturday => false)
-      end
-      if bh.sunday
-        medical.update_attributes(:sunday => true)
-      else
-        medical.update_attributes(:sunday => false)
-      end
-
-      puts(bh.hour_finish)
-      # Se le coloca al medical la menor de todas las horas de entrada y la mayor de todas las horas de salida
-      if medical.hour_start == nil
-        medical.update_attributes(:hour_start => bh.hour_start)
-      else
-        if medical.hour_start > bh.hour_start
-          medical.update_attributes(:hour_start => bh.hour_start)
-        end
-      end
-
-      if medical.hour_finish == nil 
-        medical.update_attributes(:hour_finish => bh.hour_finish)
-      else
-        if medical.hour_finish < bh.hour_finish
-          puts("lo hice 10203")
-          medical.update_attributes(:hour_finish => bh.hour_finish)
-        end
-      end
-    end
+      self.provider.reform_medical_schedule
   end
 
   def generic_update(bh)
-    address = Address.find(bh.address_id)
-    provider = Provider.find(address.provider_id)
-    puts(bh)
-    if CategoryService.find_by_category_id(Address.find(bh.address_id).category_id).service_id == 2
-      generic = GenericProfile.find_by_provider_id(bh.address.provider_id)
-      if bh.monday
-        generic.update_attributes(:monday => true)
-      else
-        generic.update_attributes(:monday => false)
-      end
-      if bh.tuesday
-        generic.update_attributes(:tuesday => true)
-      else
-        generic.update_attributes(:tuesday => false)
-      end
-      if bh.wednesday
-        generic.update_attributes(:wednesday => true)
-      else
-        generic.update_attributes(:wednesday => false)
-      end
-      if bh.thursday
-        generic.update_attributes(:thursday => true)
-      else
-        generic.update_attributes(:thursday => false)
-      end
-      if bh.friday
-        generic.update_attributes(:friday => true)
-      else
-        generic.update_attributes(:friday => false)
-      end
-      if bh.saturday
-        generic.update_attributes(:saturday => true)
-      else
-        generic.update_attributes(:saturday => false)
-      end
-      if bh.sunday
-        generic.update_attributes(:sunday => true)
-      else
-        generic.update_attributes(:sunday => false)
-      end
-
-      # Se le coloca al generic la menor de todas las horas de entrada y la mayor de todas las horas de salida
-      if generic.hour_start == nil 
-        generic.update_attributes(:hour_start => bh.hour_start)
-      else
-        if generic.hour_start > bh.hour_start
-          generic.update_attributes(:hour_start => bh.hour_start)
-        end
-      end
-
-      if generic.hour_finish == nil 
-        generic.update_attributes(:hour_finish => bh.hour_finish)
-      else
-        if generic.hour_finish < bh.hour_finish
-          generic.update_attributes(:hour_finish => bh.hour_finish)
-        end
-      end
-    end
+      self.provider.reform_generic_schedule
   end
 
   def slots(blacklist={})
@@ -750,9 +472,9 @@ class BusinessHour < ApplicationRecord
 
   def check_appointments
     
-    logger.debug("------------------================================--------------")        
+    logger.debug("-==============================================")        
     logger.debug("Verificando citas en horario espeficico")        
-    logger.debug("------------------================================--------------") 
+    logger.debug("-==============================================") 
 
     @citas = false
 
@@ -769,7 +491,7 @@ class BusinessHour < ApplicationRecord
   end
 
   def appointments_pending
-    self.appointments.where(appointment_status_id: [1,2]).where('date_start >= ?', Date.today())
+    self.appointments.where(appointment_status_id: [1,2]).or(self.appointments.where('date_start >= ?', Date.current) )
   end
 
   def appointments_pending?
@@ -780,7 +502,6 @@ class BusinessHour < ApplicationRecord
     end
     
     return @check
-
   end
 
 
