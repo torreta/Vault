@@ -10,3 +10,6 @@ para supervisar servicios de pasive income.
 5. organizador por carpetas con crobjob
 
 6. seguidor de proyectos con  Diagramas Gant con ideas de ingresos pasivos. 
+
+7. prebuilt IA demo with LM-Studio-0.2.11-Setup and codeseeker for testing out some chat integration.
+
