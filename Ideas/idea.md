@@ -13,3 +13,6 @@ para supervisar servicios de pasive income.
 
 7. prebuilt IA demo with LM-Studio-0.2.11-Setup and codeseeker for testing out some chat integration.
 
+8. universal identity blockchain contract
+
+9. zapier project
