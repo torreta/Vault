@@ -16,3 +16,5 @@ para supervisar servicios de pasive income.
 8. universal identity blockchain contract
 
 9. zapier project
+
+10. see all of this and generate texts [text](https://www.youtube.com/playlist?list=PL0lo9MOBetEE0goMLEl97vO7slruNVj43)
