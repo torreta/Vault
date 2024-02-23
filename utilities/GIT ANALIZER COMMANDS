@@ -1,0 +1,10 @@
+====Rank contributors by contributed lines of code in HEAD
+git grep --cached -zIle '' |\
+     xargs -0n1 git blame -e |\
+    sed  -n 's/^.*(<\([a-zA-Z.]*\)@.*/\1/p' |\
+    sort|uniq -c|sort -rn >authors-by-line.txt
+
+====sort branches by last modified date in the remote repository
+
+git for-each-ref --sort=-committerdate \
+    --format='%(committerdate:short)%(authorname)%(refname:short)' refs/remotes >branches-by-date.txt
