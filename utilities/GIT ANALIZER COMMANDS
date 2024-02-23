@@ -1,6 +1,6 @@
 ====Rank contributors by contributed lines of code in HEAD
 git grep --cached -zIle '' |\
-     xargs -0n1 git blame -e |\
+    xargs -0n1 git blame -e |\
     sed  -n 's/^.*(<\([a-zA-Z.]*\)@.*/\1/p' |\
     sort|uniq -c|sort -rn >authors-by-line.txt
 

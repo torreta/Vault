@@ -1,0 +1,29 @@
+A bad sysadmin changes the default SSH port.
+
+A good sysadmin throttles the brute-force attackers by allowing one new connection in 20 seconds.
+
+# requires xt_TARPIT
+iptables -A INPUT -p tcp -m state --state NEW \
+  --dport 22 -m recent --update --seconds 20 -j TARPIT
+iptables -A INPUT -p tcp -m state --state NEW \
+  --dport 22 -m recent --set -j ACCEPT
+A brilliant sysadmin blocks intruders indefinitely
+
+# requires hashlimit
+iptables -A INPUT -p tcp -m tcp --dport 22 -m state \
+  --state NEW -m hashlimit --hashlimit 1/hour \
+  --hashlimit-burst 2 --hashlimit-mode srcip \
+  --hashlimit-name SSH --hashlimit-htable-expire 60000 
+  -j ACCEPT
+
+iptables -A INPUT -p tcp -m tcp --dport 22 \
+  --tcp-flags SYN,RST,ACK SYN -j DROP 
+
+iptables -A INPUT -p tcp -m state \
+  --state NEW -m tcp --dport 22 -j ACCEPT
+In the last example, the 1st rule allows up to two connections per hour. After the limit of two connections per hour is reached, the second rule becomes active and the hashlimit module starts to countdown from 1 minute (60 000 milliseconds). If you connect within 1 minute, the hashlimit counter is reset to 60 000. If you connect after 1 minute, you drop to the 3rd rule and are allowed access.
+
+Cherry-picked from Habr
+
+
+http://mikhailian.mova.org/node/147
