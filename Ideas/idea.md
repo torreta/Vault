@@ -17,4 +17,4 @@ para supervisar servicios de pasive income.
 
 9. zapier project
 
-10. see all of this and generate texts [text](https://www.youtube.com/playlist?list=PL0lo9MOBetEE0goMLEl97vO7slruNVj43)
+10. see all of this and generate texts [link to videos](https://www.youtube.com/playlist?list=PL0lo9MOBetEE0goMLEl97vO7slruNVj43)
