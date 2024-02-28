@@ -14,41 +14,40 @@ Soy un desarrollador de software apasionado por crear proyectos que hagan la vid
 
 Habilidades
 
-L enguajes de programación: Java, Python, JavaScript, C++
+Lenguajes de programación: Java, Python, JavaScript, C++
 Frameworks: Spring Boot, Django, React, Angular
 Herramientas: Git, Docker, Jenkins, Kubernetes
 Inteligencia artificial: Aprendizaje automático, procesamiento del lenguaje natural, visión por computadora
 Experiencia laboral
 
 Ingeniero Consultor
-
 Strix Technologies
 
 Diseñé, desarrollé, mantuve, reparé, mejoré, refactoricé y adapté módulos de un proyecto creado especialmente para la gestión de droguerías.
 Me encargué de los diferentes procesos de la empresa y resolví problemas comunes de gestión.
 Audité usuarios, eventos y previne fallos del sistema.
 Brindé soporte a la herramienta que está en producción y que tiene 60+ usuarios y 2000+ clientes.
-Ayudante Administrativo
 
+Ayudante Administrativo
 Frio Sistemas C.A
 
 Mejoré los procesos de la empresa con software y aplicaciones.
 Digitalicé la contabilidad, indexé manuales y ayudé con el reballing de circuitos.
 Resolví problemas básicos de gestión y multidisciplinarios, tanto administrativos como de reparación de equipos de aire acondicionados o de acondicionamiento en general.
-Desarrollador Senior
 
+Desarrollador Senior
 Ab4cus
 
 Me encargué de la documentación del proyecto, hice los trace de la aplicación, seguimiento de fallas, corrección de bugs, depuración de logs y desarrollo de módulos del proyecto.
 Trabajé en un sistema para gestión encomiendas para Zoom, basado en Java, Maven como Framework, Google Web Tookits para generar interfaces, Log4j, Hibernate y Weblogic.
-Programador js. Utility jr.
 
+Programador js. Utility jr.
 Biblioteca Alonzo Gamero
 
 Ingresé y corregí libros en la base de datos, digitalicé tesis antiguas, modifiqué y mejoré el sitio web de la biblioteca, realicé mantenimiento de equipos, cargué nuevo contenido en la página, ordené las estanterías y restauré libros.
 Atendí al público y atendí la barra.
-Pasante
 
+Pasante
 Sudeban
 
 Modifiqué módulos de Liferay para adaptarlos a las necesidades de Sudeban.
