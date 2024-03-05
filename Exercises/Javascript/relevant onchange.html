@@ -1,0 +1,90 @@
+
+<script>
+    function syncForm() {
+
+        console.log("Sync Form");
+
+        var country = document.getElementById('country');
+        var fecha = document.getElementById('birthdate').value;
+        var sexo = document.getElementById('sex');
+        var estado = document.getElementById('state');
+        var direccion = document.getElementById('address').value;
+        var referencia = document.getElementById('reference').value;
+        var ciudad = document.getElementById('city').value;
+        var telefono = document.getElementById('phone').value;
+        
+        console.log(estado.selectedIndex);
+
+        if (country.selectedIndex == -1) { } else {
+            document.getElementById('countryModal').innerHTML = country.options[country.selectedIndex].text;
+        };
+        if (estado.selectedIndex == -1) { } else {
+            document.getElementById('stateModal').innerHTML = estado.options[estado.selectedIndex].text;
+        };
+
+        if (sexo.selectedIndex == -1) { } else {
+            document.getElementById('sexModal').innerHTML = sexo.options[sexo.selectedIndex].text;
+        };
+
+        document.getElementById('birthdateModal').innerHTML = fecha;
+        document.getElementById('addressModal').innerHTML = direccion;
+        document.getElementById('refereceModal').innerHTML = referencia;
+        document.getElementById('cityModal').innerHTML = ciudad;
+        document.getElementById('phoneModal').innerHTML = telefono;
+    };
+</script>
+
+<script>
+    function validateForm() {
+        var x;
+        x = document.getElementById("bithdateM").value;
+        if (x == "") {
+            $('#myModal').modal('hide');
+            alert("Faltan campos por favor rellenelos. (fecha new) (3)");
+            return false;
+        };
+        
+        x = document.getElementById("phoneM").value;
+
+        if (x == "" || x.length < 13) {
+            $('#myModal').modal('hide');
+            alert("Faltan campos por favor rellenelos. (telefono new) (3)");
+            return false;
+        };
+
+        x = document.getElementById("sexM").value;
+        if (x == "") {
+            $('#myModal').modal('hide');
+            alert("Faltan campos por favor rellenelos. (sexo new) (3)");
+            return false;
+        };
+
+        x = document.getElementById("countryM").value;
+        if (x == "") {
+            $('#myModal').modal('hide');
+            alert("Faltan campos por favor rellenelos. (countryM new) (3)");
+            return false;
+        };
+
+        x = document.getElementById("stateM").value;
+        if (x == "") {
+            $('#myModal').modal('hide');
+            alert("Faltan campos por favor rellenelos. (states new) (3)");
+            return false;
+        };
+
+        x = document.getElementById("addressM").value;
+        if (x == "" || x.length < 20) {
+            $('#myModal').modal('hide');
+            alert("Faltan campos por favor rellenelos. (direccion new) (3)");
+            return false;
+        };
+
+        const container = document.getElementsByClassName('modal-content')[0];
+        if (container.classList.contains('loader')) {
+            container.classList.remove('loader');
+        } else {
+            container.classList.add('loader');
+        }
+    }
+</script>
