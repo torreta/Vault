@@ -14,7 +14,8 @@ function countingValleys(n, s) {
             if (point_height == 0) {
                 valles++;
             }
-             point_height--;
+
+            point_height--;
         }
     }
     return valles;
