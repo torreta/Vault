@@ -1,0 +1,350 @@
+Person ID,Name,Department,Date,Shift,Timetable,Attendance Status,Check-In,Check-out,Late,Early Leave,Attended,Absent,Worked,Break,Leave Type,Leave,OT1,OT2,OT3
+'1,Strix Luis,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'1,Strix Luis,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'2,Estefania,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:03:22,-,0 min,233 min,543 min,237 min,543 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 07:03:22,Check-Out Time: 2023-11-01 16:06:34,Attended Duration:543 min
+'2,Estefania,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:07:37,191 min,52 min,537 min,243 min,537 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 10:10:35,Check-Out Time: 2023-11-02 19:07:37,Attended Duration:537 min
+'2,Estefania,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:19:58,-,20 min,169 min,591 min,189 min,591 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 07:19:58,Check-Out Time: 2023-11-03 17:10:42,Attended Duration:591 min
+'2,Estefania,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'2,Estefania,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:15:27,238 min,0 min,558 min,222 min,558 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 10:57:43,Check-Out Time: 2023-11-06 20:15:27,Attended Duration:558 min
+'2,Estefania,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:06:04,226 min,0 min,561 min,219 min,561 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 10:45:32,Check-Out Time: 2023-11-07 20:06:04,Attended Duration:561 min
+'2,Estefania,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:04:32,-,0 min,220 min,555 min,225 min,555 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 07:04:32,Check-Out Time: 2023-11-08 16:19:36,Attended Duration:555 min
+'2,Estefania,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:41:33,-,0 min,217 min,581 min,199 min,581 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 06:41:33,Check-Out Time: 2023-11-09 16:22:39,Attended Duration:581 min
+'2,Estefania,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:10:37,-,11 min,221 min,548 min,232 min,548 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 07:10:37,Check-Out Time: 2023-11-10 16:18:44,Attended Duration:548 min
+'2,Estefania,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'2,Estefania,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:34:49,-,0 min,236 min,569 min,211 min,569 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 06:34:49,Check-Out Time: 2023-11-13 16:03:42,Attended Duration:569 min
+'2,Estefania,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:37:11,-,0 min,132 min,671 min,109 min,671 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 06:37:11,Check-Out Time: 2023-11-14 17:48:07,Attended Duration:671 min
+'16,Gregoria  Montes,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:59:46,-,60 min,179 min,541 min,239 min,541 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 07:59:46,Check-Out Time: 2023-11-01 17:00:55,Attended Duration:541 min
+'16,Gregoria  Montes,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,66 min,180 min,535 min,246 min,535 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 08:05:46,Check-Out Time: 2023-11-02 17:00:16,Attended Duration:535 min
+'16,Gregoria  Montes,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,60 min,175 min,545 min,235 min,545 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 08:00:05,Check-Out Time: 2023-11-03 17:04:48,Attended Duration:545 min
+'16,Gregoria  Montes,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'16,Gregoria  Montes,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,61 min,178 min,541 min,239 min,541 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 08:00:55,Check-Out Time: 2023-11-06 17:01:43,Attended Duration:541 min
+'16,Gregoria  Montes,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,62 min,179 min,538 min,242 min,538 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 08:02:19,Check-Out Time: 2023-11-07 17:00:34,Attended Duration:538 min
+'16,Gregoria  Montes,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:59:36,-,60 min,179 min,542 min,238 min,542 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 07:59:36,Check-Out Time: 2023-11-08 17:01:21,Attended Duration:542 min
+'16,Gregoria  Montes,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,61 min,177 min,542 min,238 min,542 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 08:00:48,Check-Out Time: 2023-11-09 17:02:44,Attended Duration:542 min
+'16,Gregoria  Montes,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,61 min,0 min,301 min,480 min,301 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 08:01:17,Check-Out Time: 2023-11-10 13:01:47,Attended Duration:301 min
+'16,Gregoria  Montes,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'16,Gregoria  Montes,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,60 min,180 min,540 min,240 min,540 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 08:00:07,Check-Out Time: 2023-11-13 17:00:09,Attended Duration:540 min
+'16,Gregoria  Montes,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,63 min,177 min,540 min,240 min,540 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 08:03:08,Check-Out Time: 2023-11-14 17:03:17,Attended Duration:540 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:44:49,-,45 min,235 min,500 min,280 min,500 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 07:44:49,Check-Out Time: 2023-11-01 16:05:00,Attended Duration:500 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:51:45,-,52 min,232 min,496 min,284 min,496 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 07:51:45,Check-Out Time: 2023-11-02 16:07:52,Attended Duration:496 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:46:17,-,46 min,239 min,494 min,286 min,494 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 07:46:17,Check-Out Time: 2023-11-03 16:00:34,Attended Duration:494 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,316 min,242 min,222 min,558 min,222 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 12:16:19,Check-Out Time: 2023-11-06 15:58:17,Attended Duration:222 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,64 min,230 min,486 min,294 min,486 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 08:03:33,Check-Out Time: 2023-11-07 16:09:34,Attended Duration:486 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:46:05,-,46 min,0 min,377 min,403 min,377 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 07:46:05,Check-Out Time: 2023-11-08 14:03:00,Attended Duration:377 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:45:15,-,45 min,238 min,497 min,283 min,497 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 07:45:15,Check-Out Time: 2023-11-09 16:01:48,Attended Duration:497 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:48:06,-,48 min,241 min,491 min,289 min,491 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 07:48:06,Check-Out Time: 2023-11-10 15:59:04,Attended Duration:491 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:49:45,-,50 min,244 min,486 min,294 min,486 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 07:49:45,Check-Out Time: 2023-11-13 15:55:57,Attended Duration:486 min
+'5540861,Maria Elena Garcia,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:44:17,-,44 min,247 min,488 min,292 min,488 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 07:44:17,Check-Out Time: 2023-11-14 15:52:45,Attended Duration:488 min
+'7661370,Mirna Valera,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:59:54,-,0 min,220 min,560 min,220 min,560 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 06:59:54,Check-Out Time: 2023-11-01 16:20:00,Attended Duration:560 min
+'7661370,Mirna Valera,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:12:55,-,13 min,231 min,536 min,244 min,536 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 07:12:55,Check-Out Time: 2023-11-02 16:08:51,Attended Duration:536 min
+'7661370,Mirna Valera,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'7661370,Mirna Valera,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'7661370,Mirna Valera,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:02:13,-,0 min,0 min,357 min,423 min,357 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 07:02:13,Check-Out Time: 2023-11-06 12:59:09,Attended Duration:357 min
+'7661370,Mirna Valera,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:05:37,-,0 min,232 min,543 min,237 min,543 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 07:05:37,Check-Out Time: 2023-11-07 16:08:19,Attended Duration:543 min
+'7661370,Mirna Valera,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:03:05,-,0 min,222 min,555 min,225 min,555 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 07:03:05,Check-Out Time: 2023-11-08 16:18:05,Attended Duration:555 min
+'7661370,Mirna Valera,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'7661370,Mirna Valera,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:01:49,-,0 min,176 min,602 min,178 min,602 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 07:01:49,Check-Out Time: 2023-11-10 17:04:09,Attended Duration:602 min
+'7661370,Mirna Valera,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,62 min,237 min,481 min,299 min,481 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-11 08:02:17,Check-Out Time: 2023-11-11 16:02:49,Attended Duration:481 min
+'7661370,Mirna Valera,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,237 min,0 min,242 min,538 min,242 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 10:57:04,Check-Out Time: 2023-11-13 14:59:07,Attended Duration:242 min
+'7661370,Mirna Valera,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,239 min,241 min,300 min,480 min,300 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 10:59:04,Check-Out Time: 2023-11-14 15:58:36,Attended Duration:300 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,180 min,0 min,187 min,593 min,187 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 09:59:31,Check-Out Time: 2023-11-01 13:06:32,Attended Duration:187 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:27:11,240 min,0 min,567 min,213 min,567 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 10:59:50,Check-Out Time: 2023-11-02 20:27:11,Attended Duration:567 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:16:34,241 min,0 min,556 min,224 min,556 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 11:00:48,Check-Out Time: 2023-11-03 20:16:34,Attended Duration:556 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:03:34,-,0 min,0 min,384 min,396 min,384 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 07:03:34,Check-Out Time: 2023-11-07 13:27:48,Attended Duration:384 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:03:59,-,0 min,0 min,357 min,423 min,357 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 07:03:59,Check-Out Time: 2023-11-08 13:01:25,Attended Duration:357 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:00:13,-,0 min,217 min,563 min,217 min,563 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 07:00:13,Check-Out Time: 2023-11-09 16:22:46,Attended Duration:563 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:01:07,-,0 min,0 min,360 min,420 min,360 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 07:01:07,Check-Out Time: 2023-11-10 13:01:11,Attended Duration:360 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,63 min,163 min,554 min,226 min,554 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-11 08:02:35,Check-Out Time: 2023-11-11 17:16:51,Attended Duration:554 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,182 min,0 min,298 min,482 min,298 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 10:02:16,Check-Out Time: 2023-11-13 15:00:36,Attended Duration:298 min
+'12669345,Migdalia Aragort,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,176 min,0 min,306 min,474 min,306 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 09:55:57,Check-Out Time: 2023-11-14 15:01:41,Attended Duration:306 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:05:38,247 min,0 min,539 min,241 min,539 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 11:07:03,Check-Out Time: 2023-11-01 20:05:38,Attended Duration:539 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,208 min,0 min,212 min,568 min,212 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 10:27:54,Check-Out Time: 2023-11-02 13:59:29,Attended Duration:212 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:19:17,-,19 min,0 min,342 min,438 min,342 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 07:19:17,Check-Out Time: 2023-11-06 13:00:55,Attended Duration:342 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:05:44,-,0 min,230 min,544 min,236 min,544 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 07:05:44,Check-Out Time: 2023-11-07 16:10:03,Attended Duration:544 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,242 min,240 min,298 min,482 min,298 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 11:02:13,Check-Out Time: 2023-11-08 16:00:26,Attended Duration:298 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:59:33,-,0 min,0 min,423 min,357 min,423 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 06:59:33,Check-Out Time: 2023-11-09 14:02:36,Attended Duration:423 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,191 min,112 min,477 min,303 min,477 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 10:11:04,Check-Out Time: 2023-11-10 18:08:15,Attended Duration:477 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:57:19,241 min,0 min,536 min,244 min,536 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 11:01:09,Check-Out Time: 2023-11-13 19:57:19,Attended Duration:536 min
+'13290864,Adelaida Urbina,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'15296991,Luz Monsalve,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,238 min,0 min,242 min,538 min,242 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 10:58:17,Check-Out Time: 2023-11-01 15:00:23,Attended Duration:242 min
+'15296991,Luz Monsalve,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:04:59,243 min,0 min,542 min,238 min,542 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 11:03:07,Check-Out Time: 2023-11-02 20:04:59,Attended Duration:542 min
+'15296991,Luz Monsalve,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:11:55,242 min,0 min,550 min,230 min,550 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 11:02:02,Check-Out Time: 2023-11-03 20:11:55,Attended Duration:550 min
+'15296991,Luz Monsalve,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'15296991,Luz Monsalve,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:01:48,-,0 min,240 min,538 min,242 min,538 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 07:01:48,Check-Out Time: 2023-11-06 16:00:09,Attended Duration:538 min
+'15296991,Luz Monsalve,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'15296991,Luz Monsalve,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:04:51,-,0 min,240 min,536 min,245 min,536 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 07:04:51,Check-Out Time: 2023-11-08 16:00:21,Attended Duration:536 min
+'15296991,Luz Monsalve,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:04:33,-,0 min,239 min,537 min,243 min,537 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 07:04:33,Check-Out Time: 2023-11-09 16:01:12,Attended Duration:537 min
+'15296991,Luz Monsalve,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:07:04,240 min,0 min,547 min,233 min,547 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 11:00:24,Check-Out Time: 2023-11-10 20:07:04,Attended Duration:547 min
+'15296991,Luz Monsalve,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,65 min,163 min,552 min,228 min,552 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-11 08:05:14,Check-Out Time: 2023-11-11 17:16:47,Attended Duration:552 min
+'15296991,Luz Monsalve,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,121 min,119 min,539 min,241 min,539 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 09:01:18,Check-Out Time: 2023-11-13 18:00:37,Attended Duration:539 min
+'15296991,Luz Monsalve,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,121 min,120 min,540 min,240 min,540 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 09:00:35,Check-Out Time: 2023-11-14 18:00:23,Attended Duration:540 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,180 min,247 min,353 min,427 min,353 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 10:00:25,Check-Out Time: 2023-11-01 15:53:02,Attended Duration:353 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:05:36,180 min,54 min,546 min,234 min,546 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 09:59:53,Check-Out Time: 2023-11-03 19:05:36,Attended Duration:546 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,62 min,179 min,539 min,241 min,539 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-04 08:02:20,Check-Out Time: 2023-11-04 17:01:04,Attended Duration:539 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:06:07,-,0 min,0 min,445 min,335 min,445 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 07:06:07,Check-Out Time: 2023-11-07 14:30:44,Attended Duration:445 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:07:02,239 min,0 min,548 min,232 min,548 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 10:59:03,Check-Out Time: 2023-11-08 20:07:02,Attended Duration:548 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:03:07,241 min,0 min,542 min,238 min,542 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 11:00:48,Check-Out Time: 2023-11-09 20:03:07,Attended Duration:542 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:08:30,241 min,0 min,547 min,233 min,547 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 11:01:29,Check-Out Time: 2023-11-10 20:08:30,Attended Duration:547 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,184 min,266 min,330 min,450 min,330 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 10:04:23,Check-Out Time: 2023-11-13 15:34:19,Attended Duration:330 min
+'15872394,Adriana Chaparro,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,184 min,234 min,362 min,418 min,362 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 10:03:51,Check-Out Time: 2023-11-14 16:06:02,Attended Duration:362 min
+'15872395,Maria Chaparro,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:00:01,-,0 min,239 min,541 min,239 min,541 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 07:00:01,Check-Out Time: 2023-11-01 16:00:37,Attended Duration:541 min
+'15872395,Maria Chaparro,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,121 min,94 min,566 min,214 min,566 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 09:00:31,Check-Out Time: 2023-11-02 18:26:10,Attended Duration:566 min
+'15872395,Maria Chaparro,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:22:16,-,22 min,233 min,525 min,255 min,525 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 07:22:16,Check-Out Time: 2023-11-03 16:07:16,Attended Duration:525 min
+'15872395,Maria Chaparro,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,61 min,179 min,540 min,240 min,540 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-04 08:00:43,Check-Out Time: 2023-11-04 17:01:08,Attended Duration:540 min
+'15872395,Maria Chaparro,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,120 min,119 min,540 min,240 min,540 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 09:00:18,Check-Out Time: 2023-11-06 18:00:37,Attended Duration:540 min
+'15872395,Maria Chaparro,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,121 min,118 min,542 min,238 min,542 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 09:00:38,Check-Out Time: 2023-11-07 18:02:25,Attended Duration:542 min
+'15872395,Maria Chaparro,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,119 min,114 min,547 min,233 min,547 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 08:58:44,Check-Out Time: 2023-11-08 18:05:38,Attended Duration:547 min
+'15872395,Maria Chaparro,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,121 min,118 min,541 min,239 min,541 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 09:01:01,Check-Out Time: 2023-11-09 18:02:05,Attended Duration:541 min
+'15872395,Maria Chaparro,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,120 min,116 min,544 min,236 min,544 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 09:00:15,Check-Out Time: 2023-11-10 18:04:09,Attended Duration:544 min
+'15872395,Maria Chaparro,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'15872395,Maria Chaparro,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:57:16,241 min,0 min,536 min,244 min,536 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 11:01:20,Check-Out Time: 2023-11-13 19:57:16,Attended Duration:536 min
+'15872395,Maria Chaparro,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,239 min,0 min,262 min,518 min,262 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 10:59:22,Check-Out Time: 2023-11-14 15:20:59,Attended Duration:262 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:00:23,-,0 min,236 min,544 min,236 min,544 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 07:00:23,Check-Out Time: 2023-11-01 16:04:03,Attended Duration:544 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:12:49,-,13 min,0 min,347 min,433 min,347 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 07:12:49,Check-Out Time: 2023-11-02 12:59:54,Attended Duration:347 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:05:25,170 min,55 min,555 min,225 min,555 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 09:50:16,Check-Out Time: 2023-11-03 19:05:25,Attended Duration:555 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,172 min,245 min,363 min,417 min,363 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 09:51:38,Check-Out Time: 2023-11-06 15:54:50,Attended Duration:363 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:03:25,144 min,57 min,580 min,200 min,580 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 09:23:46,Check-Out Time: 2023-11-07 19:03:25,Attended Duration:580 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:02:11,166 min,58 min,557 min,223 min,557 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 09:45:35,Check-Out Time: 2023-11-08 19:02:11,Attended Duration:557 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:02:56,179 min,57 min,544 min,236 min,544 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 09:58:51,Check-Out Time: 2023-11-09 19:02:56,Attended Duration:544 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,65 min,163 min,552 min,228 min,552 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-11 08:04:47,Check-Out Time: 2023-11-11 17:16:36,Attended Duration:552 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:58:56,-,0 min,229 min,552 min,228 min,552 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 06:58:56,Check-Out Time: 2023-11-13 16:10:47,Attended Duration:552 min
+'17303369,Lisabel Sosa,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:57:52,-,0 min,238 min,545 min,235 min,545 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 06:57:52,Check-Out Time: 2023-11-14 16:02:27,Attended Duration:545 min
+'18009092,Antonella Mendez,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,117 min,111 min,551 min,229 min,551 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 08:57:29,Check-Out Time: 2023-11-01 18:08:58,Attended Duration:551 min
+'18009092,Antonella Mendez,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18009092,Antonella Mendez,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,118 min,108 min,554 min,226 min,554 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 08:57:45,Check-Out Time: 2023-11-03 18:12:08,Attended Duration:554 min
+'18009092,Antonella Mendez,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,62 min,179 min,538 min,242 min,538 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-04 08:02:25,Check-Out Time: 2023-11-04 17:00:49,Attended Duration:538 min
+'18009092,Antonella Mendez,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:55:26,237 min,0 min,538 min,242 min,538 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 10:56:57,Check-Out Time: 2023-11-06 19:55:26,Attended Duration:538 min
+'18009092,Antonella Mendez,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:58:24,238 min,0 min,540 min,240 min,540 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 10:58:01,Check-Out Time: 2023-11-07 19:58:24,Attended Duration:540 min
+'18009092,Antonella Mendez,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:57:54,236 min,0 min,542 min,238 min,542 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 10:55:33,Check-Out Time: 2023-11-08 19:57:54,Attended Duration:542 min
+'18009092,Antonella Mendez,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,246 min,244 min,290 min,490 min,290 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 11:06:12,Check-Out Time: 2023-11-09 15:55:46,Attended Duration:290 min
+'18009092,Antonella Mendez,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:05:49,-,0 min,231 min,543 min,237 min,543 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 07:05:49,Check-Out Time: 2023-11-10 16:08:36,Attended Duration:543 min
+'18009092,Antonella Mendez,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18009092,Antonella Mendez,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,06:59:03,-,0 min,223 min,558 min,222 min,558 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 06:59:03,Check-Out Time: 2023-11-13 16:17:25,Attended Duration:558 min
+'18009092,Antonella Mendez,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:14:17,232 min,0 min,562 min,218 min,562 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 10:52:25,Check-Out Time: 2023-11-06 20:14:17,Attended Duration:562 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:58:55,239 min,0 min,540 min,240 min,540 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 10:58:33,Check-Out Time: 2023-11-07 19:58:55,Attended Duration:540 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:03:09,239 min,0 min,544 min,236 min,544 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 10:59:21,Check-Out Time: 2023-11-09 20:03:09,Attended Duration:544 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:06:59,237 min,0 min,550 min,230 min,550 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 10:56:48,Check-Out Time: 2023-11-10 20:06:59,Attended Duration:550 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,63 min,163 min,554 min,226 min,554 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-11 08:02:43,Check-Out Time: 2023-11-11 17:16:41,Attended Duration:554 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,129 min,96 min,555 min,225 min,555 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 09:09:05,Check-Out Time: 2023-11-13 18:24:14,Attended Duration:555 min
+'18363955,Yorlin Caraballo,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,121 min,0 min,298 min,482 min,298 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 09:01:13,Check-Out Time: 2023-11-14 13:59:03,Attended Duration:298 min
+'19023056,Yohana Quijada,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,69 min,0 min,416 min,364 min,416 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 08:09:18,Check-Out Time: 2023-11-02 15:05:37,Attended Duration:416 min
+'19023056,Yohana Quijada,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:25:02,-,25 min,161 min,594 min,186 min,594 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 07:25:02,Check-Out Time: 2023-11-03 17:18:37,Attended Duration:594 min
+'19023056,Yohana Quijada,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,87 min,179 min,514 min,266 min,514 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-04 08:27:02,Check-Out Time: 2023-11-04 17:00:59,Attended Duration:514 min
+'19023056,Yohana Quijada,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19023056,Yohana Quijada,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,236 min,231 min,313 min,467 min,313 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 10:56:00,Check-Out Time: 2023-11-14 16:08:35,Attended Duration:313 min
+'19242570,Carrminia Leon,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:15:01,0 min,0 min,254 min,526 min,254 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 16:00:56,Check-Out Time: 2023-11-01 20:15:01,Attended Duration:254 min
+'19242570,Carrminia Leon,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:16:18,0 min,0 min,255 min,525 min,255 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 16:01:36,Check-Out Time: 2023-11-02 20:16:18,Attended Duration:255 min
+'19242570,Carrminia Leon,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:11:48,0 min,0 min,250 min,530 min,250 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 16:01:42,Check-Out Time: 2023-11-03 20:11:48,Attended Duration:250 min
+'19242570,Carrminia Leon,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,61 min,144 min,575 min,205 min,575 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-04 08:00:48,Check-Out Time: 2023-11-04 17:35:54,Attended Duration:575 min
+'19242570,Carrminia Leon,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:13:51,0 min,0 min,254 min,526 min,254 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 16:00:16,Check-Out Time: 2023-11-06 20:13:51,Attended Duration:254 min
+'19242570,Carrminia Leon,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:04:58,0 min,0 min,243 min,537 min,243 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 16:02:18,Check-Out Time: 2023-11-07 20:04:58,Attended Duration:243 min
+'19242570,Carrminia Leon,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:06:57,0 min,0 min,245 min,535 min,245 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 16:02:03,Check-Out Time: 2023-11-08 20:06:57,Attended Duration:245 min
+'19242570,Carrminia Leon,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19242570,Carrminia Leon,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:07:10,0 min,0 min,247 min,533 min,247 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 16:00:16,Check-Out Time: 2023-11-10 20:07:10,Attended Duration:247 min
+'19242570,Carrminia Leon,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19242570,Carrminia Leon,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:57:11,0 min,0 min,237 min,543 min,237 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 16:00:28,Check-Out Time: 2023-11-13 19:57:11,Attended Duration:237 min
+'19242570,Carrminia Leon,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,235 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: ,Check-Out Time: 2023-11-14 16:05:07,Attended Duration:0 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:17:26,235 min,0 min,562 min,218 min,562 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-01 10:55:02,Check-Out Time: 2023-11-01 20:17:26,Attended Duration:562 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:27:08,0 min,0 min,263 min,517 min,263 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 16:04:00,Check-Out Time: 2023-11-02 20:27:08,Attended Duration:263 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,20:22:26,242 min,0 min,560 min,220 min,560 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-03 11:02:13,Check-Out Time: 2023-11-03 20:22:26,Attended Duration:560 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:03:04,-,0 min,233 min,544 min,236 min,544 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 07:03:04,Check-Out Time: 2023-11-06 16:06:39,Attended Duration:544 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:03:29,-,0 min,0 min,492 min,288 min,492 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 07:03:29,Check-Out Time: 2023-11-07 15:15:24,Attended Duration:492 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:05:24,-,0 min,236 min,539 min,241 min,539 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 07:05:24,Check-Out Time: 2023-11-09 16:04:11,Attended Duration:539 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:02:02,-,0 min,225 min,553 min,227 min,553 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 07:02:02,Check-Out Time: 2023-11-10 16:15:13,Attended Duration:553 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,63 min,236 min,481 min,299 min,481 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-11 08:02:50,Check-Out Time: 2023-11-11 16:04:01,Attended Duration:481 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:07:31,195 min,52 min,532 min,248 min,532 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 10:15:22,Check-Out Time: 2023-11-13 19:07:31,Attended Duration:532 min
+'19735908,Kharolyn Marquez,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,182 min,242 min,357 min,423 min,357 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 10:01:34,Check-Out Time: 2023-11-14 15:58:22,Attended Duration:357 min
+'23660599,Robdaly Matos,multiahorro,2023-11-01,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'23660599,Robdaly Matos,multiahorro,2023-11-02,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,60 min,0 min,228 min,552 min,228 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-02 08:00:11,Check-Out Time: 2023-11-02 11:48:27,Attended Duration:228 min
+'23660599,Robdaly Matos,multiahorro,2023-11-03,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'23660599,Robdaly Matos,multiahorro,2023-11-04,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'23660599,Robdaly Matos,multiahorro,2023-11-06,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:02:37,169 min,57 min,553 min,227 min,553 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-06 09:49:11,Check-Out Time: 2023-11-06 19:02:37,Attended Duration:553 min
+'23660599,Robdaly Matos,multiahorro,2023-11-07,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:07:50,177 min,52 min,551 min,229 min,551 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-07 09:57:00,Check-Out Time: 2023-11-07 19:07:50,Attended Duration:551 min
+'23660599,Robdaly Matos,multiahorro,2023-11-08,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:05:40,181 min,54 min,545 min,235 min,545 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-08 10:00:30,Check-Out Time: 2023-11-08 19:05:40,Attended Duration:545 min
+'23660599,Robdaly Matos,multiahorro,2023-11-09,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:00:03,179 min,60 min,541 min,239 min,541 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-09 09:59:27,Check-Out Time: 2023-11-09 19:00:03,Attended Duration:541 min
+'23660599,Robdaly Matos,multiahorro,2023-11-10,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,19:02:59,178 min,57 min,545 min,235 min,545 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-10 09:58:06,Check-Out Time: 2023-11-10 19:02:59,Attended Duration:545 min
+'23660599,Robdaly Matos,multiahorro,2023-11-11,Turno dia norma,normal(07:00:00-20:00:00),Absence,-,-,0 min,0 min,0 min,780 min,0 min,0 min,-,0 min,0 min,0 min,0 min
+'23660599,Robdaly Matos,multiahorro,2023-11-13,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:59:49,-,60 min,119 min,601 min,179 min,601 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-13 07:59:49,Check-Out Time: 2023-11-13 18:01:03,Attended Duration:601 min
+'23660599,Robdaly Matos,multiahorro,2023-11-14,Turno dia norma,normal(07:00:00-20:00:00),Absence,07:56:31,-,57 min,0 min,314 min,466 min,314 min,0 min,-,0 min,0 min,0 min,0 min
+Check-In Time: 2023-11-14 07:56:31,Check-Out Time: 2023-11-14 13:10:12,Attended Duration:314 min
