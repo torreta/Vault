@@ -1,5 +1,4 @@
 def translateAsciiBinary(letter)
-
     if(letter == "A")then return ("1000001"); end
     if(letter == "B")then return ("1000010"); end
     if(letter == "C")then return ("1000011"); end
@@ -52,9 +51,7 @@ def translateAsciiBinary(letter)
     if(letter == "x")then return ("1111000"); end
     if(letter == "y")then return ("1111001"); end
     if(letter == "z")then return ("1111010"); end
-
     if(letter == " ")then return ("0100000"); end
-
     if(letter == "!")then return ("0100001"); end
     if(letter == "\"")then return ("0100010"); end
     if(letter == "#")then return ("0100011"); end
@@ -87,8 +84,6 @@ def translateAsciiBinary(letter)
     if(letter == ">")then return ("0111110"); end
     if(letter == "?")then return ("0111111"); end
     if(letter == "@")then return ("1000000"); end
-
     STDERR.puts ("Letra invalida  #{letter}")
-    return "X"
-
+    return nil
 end
