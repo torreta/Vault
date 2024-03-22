@@ -15,20 +15,10 @@ class TransactionTypesSeeder extends Seeder
     public function run()
     {
         DB::table('transaction_types')->insert([
-            'id' => 1,
-            'name' => 'INGRESO',
-        ]);
-        DB::table('transaction_types')->insert([
-            'id' => 2,
-            'name' => 'EGRESO',
-        ]);
-        DB::table('transaction_types')->insert([
-            'id' => 3,
-            'name' => 'VENTA',
-        ]);
-        DB::table('transaction_types')->insert([
-            'id' => 4,
-            'name' => 'AJUSTE',
+            ['id' => 1, 'name' => 'INGRESO'],
+            ['id' => 2, 'name' => 'EGRESO'],
+            ['id' => 3, 'name' => 'VENTA'],
+            ['id' => 4, 'name' => 'AJUSTE'],
         ]);
     }
 }
