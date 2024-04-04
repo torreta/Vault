@@ -1,0 +1,25 @@
+# alias de poraqui
+
+alias pj="cd /var/www/html/poraqui-api/"
+alias pjlog="tail -f -n 500 /var/www/html/poraqui-api/log/development.log"
+alias reload!="sudo systemctl restart poraqui-api.service"
+
+# page
+alias pj="cd /var/www/html/poraqui-page/"
+alias pjlog="tail -f -n 200 /var/log/syslog"
+alias reload!="sudo systemctl restart poraqui-page.service"
+
+# idea
+
+alias pj="cd /var/www/html/poraqui-page/"
+alias pjlog="tail -f -n 200 /var/log/syslog"
+alias reload!="sudo systemctl restart poraqui-page.service"
+
+# cuando hay varios (util para cuando hay dockers con varias virtualizaciones)
+alias pj="echo 'hay x proyectos'"
+alias pj1="cd /var/www/html/proyecto1/"
+alias pj2="cd /var/www/html/proyecto2/"
+alias pj3="cd /var/www/html/proyecto3/"
+
+# si hay varias hacer lo mismo
+alias db = "mysql -u root -p""
