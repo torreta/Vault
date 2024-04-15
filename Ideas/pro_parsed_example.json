@@ -1,0 +1,30 @@
+[
+  {
+    "siteName": "sitio 1",
+    "longitude": "-66.8394684791565",
+    "latitude": "10.493213228263972",
+    "phone": "584123369852",
+    "address": "parque cristal cerca del parque del este",
+    "reference": "Parque del Este\r\nF5V6+76M",
+    "timeSpam": "20",
+    "numOfHours": "1",
+    "schedules": [
+      { "days": ["1", "1", "0", "0", "0", "0", "0"], "start_time": "09:00", "end_time": "15:00" },
+      { "days": ["0", "0", "1", "1", "0", "0", "0"], "start_time": "10:00", "end_time": "19:00" }
+    ]
+  },
+  {
+    "siteName": "sitio 2",
+    "longitude": "-66.85123801231384",
+    "latitude": "10.507301647329259",
+    "phone": "584246698752",
+    "address": "carbon cafe cerca de altamira",
+    "reference": "5 Transversal De Altamira\r\nG44X+WC5",
+    "timeSpam": "25",
+    "numOfHours": null,
+    "schedules": [
+      { "days": ["0", "0", "0", "0", "0", "1", "1"], "start_time": "10:00", "end_time": "15:00" },
+      { "days": ["0", "0", "0", "0", "1", "0", "0"], "start_time": "12:00", "end_time": "21:00" }
+    ]
+  }
+]
