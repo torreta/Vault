@@ -64,14 +64,15 @@ module DataInterpreterHelper
 	end
 
 
-	def get_schedules(days, start_time, end_time)
+	def get_schedules(days, start_time, end_time, id)
 		schedules = []
 		
 		i = 0 
 		d = 0
 		
-		while d < days.length                
+		while d < days.length
 				data = {
+						"id" => id[i] || nil,
 						"days" => days.slice(d, 7),
 						"start_time" => start_time[i],
 						"end_time" => end_time[i]
@@ -101,6 +102,7 @@ def get_business_address_and_its_schedules params
 		counted.times do |n|
 				data = {}
 				get_values_of_params(data, params, n + 1, [
+						"addressC",
 						"siteName",
 						"longitude",
 						"latitude",
@@ -111,7 +113,7 @@ def get_business_address_and_its_schedules params
 						"numOfHours",
 				])
 				
-				data["schedules"] = get_schedules(params["days"]["#{n}"], params["start_time"]["#{n}"], params["end_time"]["#{n}"])
+				data["schedules"] = get_schedules(params["days"]["#{n}"], params["start_time"]["#{n}"], params["end_time"]["#{n}"], params["schedule_id"]["#{n}"])
 				
 				addresses.push(data)
 		end
@@ -119,6 +121,22 @@ def get_business_address_and_its_schedules params
 		addresses
 end
 
+def eliminate_duplicate_schedules sites
+	
+	addresses = []
+	last_schedule_id = nil
+		
+	sites.each do |site|
+		site["schedules"].each do |schedule|
+			if schedule['id'] == last_schedule_id
+				schedule['id'] = ""
+			else
+				last_schedule_id = schedule['id']
+			end
+		end
+	end
 
+	sites
+end
 
 end
