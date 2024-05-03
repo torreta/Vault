@@ -1,0 +1,41 @@
+# syntax=docker/dockerfile:1.4
+
+FROM --platform=$BUILDPLATFORM bitnami/laravel:latest AS builder
+ARG DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+RUN echo "Installing locals"
+# RUN apt update && apt install -y locales systemd && rm -rf /var/lib/apt/lists/* \
+#   && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
+ENV TZ=America/Caracas
+
+# Install required system packages
+RUN apt-get update
+RUN apt-get -y install imagemagick curl software-properties-common gnupg vim ssh
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get -y install nodejs
+# install php extensions
+# RUN install_packages php8.0-mbstring php8.0-xml php8.0-bcmath php8.0-curl php8.0-gd php8.0-intl php8.0-xsl php8.0-zip php8.0-pdo-mysql
+
+# install composer
+RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+RUN php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+RUN composer require cocur/slugify:4.1
+RUN composer dump-autoload
+RUN composer install --no-scripts
+RUN composer update
+
+# install mysql
+# RUN apt install mysql-server -y
+# Install NPM dependencies
+
+RUN npm install --prefix /app
+EXPOSE 8000
+EXPOSE 9000
+EXPOSE 5173
+WORKDIR /root/Code/
+CMD bash
+CMD ["npm", "start", "--prefix", "app"]
