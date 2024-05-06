@@ -43,7 +43,7 @@ module ApplicationHelper
 
 			# sino me response dentro de las respuestas esperadas, levanto un error
 			# pues resulta que los types eran string
-			if !["200", "201", "202"].include?(response.code)
+			if !["200", "201", "202","400"].include?(response.code)
 				raise StandardError,  "Unknown error: #{response.code}"
 			end
 
