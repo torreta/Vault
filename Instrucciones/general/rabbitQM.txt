@@ -1,0 +1,24 @@
+COMANDOS
+- docker pull rabbitmq:management
+- docker run -d -p 15673:15672 -p 5674:5672 -v /home/aluzardo/code/docker/rabbitmq:/home --hostname my-rabbitmq --name rabbitmq rabbitmq:3.10.6-management-alpine\n
+- npm install amqplib
+
+RABBIT MQ UTIL
+var amqp = require('amqplib');
+
+async function setupRabbitMQ() {
+  try {
+    const connection = await amqp.connect('amqp://localhost:5674');
+    const channel = await connection.createChannel();
+    await channel.assertQueue('farmaky');
+  } catch (error) {
+    console.error('Error al conectar con RabbitMQ:', error);
+    throw error;
+  }
+}
+
+module.exports = setupRabbitMQ;
+
+ARCHIVO INDEX
+const setupRabbitMQ = require("./utils/rabbitmq")
+await setupRabbitMQ();
