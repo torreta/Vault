@@ -1,0 +1,35 @@
+
+
+ 1. solo se puede facturar despues de dado el servicio?
+
+ No, de hecho encuestas que hecho con medicos y/o nuticionistas indican que en muchos casis los pacientes pueden pagar la cita antes y esto es bueno por 2 razones. 1.- Si el paciente no asiste o no se conecta si la cita es virtual, se genera un compromiso por haber pagado la cita y le toca reagendar. 2.- El médico o proveedor de servicio no pierde ese espacio que pudo ofrecer a otro paciente/cliente por no presentarse. Queda en manos del paciente/cliente reagendar y el proveedor honrar el pago.
+ 
+ 2. en que momentos es valido cancelar las facturas? (osea, al cancelar la cita obvio) pero despues de comentada / revisada / cambiada / pagada, antes o despues de la fecha de la cita en cuestion, etc
+
+ En funcion a la respuesta 1.- si no se ha generado ninguna factura no hay nada que cancelar. Pero si se genera y se paga, tampoco habria nada que cancelar. Ahora si se genera la factura y se paga, podria darse el caso en que toque un reembolso porque nunca se ejecuto el servicio. Pero en este último escenario aplicaría una penalidad del valor de la comision de la plataforma, porque de alli se cubre el fee de Stripe y habria que determinar si el reembolso genera el cobro de otro fee para incluirlo en el monto de la penalidad.
+ 
+ 3. se puede pagar antes de asistir a una cita? de pasar  y el cliente no asiste, que hago?
+
+3.- Sí se puede pagar antes y es recomendable en el sentido de como explique en el punto 1.- esto genera un compromiso y así el proveedor no pierde el espacio que pudo ofrecer a otro cliente/paciente. Si no asiste la politica es reagendar. Y esto me hace pensar que debemos incluir en una nota en la factura esta política. “ Recuerde que si por alguna razón no puede asistir a su cita debe cancelarla y reagendar. Si se requiere un reembolso aplica una penalidad de un valor igual a la comisión por el uso de la plataforma + el fee por la transferencia del reembolso”.
+
+
+
+
+ por cierto, como hacemos si la persona, por ejemplo le pago en efectivo la cita y ya se genero la factura?
+ (o pago por otro medio que no sea stripe)
+ deberia haber un modo para que el proveedor pueda indicar que algo asi sucedio?
+
+Esta pregunta es muy interesante por lo siguiente. La idea es que el proveedor y cliente siempre se mantenga dentro de la platforma. El objetivo es tratar de evitar se salga del marketplace. Si el cliente usa otro medio de pago como un punto de venta o efectivo entonces la factura se acumule en un contador de transacciones que se ejecutaron por fuera de Stripe. A ese valor se le calcula el fee de PorAqui y cada semana al transferir las transacciones se cruzan los montos: transacciones Stripe - fee PorAqui = X
+Transacciones por fuera de Stripe - fee PorAqui = Y.
+Luego X-Y = T (Transferencia)
+Si X > Y , se transfiere T
+Si Y > X el proveedor debe depositar a PorAqui la diferencia. O como politica se podria cargar a la tarjeta de credito que tenga registrada como cliente. Si no tiene una TC registrada solo queda que haga un deposito o transferencia.
+Para esto es importante entonces que exista un elemento para que el cliente registre que la transacción se realizo por fuera de Stripe - Otro medio de Pago —> Efectivo/Otro POS.
+Entonces que se genere la factura y Opción 1 - Pagar con la TC registrada.
+Opción 2 - te envio la factura.
+Opción 3 - Pago en Efectivo/Otra POS
+Déjame saber si tienen alguna duda.
+
+ Esto seria como una switch si el pago es en Efectivo/Otro POS. Se acumula el monto en un bucket (llamemoslo así) y solo vamos a trabajar con eso cuando vayamos a transferir las transacciones realizadas en la semana.
+
+ 
