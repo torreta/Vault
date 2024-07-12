@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Exchange\AMQPExchangeType;
 use PhpAmqpLib\Message\AMQPMessage;
 use Illuminate\Support\Facades\Log;
 use Exception;
@@ -49,7 +50,7 @@ class RabbitMQService {
     public function publish($message)
     {
 
-        $exchange = 'gopharma_exchange_queues_cloud';
+        $exchange = 'exchange_queues_cloud';
         $queue = 'branch_id_queue_cloud';
         $consumerTag = ''; //no key, just me
 
@@ -68,9 +69,72 @@ class RabbitMQService {
     }
 
 
+
+    public function go()
+    {
+
+
+        $exchange = 'exchange_queues_local';
+        $queue = 'branch_id_queue_local';
+        $consumerTag = 'key_publisher_php';
+        
+        
+        Log::info("Empezando conexion el publish");
+        // $connection = new AMQPStreamConnection(env('RABBITMQ_HOST'), env('RABBITMQ_PORT'),env(' RABBITMQ_USER'), env('RABBITMQ_PASSWORD'));
+        $connection = new AMQPStreamConnection('192.168.10.101','5674','cloud', 'cloud');
+        $channel = $connection->channel();
+        
+        /*
+            The following code is the same both in the consumer and the producer.
+            In this way we are sure we always have a queue to consume from and an
+                exchange where to publish messages.
+        */
+        
+        /*
+            name: $queue
+            passive: false
+            durable: true // the queue will survive server restarts
+            exclusive: false // the queue can be accessed in other channels
+            auto_delete: false //the queue won't be deleted once the channel is closed.
+        */
+        // example
+        // $channel->queue_declare($queueName, true, true, true, false);
+        // demo
+        $channel->queue_declare($queue, true, true, true, false);
+        
+        /*
+            name: $exchange
+            type: direct
+            passive: false
+            durable: true // the exchange will survive server restarts
+            auto_delete: false //the exchange won't be deleted once the channel is closed.
+        */
+        // example
+        // $channel->exchange_declare($exchangeName, 'direct', false, true, false);
+        
+        // demo
+        $channel->exchange_declare($exchange,'direct', false, true, false);
+        
+        
+        // example
+        // $channel->queue_bind($queueName, $exchangeName, $routingKey);
+        
+        // demo
+        $channel->queue_bind($queue, $exchange, $consumerTag);
+        Log::info("Empezando el publish");
+        
+        // $messageBody = implode('publish local del amqp ','nada, esto funciona');
+        $message = new AMQPMessage('mensaje nada especial', array('content_type' => 'text/plain', 'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT));
+        $channel->basic_publish($message, $exchange,$consumerTag);
+        
+        return true;
+
+    }
+
+
     public function consume()
     {
-        $exchange = 'gopharma_exchange_queues_cloud';
+        $exchange = 'exchange_queues_cloud';
         $queue = 'branch_id_queue_cloud';
         $consumerTag = ''; //no key, just me
 
@@ -80,11 +144,22 @@ class RabbitMQService {
         $callback = function ($msg) {
             echo ' [x] Received ', $msg->body, "\n";
             Log::info("por rabbitmq: ".$msg->body);
+
+            // consume message
             $this->consumeMessage( $msg->body);
 
             // falta hacer acks....
+            // $this->handleTask($msg->body);
 
+            // $msg->ack();
         };
+
+        // listado de colas
+
+        // binding de colas cloud
+
+        // loop de consumes de colas
+
 
         $channel->queue_declare($queue, true, true, true, false);
         $channel->basic_consume($queue, $consumerTag, false, true, false, false, $callback);
@@ -99,8 +174,8 @@ class RabbitMQService {
 
 
     public function setupQueuesAndExchanges() {
-        $exchange_cloud = 'gopharma_exchange_queues_cloud';
-        $exchange_local = 'gopharma_exchange_queues_local';
+        $exchange_cloud = 'exchange_queues_cloud';
+        $exchange_local = 'exchange_queues_local';
         $queue_cloud = 'branch_id_queue_cloud';
         $queue_local = 'branch_id_queue_local';
 
@@ -118,6 +193,51 @@ class RabbitMQService {
         
         $this->channel->basic_publish($msg, $exchange_cloud, $queue_cloud);
         $this->channel->basic_publish($msg, $exchange_local, $queue_local);
+    }
+
+
+    public function handleTask(string $task) {
+        // esto deberia ser un json
+        /*
+            ---- acks de recibir mensajes ----
+            1. ack "recibí task" (local)
+            2. ack "termine task"(local)
+            3. ack "recibí task" (cloud)
+            4. ack "termine task"(cloud)
+
+            ---- posibles tasks ------
+            5. update full catalog (local)
+            6. update single product catalog (local)
+            7. update inventory (cloud)
+            8. update single product inventory (cloud)
+            9. create invoice (local)
+
+            ----- planteados para después ------
+            10. create product (local)
+            11. create product - por verificación (cloud)
+
+        */
+        
+        // $task_object = json_decode($task);
+
+
+        // switch ($task) {
+        //     case 'value':
+        //         # code...
+        //         break;
+            
+        //     default:
+        //         # code...
+        //         break;
+        // }
+
+        // if ($task_object->task == 5) {
+
+        // }
+
+        
+        // echo  $task;
+
     }
 
 
@@ -241,14 +361,7 @@ class RabbitMQService {
         $this->channel->basic_publish($msg, $exchange,$queue);
     }
 
-    // public function consumeMessage(string $queue, callable $callback) {
-    //     $this->channel->basic_consume($queue, '', false, false, false, false, $callback);
     
-    //     while ($this->channel->is_consuming()) {
-    //         $this->channel->wait();
-    //     }
-    // }
-
     public function consumeMessage(string $message_to_parse) {
         Log::info("dentro del consume message... aqui puede ir un json");
 
