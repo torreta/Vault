@@ -81,6 +81,7 @@ sync_tasks
 php artisan make:migration create_sync_tasks_table
 
 id: integer
+remote_task_id: integer
 branch_id: integer
 task_type_id: integer
 task_status_id: integer
