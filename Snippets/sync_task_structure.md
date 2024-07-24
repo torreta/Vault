@@ -93,4 +93,5 @@ task_end: datetime
 task_duration: datetime
 task_completed: boolean
 task_succeeded: boolean
+data: text
 timestamps
