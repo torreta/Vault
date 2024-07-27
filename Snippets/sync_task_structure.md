@@ -6,7 +6,8 @@ php artisan make:migration create_branch_sync_lists_table
 need:
 branch_id : integer
 active_client : boolean, default: false
-queue_name: string
+consume_queue_name: string
+publish_queue_name: string
 active_queue: boolean, default: false
 timestamps
 
