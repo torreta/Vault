@@ -5,3 +5,9 @@ just bookmarking them will make some difference.
 https://lodash.com/docs/
 
 http://momentjs.com/
+
+https://www.rabbitmq.com/
+
+https://kafka.apache.org/quickstart
+
+https://github.com/comfyanonymous/ComfyUI
