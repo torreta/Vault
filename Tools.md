@@ -13,3 +13,5 @@ https://kafka.apache.org/quickstart
 https://github.com/comfyanonymous/ComfyUI
 
 https://suno.com
+
+https://zed.dev/
