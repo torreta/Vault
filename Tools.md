@@ -11,3 +11,5 @@ https://www.rabbitmq.com/
 https://kafka.apache.org/quickstart
 
 https://github.com/comfyanonymous/ComfyUI
+
+https://suno.com
