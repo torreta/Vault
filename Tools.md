@@ -1,19 +1,17 @@
-Since i keep forgetting pages of tools, maybe writting them down instead
+# TOOlS
+
+Since I keep forgetting pages of tools, maybe writing them down instead
 just bookmarking them will make some difference.
-(nothing that i quick internet search wont solve, but doesnt matter..)
+(nothing that a quick internet search won't solve, but doesn't matter..)
 
-https://lodash.com/docs/
-
-http://momentjs.com/
-
-https://www.rabbitmq.com/
-
-https://kafka.apache.org/quickstart
-
-https://github.com/comfyanonymous/ComfyUI
-
-https://suno.com
-
-https://zed.dev/
-
-https://railway.app/
+- [Lodash](https://lodash.com/docs/)
+- [Moment.js](http://momentjs.com/)
+- [RabbitMQ](https://www.rabbitmq.com/)
+- [Kafka](https://kafka.apache.org/quickstart)
+- [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
+- [Suno](https://suno.com)
+- [Zed](https://zed.dev/)
+- [Railway](https://railway.app/)
+- [Comfyui_LLM_party](https://github.com/heshengtao/comfyui_LLM_party)
+- [Civitai](https://civitai.com/)
+- [Hugging Face](https://huggingface.co/)
