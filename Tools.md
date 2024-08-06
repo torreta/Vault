@@ -15,3 +15,5 @@ just bookmarking them will make some difference.
 - [Comfyui_LLM_party](https://github.com/heshengtao/comfyui_LLM_party)
 - [Civitai](https://civitai.com/)
 - [Hugging Face](https://huggingface.co/)
+- [Motiff](https://motiff.com/recent)
+- [Websim](https://websim.ai/)
