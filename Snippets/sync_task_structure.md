@@ -1,6 +1,6 @@
 # Building Migrations
 
-branch sync lists
+branch_sync_lists
 php artisan make:migration create_branch_sync_lists_table
 
 need:
@@ -11,7 +11,7 @@ publish_queue_name: string
 active_queue: boolean, default: false
 timestamps
 
-task types
+task_types
 php artisan make:migration create_task_types_table
 
 need:
@@ -53,7 +53,7 @@ seed:
 run:
 php artisan db:seed --class=TaskStatusSeeder
 
-task histories
+task_histories
 php artisan make:migration create_task_histories_table
 
 need:
@@ -63,7 +63,7 @@ task_type_id: integer
 task_status_id: integer
 timestamps
 
-task source
+task_sources
 php artisan make:migration create_task_sources_table
 
 need:
