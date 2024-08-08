@@ -17,3 +17,5 @@ just bookmarking them will make some difference.
 - [Hugging Face](https://huggingface.co/)
 - [Motiff](https://motiff.com/recent)
 - [Websim](https://websim.ai/)
+- [hostinger](https://www.hostinger.com/ai-website-builder)
+- [caracashosting](https://caracashosting.com/)
