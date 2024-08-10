@@ -19,3 +19,4 @@ just bookmarking them will make some difference.
 - [Websim](https://websim.ai/)
 - [hostinger](https://www.hostinger.com/ai-website-builder)
 - [caracashosting](https://caracashosting.com/)
+- [caracashosting](https://docs.stripe.com/stripe-cli)
