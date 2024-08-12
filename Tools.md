@@ -22,3 +22,4 @@ just bookmarking them will make some difference.
 - [stripe](https://docs.stripe.com/stripe-cli)
 - [cloudamqp](https://www.cloudamqp.com/)
 - [monicahq](https://github.com/monicahq/monica?tab=readme-ov-file#features)
+- [convex](https://www.convex.dev/)
