@@ -19,4 +19,6 @@ just bookmarking them will make some difference.
 - [Websim](https://websim.ai/)
 - [hostinger](https://www.hostinger.com/ai-website-builder)
 - [caracashosting](https://caracashosting.com/)
-- [caracashosting](https://docs.stripe.com/stripe-cli)
+- [stripe](https://docs.stripe.com/stripe-cli)
+- [cloudamqp](https://www.cloudamqp.com/)
+- [monicahq](https://github.com/monicahq/monica?tab=readme-ov-file#features)
