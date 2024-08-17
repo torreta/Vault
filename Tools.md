@@ -24,3 +24,4 @@ just bookmarking them will make some difference.
 - [monicahq](https://github.com/monicahq/monica?tab=readme-ov-file#features)
 - [convex](https://www.convex.dev/)
 - [postgres.new](https://postgres.new/)
+- [summarizer](https://www.summarizer.org//)
