@@ -27,3 +27,8 @@ just bookmarking them will make some difference.
 - [summarizer](https://www.summarizer.org/)
 - [cosine](https://cosine.sh/)
 - [libgen](libgen.rs)
+- [elevenlabs](https://elevenlabs.io)
+- [flux](https://www.flux.ai/)
+- [deepmind.google/technologies/imagen-3](https://deepmind.google/technologies/imagen-3/)
+- [x.ai](https://x.ai/)
+- [OpenTriviaQA](https://github.com/uberspot/OpenTriviaQA/tree/master)
