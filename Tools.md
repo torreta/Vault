@@ -32,3 +32,5 @@ just bookmarking them will make some difference.
 - [deepmind.google/technologies/imagen-3](https://deepmind.google/technologies/imagen-3/)
 - [x.ai](https://x.ai/)
 - [OpenTriviaQA](https://github.com/uberspot/OpenTriviaQA/tree/master)
+- [datarundown](https://datarundown.com/category/bi/bi-tools/)
+- [scrcpy](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md)
