@@ -34,3 +34,5 @@ just bookmarking them will make some difference.
 - [OpenTriviaQA](https://github.com/uberspot/OpenTriviaQA/tree/master)
 - [datarundown](https://datarundown.com/category/bi/bi-tools/)
 - [scrcpy](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md)
+- [render](https://render.com/)
+- [getimg](https://getimg.ai/)
