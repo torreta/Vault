@@ -36,3 +36,5 @@ just bookmarking them will make some difference.
 - [scrcpy](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md)
 - [render](https://render.com/)
 - [getimg](https://getimg.ai/)
+- [twentyhq](https://github.com/twentyhq/twenty)
+- [twenty](https://twenty.com/)
