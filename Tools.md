@@ -38,3 +38,4 @@ just bookmarking them will make some difference.
 - [getimg](https://getimg.ai/)
 - [twentyhq](https://github.com/twentyhq/twenty)
 - [twenty](https://twenty.com/)
+- [vercel](https://v0.dev/chat)
