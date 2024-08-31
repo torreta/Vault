@@ -39,3 +39,4 @@ just bookmarking them will make some difference.
 - [twentyhq](https://github.com/twentyhq/twenty)
 - [twenty](https://twenty.com/)
 - [vercel](https://v0.dev/chat)
+- [freesets](https://freesets.dev/)
