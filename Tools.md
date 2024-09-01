@@ -40,3 +40,4 @@ just bookmarking them will make some difference.
 - [twenty](https://twenty.com/)
 - [vercel](https://v0.dev/chat)
 - [freesets](https://freesets.dev/)
+- [shortform](https://www.shortform.com/)
