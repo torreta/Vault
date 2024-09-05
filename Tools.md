@@ -42,3 +42,4 @@ just bookmarking them will make some difference.
 - [freesets](https://freesets.dev/)
 - [shortform](https://www.shortform.com/)
 - [grafana](https://grafana.com/)
+- [prometheus](https://prometheus.io/)
