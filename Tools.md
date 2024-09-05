@@ -41,3 +41,4 @@ just bookmarking them will make some difference.
 - [vercel](https://v0.dev/chat)
 - [freesets](https://freesets.dev/)
 - [shortform](https://www.shortform.com/)
+- [grafana](https://grafana.com/)
