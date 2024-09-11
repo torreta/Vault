@@ -43,3 +43,4 @@ just bookmarking them will make some difference.
 - [shortform](https://www.shortform.com/)
 - [grafana](https://grafana.com/)
 - [prometheus](https://prometheus.io/)
+- [obsidian](hhttps://obsidian.md/)
