@@ -43,4 +43,5 @@ just bookmarking them will make some difference.
 - [shortform](https://www.shortform.com/)
 - [grafana](https://grafana.com/)
 - [prometheus](https://prometheus.io/)
-- [obsidian](hhttps://obsidian.md/)
+- [obsidian](https://obsidian.md/)
+- [ve exchance rate utility](https://bcv-exchange-rates.vercel.app/get_exchange_rates)
