@@ -45,3 +45,4 @@ just bookmarking them will make some difference.
 - [prometheus](https://prometheus.io/)
 - [obsidian](https://obsidian.md/)
 - [ve exchance rate utility](https://bcv-exchange-rates.vercel.app/get_exchange_rates)
+- [laravel-livewire](https://laravel-livewire.com/screencasts/s1-introduction)
