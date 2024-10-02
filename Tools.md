@@ -48,3 +48,4 @@ just bookmarking them will make some difference.
 - [laravel-livewire](https://laravel-livewire.com/screencasts/s1-introduction)
 - [learnhowtolearn](https://learnhowtolearn.org/)
 - [certificates](https://www.classcentral.com/report/free-developer-it-certifications/)
+- [overapi cheatsheets](https://overapi.com/)
