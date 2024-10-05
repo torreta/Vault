@@ -1,0 +1,12 @@
+{
+  "Amount": 50.0,
+  "BeneficiaryBankCode": 191,
+  "BeneficiaryCellPhone": "584141234567",
+  "BeneficiaryEmail": "nombre.beneficiario@example.com",
+  "BeneficiaryID": "V123456789",
+  "BeneficiaryName": "Nombre del Beneficiario",
+  "BranchID": "CCS001",
+  "ChildClientID": "V987654321",
+  "Description": "Pago de servicios",
+  "OperationRef": "REF12345"
+}

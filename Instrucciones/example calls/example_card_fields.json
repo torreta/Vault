@@ -1,0 +1,15 @@
+{
+  "AccountType": 20,
+  "AffiliationNumber": 1234567890,
+  "Amount": 150.0,
+  "CardHolderID": 123456789,
+  "CardHolderName": "Nombre del Tarjetahabiente",
+  "CardNumber": 1234567890123456,
+  "CardPIN": 1234,
+  "BranchID": "CCS001",
+  "ChildClientID": "V123456789",
+  "CVV": 123,
+  "dtExpiration": "122025",
+  "idCardType": 1,
+  "TransactionIdentifier": "IDTransaccion123"
+}
