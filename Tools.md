@@ -50,3 +50,4 @@ just bookmarking them will make some difference.
 - [certificates](https://www.classcentral.com/report/free-developer-it-certifications/)
 - [overapi cheatsheets](https://overapi.com/)
 - [notebooklm](https://notebooklm.google.com/)
+- [zen-browser](https://zen-browser.app/)
