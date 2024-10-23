@@ -6,3 +6,4 @@ Pretty-ts-errors https://github.com/yoavbls/pretty-ts-...
 Rectangle https://rectangleapp.com/
 Posthog https://posthog.com/
 Arc https://arc.net/
+https://resend.com/

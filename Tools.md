@@ -51,3 +51,4 @@ just bookmarking them will make some difference.
 - [overapi cheatsheets](https://overapi.com/)
 - [notebooklm](https://notebooklm.google.com/)
 - [zen-browser](https://zen-browser.app/)
+- [resend](https://resend.com/)
