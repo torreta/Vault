@@ -1,0 +1,19 @@
+[Unit]
+Description=POS API
+Requires=network.target
+Requires=mysql.service
+After=network.target
+
+[Service]
+Environment=NODE_PORT=3000
+Type=simple
+EnvironmentFile=/home/usuario/.bashrc
+WorkingDirectory=/home/usuario/pos_api
+User=usuario
+ExecStart=/bin/bash /home/usuario/pos_api/run_pos_api.sh
+TimeoutSec=30
+RestartSec=15s
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
