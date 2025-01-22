@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd /home/ubuntu/<REPLACE HERE PROJECT ROUTE>/admin
+
+sudo php artisan serve --host <> --port 80

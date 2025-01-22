@@ -1,0 +1,16 @@
+[Unit]
+Description=Cupana Service  
+Requires=network.target
+Requires=mysql.service 
+
+[Service]
+Type=simple
+User=root  
+WorkingDirectory=/home/ubuntu/cupana         
+ExecStart=/bin/sh /usr/bin/cupana.sh
+TimeoutSec=30
+RestartSec=15s
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
