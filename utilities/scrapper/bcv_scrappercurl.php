@@ -1,6 +1,6 @@
 <?php
 
-    // INFO: (este es el original)
+    // INFO:
     // got error:  failed to open stream: Unable to find the socket transport "ssl"? 
     // solution:
     // https://stackoverflow.com/questions/21962849/unable-to-find-the-socket-transport-ssl-did-you-forget-to-enable-it-when-you 
@@ -14,6 +14,18 @@
 
         $baseURL = "http://www.bcv.org.ve/";
 
+
+        // Initialize cURL session
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $baseURL);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Only for development!
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        
+        // Execute cURL request
+        $html = curl_exec($ch);
+        curl_close($ch);
+            
         // Fetch the HTML content
         $html = file_get_contents($baseURL);
 
