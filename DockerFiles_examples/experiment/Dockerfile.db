@@ -1,0 +1,13 @@
+FROM postgres:16.6
+
+# Environment variables should be passed at runtime using --env-file
+# Example: docker run --env-file docker.env ...
+
+# Volumes
+VOLUME /var/lib/postgresql/data
+
+# Healthcheck
+HEALTHCHECK --interval=10s --timeout=5s --retries=5 \
+    CMD pg_isready -U postgres
+
+# Restart policy would be set in docker run command

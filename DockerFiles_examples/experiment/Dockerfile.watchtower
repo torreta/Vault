@@ -1,0 +1,9 @@
+FROM containrrr/watchtower
+
+# Volumes
+VOLUME /var/run/docker.sock
+
+# Command for scheduled cleanup
+CMD ["--schedule", "0 2 * * 6", "--cleanup"]
+
+# Restart policy would be set in docker run command

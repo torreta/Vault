@@ -1,0 +1,21 @@
+FROM minio/minio:latest
+
+# Environment variables should be passed at runtime using --env-file
+# Example: docker run --env-file docker.env ...
+
+# Entrypoint and command
+ENTRYPOINT ["/bin/sh"]
+CMD ["-c", "mkdir -p /export/nocodb && /usr/bin/minio server /export"]
+
+# Volumes
+VOLUME /export
+
+# Labels
+LABEL traefik.enable="true"
+LABEL traefik.http.services.minio.loadbalancer.server.port="9000"
+LABEL traefik.http.routers.minio.rule="Host(`minio.yourdomain.com`)"
+LABEL traefik.http.routers.minio.entrypoints="websecure"
+LABEL traefik.http.routers.minio.tls="true"
+LABEL traefik.http.routers.minio.tls.certresolver="letsencrypt"
+
+# Restart policy would be set in docker run command

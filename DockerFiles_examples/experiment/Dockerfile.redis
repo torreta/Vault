@@ -1,0 +1,16 @@
+FROM redis:latest
+
+# Environment variables should be passed at runtime using --env-file
+# Example: docker run --env-file docker.env ...
+
+# Command to run redis with password protection
+CMD ["sh", "-c", "redis-server --requirepass \"${REDIS_PASSWORD}\""]
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=5s \
+    CMD ["sh", "-c", "redis-cli -a \"${REDIS_PASSWORD}\" --raw incr ping"]
+
+# Volumes
+VOLUME /data
+
+# Restart policy would be set in docker run command

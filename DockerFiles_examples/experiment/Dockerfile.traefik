@@ -1,0 +1,22 @@
+FROM traefik:v3.1
+
+# Command line arguments
+CMD ["--api.insecure=true", \
+    "--providers.docker=true", \
+    "--entrypoints.web.address=:80", \
+    "--providers.docker.exposedByDefault=false", \
+    "--entrypoints.minio.address=:9000", \
+    "--entrypoints.websecure.address=:443", \
+    "--certificatesresolvers.letsencrypt.acme.httpchallenge=true", \
+    "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web", \
+    "--certificatesresolvers.letsencrypt.acme.email=contact@yourdomain.com", \
+    "--certificatesresolvers.letsencrypt.acme.storage=/etc/letsencrypt/acme.json"]
+
+# Volumes
+VOLUME /var/run/docker.sock
+VOLUME /etc/letsencrypt
+
+# Ports would be exposed at runtime using -p flag
+# Example: docker run -p 80:80 -p 443:443 -p 9000:9000 ...
+
+# Restart policy would be set in docker run command

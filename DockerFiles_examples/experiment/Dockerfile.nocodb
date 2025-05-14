@@ -1,0 +1,17 @@
+FROM nocodb/nocodb:latest
+
+# Environment variables should be passed at runtime using --env-file
+# Example: docker run --env-file docker.env ...
+
+# Volumes
+VOLUME /usr/app/data
+
+# Labels
+LABEL com.centurylinklabs.watchtower.enable="true"
+LABEL traefik.enable="true"
+LABEL traefik.http.routers.nocodb.rule="Host(`yourdomain.com`)"
+LABEL traefik.http.routers.nocodb.entrypoints="websecure"
+LABEL traefik.http.routers.nocodb.tls="true"
+LABEL traefik.http.routers.nocodb.tls.certresolver="letsencrypt"
+
+# Restart policy would be set in docker run command
