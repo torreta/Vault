@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16.6
+    environment:
+      POSTGRES_USER: torreta
+      POSTGRES_PASSWORD: manager
+    ports:
+      - "33062:5432"
+    volumes:
+      - "/mnt/pool de todos/COMPARTIDA/Volumes:/mysql_volume"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U torreta"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
