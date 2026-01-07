@@ -1,0 +1,48 @@
+services:
+  laravel:
+    # This section builds the image on the fly using the steps defined below
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM teguh02/laravel-filament:latest
+        
+        # 1. Install Git
+        USER root
+        RUN apt-get update && \
+            apt-get install -y git && \
+            rm -rf /var/lib/apt/lists/*
+        
+        # 2. Configure Git Safe Directory
+        RUN git config --system --add safe.directory '*'
+        
+        # 3. Create the startup script inside the image
+        RUN echo '#!/bin/bash' > /usr/local/bin/start-app.sh && \
+            echo 'set -e' >> /usr/local/bin/start-app.sh && \
+            echo 'echo "--- Checking Git: $(git --version) ---"' >> /usr/local/bin/start-app.sh && \
+            # Check if artisan exists before running commands
+            echo 'if [ -f artisan ]; then' >> /usr/local/bin/start-app.sh && \
+            echo '    echo "--- Running Migrations ---"' >> /usr/local/bin/start-app.sh && \
+            echo '    php artisan migrate --force' >> /usr/local/bin/start-app.sh && \
+            echo '    echo "--- Optimizing Filament ---"' >> /usr/local/bin/start-app.sh && \
+            echo '    php artisan filament:optimize' >> /usr/local/bin/start-app.sh && \
+            echo 'fi' >> /usr/local/bin/start-app.sh && \
+            # Start Apache (the default command of the base image)
+            echo 'apache2-foreground' >> /usr/local/bin/start-app.sh && \
+            chmod +x /usr/local/bin/start-app.sh
+
+        # 4. Set entrypoint
+        WORKDIR /var/www/html
+        ENTRYPOINT ["/usr/local/bin/start-app.sh"]
+
+    container_name: filament_app
+    ports:
+      - "8085:80"
+    volumes:
+      # Mount your current folder to the container
+      - ./:/var/www/html
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:MId16lKrZVas4/MGDBUwCVzjv1Mb78SlTOQBs79mREM=
+      - DB_CONNECTION=sqlite
+      # If using mysql, add DB_HOST, DB_PASSWORD etc here
